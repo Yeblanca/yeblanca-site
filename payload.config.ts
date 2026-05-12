@@ -4,6 +4,7 @@ import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage'
+import { resendAdapter } from '@payloadcms/email-resend'
 import { v2 as cloudinary } from 'cloudinary'
 import cloudinaryAdapter from './plugins/cloudinaryAdapter'
 import { Users } from './payload/collections/Users'
@@ -49,6 +50,11 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URI,
     },
+  }),
+  email: resendAdapter({
+    fromAddress: process.env.EMAIL_FROM_ADDRESS || 'noreply@yeblanca.com',
+    fromName: 'Ye Blanca',
+    apiKey: process.env.RESEND_API_KEY || '',
   }),
   secret: process.env.PAYLOAD_SECRET || 'dev-secret-change-me',
   typescript: {
