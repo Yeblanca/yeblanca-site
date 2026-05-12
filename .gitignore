@@ -33,6 +33,9 @@ dist/
 .DS_Store
 Thumbs.db
 
+# Playwright MCP (auto-generated logs/snapshots)
+.playwright-mcp/
+
 # Editor
 .vscode/
 .idea/
