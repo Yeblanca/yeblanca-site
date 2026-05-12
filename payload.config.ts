@@ -52,8 +52,8 @@ export default buildConfig({
     },
   }),
   email: resendAdapter({
-    fromAddress: process.env.EMAIL_FROM_ADDRESS || 'noreply@yeblanca.com',
-    fromName: 'Ye Blanca',
+    defaultFromAddress: process.env.EMAIL_FROM_ADDRESS || 'noreply@yeblanca.com',
+    defaultFromName: 'Ye Blanca',
     apiKey: process.env.RESEND_API_KEY || '',
   }),
   secret: process.env.PAYLOAD_SECRET || 'dev-secret-change-me',
