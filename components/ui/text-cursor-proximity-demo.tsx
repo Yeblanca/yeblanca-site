@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import { useTheme } from "next-themes"
+import { useTheme } from "@/lib/theme-context"
 import TextCursorProximity from "@/components/ui/text-cursor-proximity"
 
 const ASCII = ["✎", "⌐", "¬", "¬"]

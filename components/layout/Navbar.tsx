@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
-import { useTheme } from 'next-themes'
+import { useTheme } from '@/lib/theme-context'
 import { usePathname, useRouter } from 'next/navigation'
 
 export function Navbar() {

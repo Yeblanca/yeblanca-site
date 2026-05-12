@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useRef } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
-import { useTheme } from 'next-themes'
+import { useTheme } from '@/lib/theme-context'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import TextCursorProximity from '@/components/ui/text-cursor-proximity'
 

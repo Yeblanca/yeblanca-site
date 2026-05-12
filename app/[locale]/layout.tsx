@@ -68,6 +68,12 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang="en" className={`${grotesk.variable} ${mono.variable}`} suppressHydrationWarning>
       <body>
+        {/* FOUC prevention: sets theme class before React hydrates */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{let t=localStorage.getItem('theme')||'dark';document.documentElement.classList.add(t)}catch(e){document.documentElement.classList.add('dark')}`,
+          }}
+        />
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Providers>
             <Navbar />
