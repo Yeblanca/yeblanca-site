@@ -4,6 +4,7 @@ node_modules/
 # Next.js
 .next/
 out/
+next-env.d.ts
 
 # Database
 *.db
@@ -24,6 +25,9 @@ opencode.json
 
 # Build
 dist/
+
+# TypeScript
+*.tsbuildinfo
 
 # OS
 .DS_Store
