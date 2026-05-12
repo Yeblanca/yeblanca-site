@@ -23,7 +23,7 @@ export interface ContactFormData {
   name: string
   email: string
   message: string
-  preferredLanguage: string
+  preferredLanguage?: string
 }
 
 export async function sendQuoteEmail(data: QuoteFormData) {
@@ -57,7 +57,7 @@ export async function sendContactEmail(data: ContactFormData) {
     <h2>Contact Form — yeblanca.com</h2>
     <p><strong>Name:</strong> ${data.name}</p>
     <p><strong>Email:</strong> ${data.email}</p>
-    <p><strong>Preferred language:</strong> ${data.preferredLanguage}</p>
+    <p><strong>Preferred language:</strong> ${data.preferredLanguage || 'Not specified'}</p>
     <p><strong>Message:</strong></p>
     <p style="white-space:pre-wrap">${data.message}</p>
   `
