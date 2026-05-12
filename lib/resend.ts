@@ -15,8 +15,8 @@ export interface QuoteFormData {
   name: string
   email: string
   company?: string
-  preferredLanguage: string
-  source: string
+  preferredLanguage?: string
+  source?: string
 }
 
 export interface ContactFormData {
@@ -42,8 +42,8 @@ export async function sendQuoteEmail(data: QuoteFormData) {
       <tr><td style="padding:8px;font-weight:bold">Contact name</td><td style="padding:8px">${data.name}</td></tr>
       <tr><td style="padding:8px;font-weight:bold">Email</td><td style="padding:8px">${data.email}</td></tr>
       ${data.company ? `<tr><td style="padding:8px;font-weight:bold">Company</td><td style="padding:8px">${data.company}</td></tr>` : ''}
-      <tr><td style="padding:8px;font-weight:bold">Preferred language</td><td style="padding:8px">${data.preferredLanguage}</td></tr>
-      <tr><td style="padding:8px;font-weight:bold">Found via</td><td style="padding:8px">${data.source}</td></tr>
+      <tr><td style="padding:8px;font-weight:bold">Preferred language</td><td style="padding:8px">${data.preferredLanguage || 'Not specified'}</td></tr>
+      <tr><td style="padding:8px;font-weight:bold">Found via</td><td style="padding:8px">${data.source || 'Not specified'}</td></tr>
     </table>
   `
 

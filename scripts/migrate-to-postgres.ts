@@ -87,7 +87,7 @@ async function main() {
     console.log(`  SQLite global ${slug}: fetched`)
   }
 
-  await sqlitePayload.db.destroy()
+  await sqlitePayload.db!.destroy()
 
   // ── Write everything to Postgres ─────────────────────────────────────────────
   console.log('\n→ Connecting to Neon Postgres target …')

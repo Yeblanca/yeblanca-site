@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true })
   } catch (err) {
     if (err instanceof z.ZodError) {
-      return NextResponse.json({ error: 'Invalid data', details: err.errors }, { status: 400 })
+      return NextResponse.json({ error: 'Invalid data', details: err.issues }, { status: 400 })
     }
     console.error('Contact email error:', err)
     return NextResponse.json({ error: 'Failed to send' }, { status: 500 })
