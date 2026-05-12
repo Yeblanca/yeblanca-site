@@ -52,7 +52,7 @@ export function Navbar() {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-[rgba(240,240,240,0.08)] bg-[#0a0a0a]/90 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center h-8 relative z-50">
+          <Link href={`/${locale}`} className="flex items-center gap-2 h-8 relative z-50">
             <Image
               src="/images/yebconfondo (1).png"
               alt="yeblanca"
@@ -61,6 +61,7 @@ export function Navbar() {
               className="h-full w-auto object-contain"
               priority
             />
+            <span className="font-sans text-sm font-bold tracking-[0.08em] text-[#f0f0f0]">YEBLANCA</span>
           </Link>
 
           {/* Desktop Nav links */}
