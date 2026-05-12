@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand color tokens */
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-elevated: #1a1a1a;
+  --color-fg: #f0f0f0;
+  --color-muted: rgba(240, 240, 240, 0.45);
+  --color-subtle: rgba(240, 240, 240, 0.15);
+  --color-border: rgba(240, 240, 240, 0.08);
+  --color-accent: #ff3e7f;
+  --color-accent-muted: rgba(255, 62, 127, 0.15);
+  --color-accent-border: rgba(255, 62, 127, 0.3);
+
+  /* Typography */
+  --font-sans: var(--font-grotesk), "Arial Black", sans-serif;
+  --font-mono: var(--font-mono-var), "Courier New", monospace;
+
+  /* shadcn/ui CSS variable mapping */
+  --color-background: #0a0a0a;
+  --color-foreground: #f0f0f0;
+  --color-card: #111111;
+  --color-card-foreground: #f0f0f0;
+  --color-popover: #111111;
+  --color-popover-foreground: #f0f0f0;
+  --color-primary: #ff3e7f;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #1a1a1a;
+  --color-secondary-foreground: #f0f0f0;
+  --color-muted-bg: #111111;
+  --color-muted-fg: rgba(240, 240, 240, 0.45);
+  --color-accent-bg: rgba(255, 62, 127, 0.15);
+  --color-accent-fg: #ff3e7f;
+  --color-destructive: #ff3e7f;
+  --color-border-ui: rgba(240, 240, 240, 0.08);
+  --color-input: rgba(240, 240, 240, 0.08);
+  --color-ring: #ff3e7f;
+  --radius: 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* Input/textarea focus reset — accent border only, no glow */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #ff3e7f;
+  box-shadow: none;
+}
+
+/* Light mode overrides — activated by removing .dark from <html> */
+html.light {
+  --color-bg: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-elevated: #ebebeb;
+  --color-fg: #0a0a0a;
+  --color-muted: rgba(10, 10, 10, 0.45);
+  --color-subtle: rgba(10, 10, 10, 0.08);
+  --color-border: rgba(10, 10, 10, 0.08);
+  background-color: #f5f5f5;
+  color: #0a0a0a;
+}
+
+html.light body {
+  background-color: #f5f5f5;
+  color: #0a0a0a;
+}

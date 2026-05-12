@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Database
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Payload CMS
+media/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OpenCode config (contains tokens/secrets)
+opencode.json
+
+# Build
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
