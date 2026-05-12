@@ -1,30 +1,17 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
+import { useTheme } from 'next-themes'
 import { usePathname, useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
 
 export function Navbar() {
   const t = useTranslations('nav')
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
-  const [isDark, setIsDark] = useState(true)
-
-  useEffect(() => {
-    const stored = localStorage.getItem('theme')
-    const dark = stored ? stored === 'dark' : true
-    setIsDark(dark)
-    document.documentElement.classList.toggle('light', !dark)
-  }, [])
-
-  function toggleTheme() {
-    const next = !isDark
-    setIsDark(next)
-    localStorage.setItem('theme', next ? 'dark' : 'light')
-    document.documentElement.classList.toggle('light', !next)
-  }
+  const { theme, setTheme } = useTheme()
 
   function switchLocale(next: string) {
     const segments = pathname.split('/')
@@ -45,11 +32,15 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-[rgba(240,240,240,0.08)] bg-[#0a0a0a]/90 backdrop-blur-sm">
       <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
         {/* Logo */}
-        <Link
-          href={`/${locale}`}
-          className="font-sans font-bold text-[13px] uppercase tracking-[0.06em] text-[#f0f0f0] hover:text-[#FF3E7F] transition-colors"
-        >
-          yeblanca
+        <Link href={`/${locale}`} className="flex items-center h-8">
+          <Image
+            src="/images/yebconfondo (1).png"
+            alt="yeblanca"
+            width={80}
+            height={20}
+            className="h-full w-full object-cover"
+            priority
+          />
         </Link>
 
         {/* Nav links */}
@@ -81,11 +72,11 @@ export function Navbar() {
 
           {/* Theme toggle */}
           <button
-            onClick={toggleTheme}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             aria-label="Toggle theme"
             className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
           >
-            {isDark ? '○' : '●'}
+            {theme === 'dark' ? '○' : '●'}
           </button>
 
           {/* Quote CTA */}

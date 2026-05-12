@@ -1,20 +1,57 @@
+"use client"
+
 import Link from 'next/link'
+import { useRef } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
+import { useTheme } from 'next-themes'
 import { SectionLabel } from '@/components/ui/SectionLabel'
+import TextCursorProximity from '@/components/ui/text-cursor-proximity'
 
 export function Hero() {
   const t = useTranslations('home')
   const locale = useLocale()
+  const { resolvedTheme } = useTheme()
+  const containerRef = useRef<HTMLDivElement>(null)
 
-  const headline = t('hero_headline')
+  const isDark = resolvedTheme === 'dark'
 
   return (
-    <section className="min-h-[90vh] flex flex-col justify-center px-6 py-32 bg-[#0a0a0a]">
-      <div className="max-w-5xl mx-auto w-full">
+    <section className="relative min-h-[90vh] flex flex-col justify-center px-6 py-32 overflow-hidden">
+      {/* Video background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
+      >
+        <source src="/images/3D_letter_Y_UI_202605121532.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]" />
+
+      <div className="relative z-10 max-w-5xl mx-auto w-full" ref={containerRef}>
         <SectionLabel label={t('hero_label')} />
 
-        <h1 className="font-sans font-bold text-[clamp(2.5rem,8vw,5rem)] leading-[1.05] tracking-[-0.03em] text-[#f0f0f0] mb-8 whitespace-pre-line">
-          {headline}
+        <h1 className="font-sans font-bold text-[clamp(2.5rem,8vw,5rem)] leading-[1.05] tracking-[-0.03em] text-[#f0f0f0] mb-8">
+          <TextCursorProximity
+            label={t('hero_headline')}
+            className="inline"
+            styles={{
+              transform: {
+                from: 'scale(1)',
+                to: 'scale(1.15)',
+              },
+              color: {
+                from: '#f0f0f0',
+                to: '#FF3E7F',
+              },
+            }}
+            falloff="gaussian"
+            radius={250}
+            containerRef={containerRef}
+          />
         </h1>
 
         <p className="font-sans font-light text-[1.125rem] leading-[1.7] text-[rgba(240,240,240,0.60)] max-w-xl mb-12">

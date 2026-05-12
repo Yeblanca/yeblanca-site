@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 
 export function Footer() {
@@ -18,16 +19,24 @@ export function Footer() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* Brand */}
-          <div className="space-y-3">
-            <p className="font-sans font-bold text-[13px] uppercase tracking-[0.06em] text-[#f0f0f0]">
-              yeblanca
-            </p>
+          <div>
+            <div className="h-12 overflow-hidden mb-4">
+              <Image
+                src="/images/yebhozconfondo (1).png"
+                alt="yeblanca"
+                width={160}
+                height={40}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="space-y-1">
             <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)]">
               {t('tagline')}
             </p>
             <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.30)]">
               {t('location')}
             </p>
+            </div>
           </div>
 
           {/* Links */}

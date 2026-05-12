@@ -702,6 +702,67 @@ const services: ServiceSeed[] = [
   },
 ]
 
+// ─── Methodology ─────────────────────────────────────────────────────────────
+
+interface MethodologySeed {
+  phase: string
+  titleEn: string
+  titleEs: string
+  descriptionEn: string
+  descriptionEs: string
+  order: number
+}
+
+const methodologyPhases: MethodologySeed[] = [
+  {
+    phase: '01',
+    titleEn: 'DISCOVERY',
+    titleEs: 'DESCUBRIMIENTO',
+    descriptionEn: 'Deep immersion into brand DNA and technical constraints.',
+    descriptionEs: 'Inmersión profunda en el ADN de la marca y las restricciones técnicas.',
+    order: 1,
+  },
+  {
+    phase: '02',
+    titleEn: 'DESIGN',
+    titleEs: 'DISEÑO',
+    descriptionEn: 'Iterative construction of the visual and structural language.',
+    descriptionEs: 'Construcción iterativa del lenguaje visual y estructural.',
+    order: 2,
+  },
+  {
+    phase: '03',
+    titleEn: 'DEV',
+    titleEs: 'DESARROLLO',
+    descriptionEn: 'Meticulous translation of pixels into performant code.',
+    descriptionEs: 'Traducción meticulosa de píxeles a código de alto rendimiento.',
+    order: 3,
+  },
+  {
+    phase: '04',
+    titleEn: 'LAUNCH',
+    titleEs: 'LANZAMIENTO',
+    descriptionEn: 'Final optimization and deployment to the global stage.',
+    descriptionEs: 'Optimización final y despliegue al escenario global.',
+    order: 4,
+  },
+]
+
+// ─── Clients ─────────────────────────────────────────────────────────────────
+
+interface ClientSeed {
+  name: string
+  order: number
+  featured: boolean
+}
+
+const clients: ClientSeed[] = [
+  { name: 'ALPHAVILLE', order: 1, featured: true },
+  { name: 'STARK', order: 2, featured: true },
+  { name: 'MONOLITH', order: 3, featured: true },
+  { name: 'VANGUARD', order: 4, featured: true },
+]
+
 // ─── Testimonials ─────────────────────────────────────────────────────────────
 
 /**
@@ -718,20 +779,20 @@ interface TestimonialSeed {
 }
 
 const testimonials: TestimonialSeed[] = [
-  { projectSlug: 'colonial-crm',              author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: true },
+  { projectSlug: 'colonial-crm',              author: 'DIRECTOR', company: 'MONOLITH INC.', textEn: "YEBLANCA DOESN'T JUST BUILD WEBSITES; THEY CONSTRUCT DIGITAL ARCHITECTURE THAT COMMANDS ATTENTION THROUGH SILENCE.", textEs: "YEBLANCA NO SOLO CONSTRUYE SITIOS WEB; CONSTRUYEN ARQUITECTURA DIGITAL QUE COMANDA ATENCIÓN A TRAVÉS DEL SILENCIO.", featured: true },
   { projectSlug: 'talent-insight-wizeline',    author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'vlood-plus',                 author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'covid-management-bxp',       author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'constellation-lynx',         author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'candy-store',                author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'radia-landing',              author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'ofisenas',                   author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'bxp-gym-system',             author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'treon-bubbles',              author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'ibarra-bus-iot',             author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'centro-incubador-utnc',      author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'wizeline-redux-bootcamp',    author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
-  { projectSlug: 'xml-parser-microservice',    author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
+  { projectSlug: 'vlood-plus',                 author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'covid-management-bxp',       author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'constellation-lynx',         author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'candy-store',                author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'radia-landing',              author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'ofisenas',                   author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'bxp-gym-system',             author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'treon-bubbles',              author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'ibarra-bus-iot',             author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'centro-incubador-utnc',      author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'wizeline-redux-bootcamp',    author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
+  { projectSlug: 'xml-parser-microservice',    author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
 ]
 
 // ─── Seed Runner ──────────────────────────────────────────────────────────────
@@ -793,6 +854,58 @@ async function seed() {
     }
   }
 
+  // ── Methodology ────────────────────────────────────────────────────────────
+  console.log('\n📋 Seeding methodology phases…')
+
+  for (const phase of methodologyPhases) {
+    try {
+      const existing = await payloadInstance.find({
+        collection: 'methodology',
+        where: { phase: { equals: phase.phase } },
+        limit: 1,
+      })
+
+      if (existing.docs.length > 0) {
+        console.log(`  ⏭  Skipped (exists): Phase ${phase.phase}`)
+        continue
+      }
+
+      await payloadInstance.create({
+        collection: 'methodology',
+        data: phase as any,
+      })
+      console.log(`  ✅ Created: Phase ${phase.phase} - ${phase.titleEn}`)
+    } catch (err) {
+      console.error(`  ❌ Failed: Phase ${phase.phase}`, err)
+    }
+  }
+
+  // ── Clients ─────────────────────────────────────────────────────────────────
+  console.log('\n🏢 Seeding clients…')
+
+  for (const client of clients) {
+    try {
+      const existing = await payloadInstance.find({
+        collection: 'clients',
+        where: { name: { equals: client.name } },
+        limit: 1,
+      })
+
+      if (existing.docs.length > 0) {
+        console.log(`  ⏭  Skipped (exists): ${client.name}`)
+        continue
+      }
+
+      await payloadInstance.create({
+        collection: 'clients',
+        data: client as any,
+      })
+      console.log(`  ✅ Created: ${client.name}`)
+    } catch (err) {
+      console.error(`  ❌ Failed: ${client.name}`, err)
+    }
+  }
+
   // ── Testimonials ────────────────────────────────────────────────────────────
   console.log('\n💬 Seeding testimonials…')
 
@@ -822,7 +935,23 @@ async function seed() {
       })
 
       if (existing.docs.length > 0) {
-        console.log(`  ⏭  Skipped (exists): ${t.projectSlug}`)
+        // If it's the featured testimonial, update it with the new text
+        if (t.featured) {
+          await payloadInstance.update({
+            collection: 'testimonials',
+            id: existing.docs[0].id,
+            data: {
+              author: t.author,
+              company: t.company,
+              textEn: t.textEn,
+              textEs: t.textEs,
+              featured: t.featured,
+            },
+          })
+          console.log(`  🔄 Updated (featured): ${t.projectSlug}`)
+        } else {
+          console.log(`  ⏭  Skipped (exists): ${t.projectSlug}`)
+        }
         continue
       }
 
@@ -874,7 +1003,9 @@ async function seed() {
   console.log('\n✨ Seed complete.\n')
   console.log(`   Projects: ${projects.length} (${projects.filter((p) => p.featured).length} featured)`)
   console.log(`   Services: ${services.length}`)
-  console.log(`   Testimonials: ${testimonials.length}`)
+  console.log(`   Methodology: ${methodologyPhases.length} phases`)
+  console.log(`   Clients: ${clients.length} (${clients.filter((c) => c.featured).length} featured)`)
+  console.log(`   Testimonials: ${testimonials.length} (${testimonials.filter((t) => t.featured).length} featured)`)
   console.log('\n')
 }
 
