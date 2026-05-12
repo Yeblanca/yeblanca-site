@@ -58,7 +58,7 @@ export function Navbar() {
               alt="yeblanca"
               width={80}
               height={20}
-              className="h-full w-full object-cover"
+              className="h-full w-auto object-contain"
               priority
             />
           </Link>

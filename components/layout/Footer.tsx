@@ -20,13 +20,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* Brand */}
           <div>
-            <div className="h-12 overflow-hidden mb-4">
+            <div className="h-12 mb-4">
               <Image
                 src="/images/yebhozconfondo (1).png"
                 alt="yeblanca"
                 width={160}
                 height={40}
-                className="h-full w-full object-cover"
+                className="h-full w-auto object-contain"
               />
             </div>
             <div className="space-y-1">

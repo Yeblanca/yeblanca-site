@@ -23,6 +23,7 @@ export function Hero() {
         loop
         muted
         playsInline
+        webkit-playsinline="true"
         className="absolute inset-0 w-full h-full object-cover opacity-40"
       >
         <source src="/images/3D_letter_Y_UI_202605121532.mp4" type="video/mp4" />
