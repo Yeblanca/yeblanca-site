@@ -15,6 +15,9 @@ import { SiteSettings } from './payload/globals/SiteSettings'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
+// NOTE: For production uploads, configure a storage adapter (S3, R2, Cloudinary, etc.)
+// See: https://payloadcms.com/docs/upload/storage-adapters
+
 export default buildConfig({
   admin: {
     user: 'users',

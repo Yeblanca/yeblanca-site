@@ -13,6 +13,7 @@ export interface ProjectCardData {
   stack: Array<{ tech: string }>
   featured?: boolean
   index?: number
+  imageUrl?: string
 }
 
 export function ProjectCard({ project, index = 0 }: { project: ProjectCardData; index?: number }) {
