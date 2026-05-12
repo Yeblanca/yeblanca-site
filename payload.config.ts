@@ -3,6 +3,8 @@ import { fileURLToPath } from 'url'
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage'
+import cloudinaryAdapter from './plugins/cloudinaryAdapter'
 import { Users } from './payload/collections/Users'
 import { Projects } from './payload/collections/Projects'
 import { Services } from './payload/collections/Services'
@@ -15,9 +17,6 @@ import { SiteSettings } from './payload/globals/SiteSettings'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
-// NOTE: For production uploads, configure a storage adapter (S3, R2, Cloudinary, etc.)
-// See: https://payloadcms.com/docs/upload/storage-adapters
-
 export default buildConfig({
   admin: {
     user: 'users',
@@ -28,6 +27,15 @@ export default buildConfig({
   collections: [Users, Projects, Services, Testimonials, Methodology, Clients, Media],
   globals: [SiteSettings],
   editor: lexicalEditor(),
+  plugins: [
+    cloudStoragePlugin({
+      collections: {
+        media: {
+          adapter: cloudinaryAdapter as any,
+        },
+      },
+    }),
+  ],
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI,
