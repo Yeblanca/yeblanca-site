@@ -68,7 +68,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang="en" className={`${grotesk.variable} ${mono.variable}`} suppressHydrationWarning>
       <body>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages} locale={locale}>
           <Providers>
             <Navbar />
             <main>{children}</main>
