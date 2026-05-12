@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   },
   description: 'Cross-border web development agency. Bilingual. Builds systems that go to production.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://yeblanca.com'),
+  icons: {
+    icon: '/images/yebconfondo.png',
+    apple: '/images/yebconfondo.png',
+  },
 }
 
 export const viewport = {
