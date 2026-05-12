@@ -66,7 +66,7 @@ export function ProjectCard({ project, index = 0 }: { project: ProjectCardData; 
           {project.stack.slice(0, 4).map(({ tech }) => (
             <span
               key={tech}
-              className="inline-flex items-center h-5 px-2 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[9px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)]"
+              className="inline-flex items-center h-7 px-2.5 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[9px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)]"
             >
               {tech}
             </span>

@@ -44,12 +44,12 @@ export function Footer() {
             <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)]">
               {t('links_label')}
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {links.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                    className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
                   >
                     {label}
                   </Link>
@@ -63,13 +63,13 @@ export function Footer() {
             <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)]">
               Social
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               <li>
                 <a
                   href="https://github.com/yeblanca"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                  className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
                 >
                   GitHub
                 </a>
@@ -79,7 +79,7 @@ export function Footer() {
                   href="https://linkedin.com/company/yeblanca"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                  className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
                 >
                   LinkedIn
                 </a>

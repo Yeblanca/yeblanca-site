@@ -16,7 +16,7 @@ export function Hero() {
   const isDark = resolvedTheme === 'dark'
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center px-6 py-32 overflow-hidden">
+    <section className="relative min-h-[90vh] min-h-[90dvh] flex flex-col justify-center px-6 py-32 overflow-hidden">
       {/* Video background */}
       <video
         autoPlay

@@ -112,7 +112,7 @@ export default async function AboutPage({ params }: Props) {
 
               {/* Available badge */}
               <span
-                className={`inline-flex items-center h-6 px-3 rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] border-[0.5px] shrink-0 ${
+                className={`inline-flex items-center h-8 px-3 rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] border-[0.5px] shrink-0 ${
                   available
                     ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
                     : 'bg-[rgba(240,240,240,0.05)] border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.40)]'
@@ -128,12 +128,12 @@ export default async function AboutPage({ params }: Props) {
               {t('founder_bio')}
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex items-center gap-2">
               <a
                 href="https://github.com/bytewing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[rgba(240,240,240,0.40)] hover:text-[#FF3E7F] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.40)] hover:text-[#FF3E7F] transition-colors"
                 aria-label="GitHub"
               >
                 <IconGithub size={16} />
@@ -142,7 +142,7 @@ export default async function AboutPage({ params }: Props) {
                 href="https://linkedin.com/in/jplozano"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[rgba(240,240,240,0.40)] hover:text-[#FF3E7F] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.40)] hover:text-[#FF3E7F] transition-colors"
                 aria-label="LinkedIn"
               >
                 <IconLinkedin size={16} />
@@ -158,7 +158,7 @@ export default async function AboutPage({ params }: Props) {
             {STACK.map((tech) => (
               <span
                 key={tech}
-                className="inline-flex items-center h-7 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(240,240,240,0.50)]"
+                className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(240,240,240,0.50)]"
               >
                 {tech}
               </span>

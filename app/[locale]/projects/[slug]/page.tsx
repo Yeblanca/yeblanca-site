@@ -73,7 +73,7 @@ export default async function CaseStudyPage({ params }: Props) {
       {/* Description */}
       {description && (
         <div className="px-6 py-16">
-          <div className="max-w-5xl mx-auto max-w-3xl">
+          <div className="max-w-3xl mx-auto">
             <div className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.70)] leading-[1.8] prose prose-invert">
               {/* Rich text content — rendered as plain text for now */}
               <p>{typeof description === 'string' ? description : JSON.stringify(description)}</p>

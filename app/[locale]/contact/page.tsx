@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 
 const inputClass =
-  'w-full bg-transparent border-[0.5px] border-[rgba(240,240,240,0.15)] rounded-[2px] px-4 py-3 font-sans font-light text-[0.9375rem] text-[#f0f0f0] placeholder:text-[rgba(240,240,240,0.25)] focus:outline-none focus:border-[#FF3E7F] transition-colors'
+  'w-full bg-transparent border-[0.5px] border-[rgba(240,240,240,0.15)] rounded-[2px] px-4 py-3 font-sans font-light text-[1rem] text-[#f0f0f0] placeholder:text-[rgba(240,240,240,0.25)] focus:outline-none focus:border-[#FF3E7F] transition-colors'
 
 export default function ContactPage() {
   const t = useTranslations('contact')

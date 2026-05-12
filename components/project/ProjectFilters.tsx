@@ -54,7 +54,7 @@ export function ProjectFilters({ projects }: { projects: ProjectCardData[] }) {
         </span>
         <button
           onClick={() => onChange('all')}
-          className={`h-6 px-3 rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
+          className={`h-8 px-3 rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
             active === 'all'
               ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
               : 'border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.40)] hover:border-[rgba(240,240,240,0.25)]'
@@ -66,7 +66,7 @@ export function ProjectFilters({ projects }: { projects: ProjectCardData[] }) {
           <button
             key={v}
             onClick={() => onChange(v)}
-            className={`h-6 px-3 rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
+            className={`h-8 px-3 rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
               active === v
                 ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
                 : 'border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.40)] hover:border-[rgba(240,240,240,0.25)]'

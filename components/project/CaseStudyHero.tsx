@@ -72,7 +72,7 @@ export function CaseStudyHero({
             {stack.map(({ tech }) => (
               <span
                 key={tech}
-                className="inline-flex items-center h-6 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.50)]"
+                className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.50)]"
               >
                 {tech}
               </span>
