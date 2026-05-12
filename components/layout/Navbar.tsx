@@ -76,7 +76,7 @@ export function Navbar() {
             aria-label="Toggle theme"
             className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
           >
-            {theme === 'dark' ? '○' : '●'}
+            {(theme ?? 'dark') === 'dark' ? '○' : '●'}
           </button>
 
           {/* Quote CTA */}

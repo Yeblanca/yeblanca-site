@@ -4,6 +4,7 @@ import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage'
+import { v2 as cloudinary } from 'cloudinary'
 import cloudinaryAdapter from './plugins/cloudinaryAdapter'
 import { Users } from './payload/collections/Users'
 import { Projects } from './payload/collections/Projects'
@@ -16,6 +17,13 @@ import { SiteSettings } from './payload/globals/SiteSettings'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+})
 
 export default buildConfig({
   admin: {
@@ -31,7 +39,8 @@ export default buildConfig({
     cloudStoragePlugin({
       collections: {
         media: {
-          adapter: cloudinaryAdapter as any,
+          adapter: cloudinaryAdapter,
+          disableLocalStorage: true,
         },
       },
     }),
