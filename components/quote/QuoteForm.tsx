@@ -77,7 +77,7 @@ export function QuoteForm({ preselectedService }: { preselectedService?: string 
       <div className="text-center py-24 space-y-6">
         <div className="inline-flex items-center gap-2 mb-4">
           <div className="w-4 h-px bg-[#FF3E7F]" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+          <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
             {t('step3_label').split(' ')[0]}
           </span>
         </div>

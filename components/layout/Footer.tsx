@@ -25,7 +25,7 @@ export function Footer() {
               <span className="font-sans text-xl font-bold tracking-[0.08em] text-[#f0f0f0]">YEBLANCA</span>
             </div>
             <div className="space-y-1">
-            <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)]">
               {t('tagline')}
             </p>
             <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.30)]">
@@ -44,7 +44,7 @@ export function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                    className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
                   >
                     {label}
                   </Link>
@@ -64,7 +64,7 @@ export function Footer() {
                   href="https://github.com/yeblanca"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                  className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
                 >
                   GitHub
                 </a>
@@ -74,7 +74,7 @@ export function Footer() {
                   href="https://linkedin.com/company/yeblanca"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                  className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
                 >
                   LinkedIn
                 </a>

@@ -54,10 +54,11 @@ export function QuoteStep3({
     <div className="space-y-8">
       <div className="grid sm:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+          <label htmlFor="quote-contact-name" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
             {t('name_label')}
           </label>
           <input
+            id="quote-contact-name"
             type="text"
             value={data.name || ''}
             onChange={(e) => onChange({ name: e.target.value })}
@@ -65,10 +66,11 @@ export function QuoteStep3({
           />
         </div>
         <div className="space-y-2">
-          <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+          <label htmlFor="quote-contact-email" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
             {t('email_label')}
           </label>
           <input
+            id="quote-contact-email"
             type="email"
             value={data.email || ''}
             onChange={(e) => onChange({ email: e.target.value })}
@@ -78,10 +80,11 @@ export function QuoteStep3({
       </div>
 
       <div className="space-y-2">
-        <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <label htmlFor="quote-company" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('company_label')}
         </label>
         <input
+          id="quote-company"
           type="text"
           value={data.company || ''}
           onChange={(e) => onChange({ company: e.target.value })}
@@ -90,7 +93,7 @@ export function QuoteStep3({
       </div>
 
       <div className="space-y-3">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('language_label')}
         </p>
         <div className="flex gap-3">
@@ -107,7 +110,7 @@ export function QuoteStep3({
       </div>
 
       <div className="space-y-3">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('source_label')}
         </p>
         <div className="flex flex-wrap gap-3">

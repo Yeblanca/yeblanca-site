@@ -48,7 +48,7 @@ export function QuoteStep1({
     <div className="space-y-10">
       {/* Service type */}
       <div className="space-y-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('type_label')}
         </p>
         <div className="flex flex-wrap gap-3">
@@ -66,7 +66,7 @@ export function QuoteStep1({
 
       {/* Budget */}
       <div className="space-y-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('budget_label')}
         </p>
         <div className="flex flex-wrap gap-3">
@@ -84,7 +84,7 @@ export function QuoteStep1({
 
       {/* Timeline */}
       <div className="space-y-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('timeline_label')}
         </p>
         <div className="flex flex-wrap gap-3">

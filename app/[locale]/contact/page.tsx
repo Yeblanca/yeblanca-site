@@ -52,10 +52,11 @@ export default function ContactPage() {
           <form onSubmit={handleSubmit} className="max-w-xl space-y-6">
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+                <label htmlFor="contact-name" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
                   {t('name_label')}
                 </label>
                 <input
+                  id="contact-name"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -64,10 +65,11 @@ export default function ContactPage() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+                <label htmlFor="contact-email" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
                   {t('email_label')}
                 </label>
                 <input
+                  id="contact-email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -78,10 +80,11 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-2">
-              <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+              <label htmlFor="contact-message" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
                 {t('message_label')}
               </label>
               <textarea
+                id="contact-message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
@@ -91,7 +94,7 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-3">
-              <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+              <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
                 {t('language_label')}
               </p>
               <div className="flex gap-3">

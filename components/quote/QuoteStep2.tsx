@@ -24,10 +24,11 @@ export function QuoteStep2({
   return (
     <div className="space-y-8">
       <div className="space-y-2">
-        <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <label htmlFor="quote-project-name" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('project_name_label')}
         </label>
         <input
+          id="quote-project-name"
           type="text"
           value={data.projectName || ''}
           onChange={(e) => onChange({ projectName: e.target.value })}
@@ -37,10 +38,11 @@ export function QuoteStep2({
       </div>
 
       <div className="space-y-2">
-        <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <label htmlFor="quote-description" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('description_label')}
         </label>
         <textarea
+          id="quote-description"
           value={data.description || ''}
           onChange={(e) => onChange({ description: e.target.value.slice(0, 500) })}
           placeholder={t('description_placeholder')}
@@ -53,10 +55,11 @@ export function QuoteStep2({
       </div>
 
       <div className="space-y-2">
-        <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <label htmlFor="quote-stack" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('stack_label')}
         </label>
         <input
+          id="quote-stack"
           type="text"
           value={data.currentStack || ''}
           onChange={(e) => onChange({ currentStack: e.target.value })}
@@ -66,10 +69,11 @@ export function QuoteStep2({
       </div>
 
       <div className="space-y-2">
-        <label className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.45)]">
+        <label htmlFor="quote-refs" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('refs_label')}
         </label>
         <input
+          id="quote-refs"
           type="text"
           value={data.referenceUrls || ''}
           onChange={(e) => onChange({ referenceUrls: e.target.value })}

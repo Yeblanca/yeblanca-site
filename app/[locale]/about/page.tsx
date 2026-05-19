@@ -105,7 +105,7 @@ export default async function AboutPage({ params }: Props) {
                 <h3 className="font-sans font-medium text-[1.125rem] text-[#f0f0f0]">
                   {t('founder_name')}
                 </h3>
-                <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] mt-1">
+                <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] mt-1">
                   {t('founder_title')}
                 </p>
               </div>
