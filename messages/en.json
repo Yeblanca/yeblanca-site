@@ -10,7 +10,7 @@
     "quote": "Get a quote"
   },
   "home": {
-"hero_eyebrow": "Piedras Negras, MX — Eagle Pass, TX — Everywhere in between",
+"hero_eyebrow": "Coahuila — Texas — Everywhere",
     "hero_headline": "Your system.\nYour rules.\nYour pace.",
     "hero_sub": "Whether you're building your first digital presence or replacing a system that stopped working, we engineer it, we run it, and you control it.\n\nNo agencies. No middlemen. No platform fees eating your margin.",
     "cta_services": "See how we work →",
@@ -106,7 +106,7 @@
     "cta": "Start a project",
 
     "web_title": "Web Development",
-    "web_tagline": "If your business isn't online, it doesn't exist for a growing number of customers.\n\nWe build bilingual websites, corporate, landing pages, CMS-driven, designed to work on both sides of the border. Fast, structured, and built to rank.",
+    "web_tagline": "Bilingual sites.\nFast. Structured.\nBuilt to rank.",
     "web_features": [
       "Next.js + Payload CMS",
       "EN/ES from day one",
@@ -116,7 +116,7 @@
     ],
 
     "ecommerce_title": "E-commerce",
-    "ecommerce_tagline": "Shopify charges up to 2% per transaction on top of your subscription, plus another $150–800/month in apps to unlock features that should be standard.\n\nWe build on MedusaJS: open source, fully owned by you, zero transaction fees. At scale, that's not a technical decision, it's a financial one.",
+    "ecommerce_tagline": "0% transaction fees.\nOpen source.\nYours forever.",
     "ecommerce_features": [
       "MedusaJS or Shopify headless",
       "Stripe & OXXO payments",
@@ -126,7 +126,7 @@
     ],
 
     "system_title": "Custom Systems",
-    "system_tagline": "Running your clients in a notebook? Appointments through WhatsApp? Inventory in Excel?\n\nThere's a more organized version of that, and you don't need to understand a single line of code to use it. We build CRMs, ERPs, booking platforms, and internal tools designed around your actual workflow.",
+    "system_tagline": "What you run in a notebook,\nin a system.\nWithout touching code.",
     "system_features": [
       "Full-stack TypeScript",
       "Role-based access",
@@ -136,7 +136,7 @@
     ],
 
     "consulting_title": "Consulting & Strategy",
-    "consulting_tagline": "You shouldn't need an agency to understand your own tech stack.\n\nWe audit, advise, and hand off documentation your team can actually use. If the architecture can't be explained clearly, it shouldn't exist.",
+    "consulting_tagline": "Architecture that explains itself.\nDocumentation your team actually uses.\nNo agency in the middle.",
     "consulting_features": [
       "Stack selection",
       "Architecture review",

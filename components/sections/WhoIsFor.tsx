@@ -25,13 +25,42 @@ export function WhoIsFor() {
       }
 
   return (
-    <section className="relative py-24 md:py-32 px-6 bg-[#0a0a0a] border-t-[0.5px] border-[rgba(240,240,240,0.08)]">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative py-24 md:py-32 px-6 bg-[#0a0a0a] border-t-[0.5px] border-[rgba(240,240,240,0.08)] overflow-hidden">
+      {/* Diferenciador visual: Grid pattern animado - MUY SUTIL */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" aria-hidden="true">
+        <div 
+          className="absolute inset-0 animate-subtle-drift"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px',
+          }}
+        />
+      </div>
+
+      {/* Línea vertical divisor decorativa - MUY SUTIL */}
+      <div 
+        className="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-b from-[rgba(255,62,127,0.2)] via-[rgba(255,62,127,0.08)] to-transparent pointer-events-none"
+        aria-hidden="true"
+      />
+
+      {/* Gradiente radial como divisor visual - MUY SUTIL */}
+      <div 
+        className="absolute top-0 right-0 w-[500px] h-[500px] opacity-[0.05] pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(255,62,127,0.3) 0%, transparent 70%)',
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Two column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Left column - eyebrow + title */}
           <div className="lg:col-span-5">
-            <span className="font-mono text-[0.75rem] uppercase tracking-[0.20em] text-[rgba(240,240,240,0.35)] block mb-6">
+            <span className="font-mono text-[0.75rem] uppercase tracking-[0.20em] text-[rgba(240,240,240,0.45)] block mb-6">
               {translations.eyebrow}
             </span>
             <h2 className="font-sans font-medium text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] tracking-[-0.02em]">
@@ -46,7 +75,7 @@ export function WhoIsFor() {
               {translations.body.split('\n\n').map((paragraph, index) => (
                 <p 
                   key={index} 
-                  className="font-sans text-[1rem] md:text-[1.125rem] leading-[1.7] text-[rgba(240,240,240,0.55)]"
+                  className="font-sans text-[1rem] md:text-[1.125rem] leading-[1.75] text-[rgba(240,240,240,0.72)]"
                 >
                   {paragraph}
                 </p>

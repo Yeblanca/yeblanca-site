@@ -16,7 +16,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="border-t border-[rgba(240,240,240,0.08)] py-16">
+    <footer className="bg-[#050505] border-t border-[rgba(240,240,240,0.08)] py-16">
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* Brand */}

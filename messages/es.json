@@ -10,7 +10,7 @@
     "quote": "Solicitar cotización"
   },
   "home": {
-    "hero_eyebrow": "Piedras Negras, Coah. — Eagle Pass, TX — Y todo lo que hay en medio",
+    "hero_eyebrow": "Coahuila — Texas — En todos lados.",
     "hero_headline": "Tu sistema.\nTus reglas.\nTu ritmo.",
     "hero_sub": "Ya sea que estés construyendo tu primera presencia digital o reemplazando un sistema que dejó de funcionar, nosotros lo ingeniamos, lo operamos y tú lo controlas.\n\nSin agencias. Sin intermediarios. Sin comisiones de plataforma comiendo tu margen.",
     "cta_services": "Así trabajamos →",
@@ -103,7 +103,7 @@
     "cta": "Iniciar un proyecto",
 
     "web_title": "Desarrollo Web",
-    "web_tagline": "Si tu negocio no está en internet, para un número creciente de clientes, simplemente no existe.\n\nConstruimos sitios web bilingües — corporativos, landing pages, con CMS — diseñados para funcionar en los dos lados de la frontera. Rápidos, estructurados y listos para posicionarse.",
+    "web_tagline": "Sitios bilingües.\nRápidos. Estructurados.\nListos para posicionar.",
     "web_features": [
       "Next.js + Payload CMS",
       "EN/ES desde el primer día",
@@ -113,7 +113,7 @@
     ],
 
     "ecommerce_title": "E-commerce",
-    "ecommerce_tagline": "Shopify cobra hasta 2% por transacción, más entre $150 y $800 al mes en aplicaciones para desbloquear funciones que deberían ser estándar.\n\nNosotros construimos sobre MedusaJS: código abierto, totalmente tuyo, sin comisiones por venta. A escala, eso no es una decisión técnica — es una decisión financiera.",
+    "ecommerce_tagline": "0% comisión.\nCódigo abierto.\nTuyo para siempre.",
     "ecommerce_features": [
       "MedusaJS o Shopify headless",
       "Pagos con Stripe y OXXO",
@@ -123,7 +123,7 @@
     ],
 
     "system_title": "Sistemas a Medida",
-    "system_tagline": "¿Llevas tus clientes en una libreta? ¿Tus citas por WhatsApp? ¿Tu inventario en Excel?\n\nHay una versión más ordenada de eso, y no necesitas entender una sola línea de código para usarla. Construimos CRMs, ERPs, plataformas de reservas y herramientas internas diseñadas alrededor de tu flujo de trabajo real.",
+    "system_tagline": "Lo que llevas en libreta,\nen sistema.\nSin que tengas que ver código.",
     "system_features": [
       "TypeScript full-stack",
       "Acceso por roles",
@@ -133,7 +133,7 @@
     ],
 
     "consulting_title": "Consultoría y Estrategia",
-    "consulting_tagline": "No deberías necesitar una agencia para entender tu propio stack tecnológico.\n\nAuditamos, asesoramos y entregamos documentación que tu equipo puede usar de verdad. Si la arquitectura no se puede explicar con claridad, no debería existir.",
+    "consulting_tagline": "Arquitectura que se explica.\nDocumentación que se usa.\nSin agencia en el medio.",
     "consulting_features": [
       "Selección de stack",
       "Revisión de arquitectura",

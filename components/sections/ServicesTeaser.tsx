@@ -38,7 +38,7 @@ export function ServicesTeaser() {
           {t('services_heading')}
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {SERVICES.map(({ key, index }) => {
             const Icon = ICONS[key]
             const title = ts(`${key}_title`)
@@ -49,7 +49,7 @@ export function ServicesTeaser() {
               <Link
                 key={key}
                 href={`/${locale}/services`}
-                className="group relative flex flex-col p-6 lg:p-7 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] hover:border-[#FF3E7F]/40 hover:bg-[var(--color-surface)]/50 transition-all duration-300 ease-out"
+                className="group relative flex flex-col p-8 lg:p-10 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] hover:border-[#FF3E7F]/40 hover:bg-[var(--color-surface)]/50 transition-all duration-300 ease-out min-h-[340px] lg:min-h-[360px]"
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 bg-gradient-to-br from-[#FF3E7F]/5 to-transparent" />
@@ -79,7 +79,7 @@ export function ServicesTeaser() {
                 </h3>
 
                 {/* Description */}
-                <p className="font-sans text-[13px] leading-relaxed text-[var(--color-muted)] flex-1 line-clamp-3 group-hover:text-[var(--color-fg)]/80 transition-colors duration-200">
+                <p className="font-sans text-[13px] leading-relaxed text-[var(--color-muted)] flex-1 group-hover:text-[var(--color-fg)]/80 transition-colors duration-200 whitespace-pre-line">
                   {tagline}
                 </p>
 

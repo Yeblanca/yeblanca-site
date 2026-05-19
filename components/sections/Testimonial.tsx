@@ -21,7 +21,7 @@ export function TestimonialSection({ testimonial, locale }: TestimonialProps) {
   const attribution = testimonial.author + (testimonial.company ? `, ${testimonial.company}` : '')
 
   return (
-    <section aria-label="Testimonial" className="py-32 px-6 bg-[#0a0a0a]">
+    <section aria-label="Testimonial" className="py-32 px-6 bg-[#0a0a0a] border-t-[0.5px] border-[rgba(240,240,240,0.08)]">
       <div className="max-w-4xl mx-auto">
         <Quote
           size={48}

@@ -131,3 +131,70 @@ html.light body {
   letter-spacing: -0.03em;
   line-height: 1.2;
 }
+
+/* Animación idle para grid pattern - WhoIsFor section */
+@keyframes subtle-drift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-2px, -1px);
+  }
+  50% {
+    transform: translate(1px, -2px);
+  }
+  75% {
+    transform: translate(-1px, 1px);
+  }
+}
+
+.animate-subtle-drift {
+  animation: subtle-drift 20s ease-in-out infinite;
+}
+
+/* Glitch happy face animations */
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); opacity: 0.8; }
+  20% { transform: translate(2px, -1px); }
+  40% { transform: translate(-2px, 1px); }
+  60% { transform: translate(1px, 1px); }
+  80% { transform: translate(-1px, -1px); }
+}
+
+@keyframes glitch-3 {
+  0%, 100% { transform: translate(0); opacity: 0.6; }
+  20% { transform: translate(1px, 2px); }
+  40% { transform: translate(-1px, -2px); }
+  60% { transform: translate(2px, -1px); }
+  80% { transform: translate(-2px, 1px); }
+}
+
+.animate-glitch-1 {
+  animation: glitch-1 0.3s steps(2) infinite;
+}
+
+.animate-glitch-2 {
+  animation: glitch-2 0.3s steps(2) infinite;
+}
+
+.animate-glitch-3 {
+  animation: glitch-3 0.3s steps(2) infinite;
+}
+
+/* Reduce motion para usuarios que lo prefieren */
+@media (prefers-reduced-motion: reduce) {
+  .animate-subtle-drift,
+  .animate-glitch-1,
+  .animate-glitch-2,
+  .animate-glitch-3 {
+    animation: none;
+  }
+}

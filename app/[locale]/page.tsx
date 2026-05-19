@@ -64,17 +64,17 @@ export default async function HomePage({ params }: Props) {
     <>
       <Hero />
 
-      <WhoIsFor />
+      <Clients clients={clients} />
 
       {featuredProjects.length > 0 && (
         <FeaturedProjects projects={featuredProjects} />
       )}
 
+      <WhoIsFor />
+
       <ServicesTeaser />
 
       <Methodology phases={methodologyTimeline} />
-
-      <Clients clients={clients} />
 
       <TestimonialSection testimonial={featuredTestimonial} locale={locale} />
 
