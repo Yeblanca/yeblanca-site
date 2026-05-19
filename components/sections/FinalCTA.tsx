@@ -18,7 +18,7 @@ export function FinalCTA() {
         </p>
         <Link
           href={`/${locale}/quote`}
-          className="inline-flex items-center h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
+          className="inline-flex items-center h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
         >
           {t('final_cta_button')}
         </Link>

@@ -1,6 +1,14 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { QuoteForm } from '@/components/quote/QuoteForm'
+
+export function generateMetadata(): Metadata {
+  return {
+    title: 'Start a Project — yeblanca',
+    description: 'Tell us about your project. No commitment, no technical background required. Just tell us where you are.',
+  }
+}
 
 type Props = {
   params: Promise<{ locale: string }>

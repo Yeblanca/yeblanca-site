@@ -22,7 +22,7 @@ function RadioOption({
       role="radio"
       aria-checked={active}
       onClick={onClick}
-      className={`h-11 px-5 rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] border-[0.5px] transition-colors text-left ${
+      className={`h-11 px-5 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] border-[0.5px] transition-colors text-left ${
         active
           ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
           : 'border-[rgba(240,240,240,0.12)] text-[rgba(240,240,240,0.55)] hover:border-[rgba(240,240,240,0.30)]'
@@ -42,7 +42,7 @@ function OptionGroup({
 }) {
   return (
     <fieldset className="space-y-4 border-0 p-0 m-0">
-      <legend className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] mb-4">
+      <legend className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] mb-4">
         {label}
       </legend>
       <div role="radiogroup" aria-label={label} className="flex flex-wrap gap-3">
@@ -107,7 +107,7 @@ export function QuoteStep1({
         type="button"
         disabled={!canProceed}
         onClick={onNext}
-        className="h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+        className="h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
       >
         {t('next')}
       </button>

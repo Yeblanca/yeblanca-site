@@ -74,7 +74,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* Methodology */}
       {methodologyPhases.length > 0 && (
-        <section className="relative py-32 px-6 bg-[#0a0a0a] overflow-hidden">
+        <section aria-labelledby="methodology-heading" className="relative py-32 px-6 bg-[#0a0a0a] overflow-hidden">
           {/* Background image - variant */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -88,7 +88,7 @@ export default async function HomePage({ params }: Props) {
           <div className="relative z-10 max-w-6xl mx-auto">
             <div className="flex items-center gap-4 mb-16">
               <div className="w-6 h-[1px] bg-[#ff3e7f]"></div>
-              <h2 className="font-label-mono text-accent-primary uppercase tracking-widest">METHODOLOGY</h2>
+              <h2 id="methodology-heading" className="font-label-mono text-accent-primary uppercase tracking-widest">METHODOLOGY</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
               {methodologyPhases.map((phase) => {
@@ -109,7 +109,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* Clients */}
       {clients.length > 0 && (
-        <section className="relative py-32 px-6 border-t-[0.5px] border-b-[0.5px] border-[rgba(240,240,240,0.15)] overflow-hidden">
+        <section aria-label="Clients" className="relative py-32 px-6 border-t-[0.5px] border-b-[0.5px] border-[rgba(240,240,240,0.15)] overflow-hidden">
           {/* Background image - horizontal variant */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -137,9 +137,9 @@ export default async function HomePage({ params }: Props) {
 
       {/* Testimonial */}
       {featuredTestimonial && (
-        <section className="py-32 px-6 bg-[#0a0a0a]">
+        <section aria-label="Testimonial" className="py-32 px-6 bg-[#0a0a0a]">
           <div className="max-w-4xl mx-auto">
-            <span className="material-symbols-outlined text-[#ff3e7f] text-6xl mb-8" aria-hidden="true" data-icon="format_quote">  </span>
+            <span className="material-symbols-outlined text-[#ff3e7f] text-6xl mb-8" aria-hidden="true" data-icon="format_quote"> What w </span>
             <blockquote className="font-display text-[#f0f0f0] italic uppercase leading-tight">
               "{locale === 'es' && featuredTestimonial.textEs ? featuredTestimonial.textEs : featuredTestimonial.textEn}"
             </blockquote>

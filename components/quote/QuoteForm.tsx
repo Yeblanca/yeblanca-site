@@ -77,7 +77,7 @@ export function QuoteForm({ preselectedService }: { preselectedService?: string 
       <div className="text-center py-24 space-y-6">
         <div className="inline-flex items-center gap-2 mb-4">
           <div className="w-4 h-px bg-[#FF3E7F]" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+          <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
             {t('step3_label').split(' ')[0]}
           </span>
         </div>
@@ -89,7 +89,7 @@ export function QuoteForm({ preselectedService }: { preselectedService?: string 
         </p>
         <Link
           href={`/${locale}`}
-          className="inline-flex items-center h-11 px-6 border-[0.5px] border-[rgba(240,240,240,0.15)] text-[rgba(240,240,240,0.60)] font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:border-[rgba(240,240,240,0.30)] transition-colors"
+          className="inline-flex items-center h-11 px-6 border-[0.5px] border-[rgba(240,240,240,0.15)] text-[rgba(240,240,240,0.60)] font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:border-[rgba(240,240,240,0.30)] transition-colors"
         >
           {t('success_cta')}
         </Link>
@@ -146,7 +146,7 @@ export function QuoteForm({ preselectedService }: { preselectedService?: string 
       )}
 
       {error && (
-        <p role="alert" className="mt-4 font-mono text-[11px] text-[#FF3E7F]">{error}</p>
+        <p role="alert" className="mt-4 font-mono text-[0.75rem] text-[#FF3E7F]">{error}</p>
       )}
     </div>
   )

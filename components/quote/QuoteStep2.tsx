@@ -24,7 +24,7 @@ export function QuoteStep2({
   return (
     <div className="space-y-8">
       <div className="space-y-2">
-        <label htmlFor="quote-project-name" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+        <label htmlFor="quote-project-name" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('project_name_label')} <span aria-hidden="true">*</span>
         </label>
         <input
@@ -40,7 +40,7 @@ export function QuoteStep2({
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="quote-description" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+        <label htmlFor="quote-description" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('description_label')} <span aria-hidden="true">*</span>
         </label>
         <textarea
@@ -53,13 +53,13 @@ export function QuoteStep2({
           aria-required="true"
           className={`${inputClass} resize-none`}
         />
-        <p className="font-mono text-[10px] text-[rgba(240,240,240,0.45)] text-right">
+        <p className="font-mono text-[0.75rem] text-[rgba(240,240,240,0.45)] text-right">
           {(data.description || '').length}/500
         </p>
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="quote-stack" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+        <label htmlFor="quote-stack" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('stack_label')}
         </label>
         <input
@@ -73,7 +73,7 @@ export function QuoteStep2({
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="quote-refs" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+        <label htmlFor="quote-refs" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
           {t('refs_label')}
         </label>
         <input
@@ -90,7 +90,7 @@ export function QuoteStep2({
         <button
           type="button"
           onClick={onBack}
-          className="h-11 px-6 border-[0.5px] border-[rgba(240,240,240,0.15)] text-[rgba(240,240,240,0.55)] font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:border-[rgba(240,240,240,0.30)] transition-colors"
+          className="h-11 px-6 border-[0.5px] border-[rgba(240,240,240,0.15)] text-[rgba(240,240,240,0.55)] font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:border-[rgba(240,240,240,0.30)] transition-colors"
         >
           {t('back')}
         </button>
@@ -98,7 +98,7 @@ export function QuoteStep2({
           type="button"
           disabled={!canProceed}
           onClick={onNext}
-          className="h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          className="h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
         >
           {t('next')}
         </button>

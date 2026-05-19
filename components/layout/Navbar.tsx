@@ -70,7 +70,7 @@ export function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`font-mono text-[11px] uppercase tracking-[0.12em] transition-colors ${
+                className={`font-mono text-[0.75rem] uppercase tracking-[0.12em] transition-colors ${
                   isActive(href)
                     ? 'text-[#FF3E7F] opacity-100'
                     : 'text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)]'
@@ -86,7 +86,7 @@ export function Navbar() {
             {/* Locale toggle — expanded tap target */}
             <button
               onClick={() => switchLocale(locale === 'en' ? 'es' : 'en')}
-              className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
               aria-label={locale === 'en' ? 'Switch to Spanish' : 'Switch to English'}
             >
               {locale === 'en' ? 'ES' : 'EN'}
@@ -96,7 +96,7 @@ export function Navbar() {
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               aria-label="Toggle theme"
-              className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
             >
               {(theme ?? 'dark') === 'dark' ? '○' : '●'}
             </button>
@@ -104,7 +104,7 @@ export function Navbar() {
             {/* Desktop Quote CTA */}
             <Link
               href={`/${locale}/quote`}
-              className="hidden md:inline-flex items-center h-8 px-4 bg-[#FF3E7F] text-white font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
+              className="hidden md:inline-flex items-center h-8 px-4 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
             >
               {t('quote')}
             </Link>
@@ -192,7 +192,7 @@ export function Navbar() {
             <Link
               href={`/${locale}/quote`}
               onClick={() => setMobileOpen(false)}
-              className="mt-4 inline-flex items-center h-12 px-8 bg-[#FF3E7F] text-white font-mono text-[13px] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-all duration-300"
+              className="mt-4 inline-flex items-center h-12 px-8 bg-[#FF3E7F] text-white font-mono text-[0.8125rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-all duration-300"
               style={{
                 transitionDelay: mobileOpen ? `${navLinks.length * 50 + 100}ms` : '0ms',
                 opacity: mobileOpen ? 1 : 0,
@@ -213,7 +213,7 @@ export function Navbar() {
             >
               <button
                 onClick={() => switchLocale(locale === 'en' ? 'es' : 'en')}
-                className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[13px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.8125rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
               >
                 {locale === 'en' ? 'ES' : 'EN'}
               </button>
@@ -221,7 +221,7 @@ export function Navbar() {
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 aria-label="Toggle theme"
-                className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[13px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.8125rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
               >
                 {(theme ?? 'dark') === 'dark' ? '○' : '●'}
               </button>

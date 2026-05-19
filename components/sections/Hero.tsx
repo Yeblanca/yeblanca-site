@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { useTheme } from '@/lib/theme-context'
 import { SectionLabel } from '@/components/ui/SectionLabel'
@@ -12,13 +12,35 @@ export function Hero() {
   const locale = useLocale()
   const { resolvedTheme } = useTheme()
   const containerRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   const isDark = resolvedTheme === 'dark'
+
+  // Respect prefers-reduced-motion (WCAG 2.3.3)
+  const [reducedMotion, setReducedMotion] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setReducedMotion(mq.matches)
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
+
+  useEffect(() => {
+    if (videoRef.current) {
+      if (reducedMotion) {
+        videoRef.current.pause()
+      } else {
+        videoRef.current.play()
+      }
+    }
+  }, [reducedMotion])
 
   return (
     <section className="relative min-h-[90vh] min-h-[90dvh] flex flex-col justify-center px-6 py-32 overflow-hidden">
       {/* Video background */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
@@ -63,13 +85,13 @@ export function Hero() {
         <div className="flex flex-wrap gap-4">
           <Link
             href={`/${locale}/services`}
-            className="inline-flex items-center h-11 px-6 border border-[rgba(240,240,240,0.15)] text-[#f0f0f0] font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:border-[rgba(240,240,240,0.35)] transition-colors"
+            className="inline-flex items-center h-11 px-6 border border-[rgba(240,240,240,0.15)] text-[#f0f0f0] font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:border-[rgba(240,240,240,0.35)] transition-colors"
           >
             {t('cta_services')}
           </Link>
           <Link
             href={`/${locale}/projects`}
-            className="inline-flex items-center h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
+            className="inline-flex items-center h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
           >
             {t('cta_projects')}
           </Link>

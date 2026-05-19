@@ -1,7 +1,15 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 import { Globe, ShoppingCart, Settings, BarChart3 } from 'lucide-react'
 import Link from 'next/link'
 import { SectionLabel } from '@/components/ui/SectionLabel'
+
+export function generateMetadata(): Metadata {
+  return {
+    title: 'Services — yeblanca',
+    description: 'Web development, e-commerce, custom systems, and consulting for businesses operating between México and the U.S.',
+  }
+}
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -46,7 +54,7 @@ export default async function ServicesPage({ params }: Props) {
                   <div className="flex items-center gap-4 shrink-0">
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-px bg-[#FF3E7F]" />
-                      <span className="font-mono text-[11px] text-[rgba(240,240,240,0.55)] tracking-[0.10em]">
+                      <span className="font-mono text-[0.75rem] text-[rgba(240,240,240,0.55)] tracking-[0.10em]">
                         {String(i + 1).padStart(2, '0')}
                       </span>
                     </div>
@@ -65,7 +73,7 @@ export default async function ServicesPage({ params }: Props) {
                     <ul className="space-y-2 mb-8">
                       {(Array.isArray(features) ? features : []).map((f: string, j: number) => (
                         <li key={j} className="flex items-center gap-3">
-                          <span className="text-[#FF3E7F] text-[10px]">—</span>
+                          <span className="text-[#FF3E7F] text-[0.75rem]">—</span>
                           <span className="font-sans font-light text-[0.875rem] text-[rgba(240,240,240,0.60)]">
                             {f}
                           </span>
@@ -75,7 +83,7 @@ export default async function ServicesPage({ params }: Props) {
 
                     <Link
                       href={`/${locale}/quote?service=${SLUGS[key]}`}
-                      className="inline-flex items-center h-9 px-5 bg-[#FF3E7F] text-white font-mono text-[10px] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
+                      className="inline-flex items-center h-9 px-5 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
                     >
                       {t('cta')}
                     </Link>

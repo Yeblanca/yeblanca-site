@@ -50,7 +50,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
           </div>
           <Link
             href={`/${locale}/projects`}
-            className="hidden md:inline-flex font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+            className="hidden md:inline-flex font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
           >
             {t('projects_cta')} →
           </Link>
@@ -80,7 +80,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
                     <div className="flex-1 space-y-6 w-full">
                       {/* Number row */}
                       <div className="flex items-center gap-3">
-                        <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-[#FF3E7F]">
+                        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[#FF3E7F]">
                           {num}
                         </span>
                         <div className="flex-1 h-px bg-[#FF3E7F]" />
@@ -104,7 +104,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
                           {project.stack.slice(0, 4).map(({ tech }) => (
                             <span
                               key={tech}
-                              className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)]"
+                              className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)]"
                             >
                               {tech}
                             </span>
@@ -137,7 +137,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
         <div className="mt-12 md:hidden">
           <Link
             href={`/${locale}/projects`}
-            className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+            className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
           >
             {t('projects_cta')} →
           </Link>

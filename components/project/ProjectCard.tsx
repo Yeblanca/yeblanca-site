@@ -32,7 +32,7 @@ export function ProjectCard({ project, index = 0 }: { project: ProjectCardData; 
       {/* Index marker */}
       <div className="flex items-center gap-2 mb-5">
         <div className="w-4 h-px bg-[#FF3E7F] shrink-0" />
-        <span className="font-mono text-[11px] text-[rgba(240,240,240,0.40)] tracking-[0.10em]">
+        <span className="font-mono text-[0.75rem] text-[rgba(240,240,240,0.40)] tracking-[0.10em]">
           {num}
         </span>
       </div>
@@ -51,11 +51,11 @@ export function ProjectCard({ project, index = 0 }: { project: ProjectCardData; 
 
       {/* Meta */}
       <div className="flex items-center gap-2 mb-5">
-        <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.40)]">
+        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.40)]">
           {project.serviceType}
         </span>
         <span className="text-[rgba(240,240,240,0.20)]">·</span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.40)]">
+        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.40)]">
           {project.year}
         </span>
       </div>
@@ -66,7 +66,7 @@ export function ProjectCard({ project, index = 0 }: { project: ProjectCardData; 
           {project.stack.slice(0, 4).map(({ tech }) => (
             <span
               key={tech}
-              className="inline-flex items-center h-7 px-2.5 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[9px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)]"
+              className="inline-flex items-center h-7 px-2.5 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)]"
             >
               {tech}
             </span>

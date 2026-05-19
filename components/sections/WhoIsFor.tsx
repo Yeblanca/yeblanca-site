@@ -31,7 +31,7 @@ export function WhoIsFor() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Left column - eyebrow + title */}
           <div className="lg:col-span-5">
-            <span className="font-mono text-[10px] uppercase tracking-[0.20em] text-[rgba(240,240,240,0.35)] block mb-6">
+            <span className="font-mono text-[0.75rem] uppercase tracking-[0.20em] text-[rgba(240,240,240,0.35)] block mb-6">
               {translations.eyebrow}
             </span>
             <h2 className="font-sans font-medium text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] tracking-[-0.02em]">
@@ -57,7 +57,7 @@ export function WhoIsFor() {
             <div className="mt-12">
               <Link
                 href={`/${locale}/quote`}
-                className="inline-flex items-center font-mono text-[11px] uppercase tracking-[0.10em] text-[#FF3E7F] hover:text-[#ff5c8d] transition-colors group"
+                className="inline-flex items-center font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[#FF3E7F] hover:text-[#ff5c8d] transition-colors group"
               >
                 {translations.cta}
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>

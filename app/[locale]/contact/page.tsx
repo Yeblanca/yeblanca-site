@@ -45,14 +45,14 @@ export default function ContactPage() {
         </p>
 
         {status === 'success' ? (
-          <p className="font-mono text-[13px] text-[#FF3E7F] uppercase tracking-[0.10em]">
+          <p className="font-mono text-[0.8125rem] text-[#FF3E7F] uppercase tracking-[0.10em]">
             {t('success')}
           </p>
         ) : (
           <form onSubmit={handleSubmit} className="max-w-xl space-y-6">
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="contact-name" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+                <label htmlFor="contact-name" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
                   {t('name_label')}
                 </label>
                 <input
@@ -65,7 +65,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="contact-email" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+                <label htmlFor="contact-email" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
                   {t('email_label')}
                 </label>
                 <input
@@ -80,7 +80,7 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="contact-message" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+              <label htmlFor="contact-message" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
                 {t('message_label')}
               </label>
               <textarea
@@ -94,7 +94,7 @@ export default function ContactPage() {
             </div>
 
             <fieldset className="space-y-3 border-0 p-0 m-0">
-              <legend className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] mb-3">
+              <legend className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] mb-3">
                 {t('language_label')}
               </legend>
               <div role="radiogroup" aria-label={t('language_label')} className="flex gap-3">
@@ -105,7 +105,7 @@ export default function ContactPage() {
                     role="radio"
                     aria-checked={preferredLanguage === lang}
                     onClick={() => setPreferredLanguage(lang)}
-                    className={`h-9 px-4 rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] border-[0.5px] transition-colors ${
+                    className={`h-9 px-4 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] border-[0.5px] transition-colors ${
                       preferredLanguage === lang
                         ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
                         : 'border-[rgba(240,240,240,0.12)] text-[rgba(240,240,240,0.55)] hover:border-[rgba(240,240,240,0.30)]'
@@ -118,13 +118,13 @@ export default function ContactPage() {
             </fieldset>
 
             {status === 'error' && (
-              <p role="alert" className="font-mono text-[11px] text-[#FF3E7F]">{t('error')}</p>
+              <p role="alert" className="font-mono text-[0.75rem] text-[#FF3E7F]">{t('error')}</p>
             )}
 
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors disabled:opacity-50"
+              className="h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors disabled:opacity-50"
             >
               {status === 'submitting' ? t('submitting') : t('submit')}
             </button>

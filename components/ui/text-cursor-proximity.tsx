@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useCallback, useRef } from "react"
+import React, { useCallback, useRef, useEffect, useState } from "react"
 import { useAnimationFrame } from "motion/react"
 import { useMousePositionRef } from "@/hooks/use-mouse-position-ref"
 
@@ -30,6 +30,16 @@ export default function TextCursorProximity({
   const letterRefs = useRef<(HTMLSpanElement | null)[]>([])
   const mousePositionRef = useMousePositionRef(containerRef)
   const stylesRef = useRef(styles)
+
+  // Respect prefers-reduced-motion (WCAG 2.3.3)
+  const [reducedMotion, setReducedMotion] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setReducedMotion(mq.matches)
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
 
   // Keep styles ref updated
   stylesRef.current = styles
@@ -111,6 +121,7 @@ export default function TextCursorProximity({
 
   // Animation frame to update letter styles based on cursor proximity
   useAnimationFrame(() => {
+    if (reducedMotion) return
     if (!containerRef.current) return
 
     const containerRect = containerRef.current.getBoundingClientRect()
