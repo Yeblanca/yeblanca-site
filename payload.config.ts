@@ -11,7 +11,6 @@ import { Users } from './payload/collections/Users'
 import { Projects } from './payload/collections/Projects'
 import { Services } from './payload/collections/Services'
 import { Testimonials } from './payload/collections/Testimonials'
-import { Methodology } from './payload/collections/Methodology'
 import { Clients } from './payload/collections/Clients'
 import { Media } from './payload/collections/Media'
 import { SiteSettings } from './payload/globals/SiteSettings'
@@ -33,7 +32,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Projects, Services, Testimonials, Methodology, Clients, Media],
+  collections: [Users, Projects, Services, Testimonials, Clients, Media],
   globals: [SiteSettings],
   editor: lexicalEditor(),
   plugins: [
