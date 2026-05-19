@@ -33,7 +33,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]" />
 
       <div className="relative z-10 max-w-5xl mx-auto w-full" ref={containerRef}>
-        <SectionLabel label={t('hero_label')} />
+        <SectionLabel label={t('hero_eyebrow')} />
 
         <h1 className="font-sans font-bold text-[clamp(2.5rem,8vw,5rem)] leading-[1.05] tracking-[-0.03em] text-[#f0f0f0] mb-8">
           <TextCursorProximity
@@ -61,16 +61,16 @@ export function Hero() {
 
         <div className="flex flex-wrap gap-4">
           <Link
-            href={`/${locale}/projects`}
+            href={`/${locale}/services`}
             className="inline-flex items-center h-11 px-6 border border-[rgba(240,240,240,0.15)] text-[#f0f0f0] font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:border-[rgba(240,240,240,0.35)] transition-colors"
           >
-            {t('cta_work')}
+            {t('cta_services')}
           </Link>
           <Link
-            href={`/${locale}/quote`}
+            href={`/${locale}/projects`}
             className="inline-flex items-center h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[11px] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
           >
-            {t('cta_quote')}
+            {t('cta_projects')}
           </Link>
         </div>
       </div>

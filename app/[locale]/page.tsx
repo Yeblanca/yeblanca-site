@@ -1,6 +1,7 @@
 import { setRequestLocale } from 'next-intl/server'
 import Image from 'next/image'
 import { Hero } from '@/components/sections/Hero'
+import { WhoIsFor } from '@/components/sections/WhoIsFor'
 import { FeaturedProjects } from '@/components/sections/FeaturedProjects'
 import { ServicesTeaser } from '@/components/sections/ServicesTeaser'
 import { FinalCTA } from '@/components/sections/FinalCTA'
@@ -61,6 +62,8 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <Hero />
+
+      <WhoIsFor />
 
       {featuredProjects.length > 0 && (
         <FeaturedProjects projects={featuredProjects} />
