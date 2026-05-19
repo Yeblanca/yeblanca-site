@@ -93,15 +93,17 @@ export default function ContactPage() {
               />
             </div>
 
-            <div className="space-y-3">
-              <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+            <fieldset className="space-y-3 border-0 p-0 m-0">
+              <legend className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] mb-3">
                 {t('language_label')}
-              </p>
-              <div className="flex gap-3">
+              </legend>
+              <div role="radiogroup" aria-label={t('language_label')} className="flex gap-3">
                 {(['en', 'es'] as const).map((lang) => (
                   <button
                     key={lang}
                     type="button"
+                    role="radio"
+                    aria-checked={preferredLanguage === lang}
                     onClick={() => setPreferredLanguage(lang)}
                     className={`h-9 px-4 rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] border-[0.5px] transition-colors ${
                       preferredLanguage === lang
@@ -113,7 +115,7 @@ export default function ContactPage() {
                   </button>
                 ))}
               </div>
-            </div>
+            </fieldset>
 
             {status === 'error' && (
               <p role="alert" className="font-mono text-[11px] text-[#FF3E7F]">{t('error')}</p>

@@ -28,7 +28,7 @@ export function Footer() {
             <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)]">
               {t('tagline')}
             </p>
-            <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.30)]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.55)]">
               {t('location')}
             </p>
             </div>
@@ -36,7 +36,7 @@ export function Footer() {
 
           {/* Links */}
           <nav className="space-y-3">
-            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)]">
               {t('links_label')}
             </p>
             <ul className="space-y-1">
@@ -55,7 +55,7 @@ export function Footer() {
 
           {/* Social */}
           <div className="space-y-3">
-            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)]">
+            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)]">
               Social
             </p>
             <ul className="space-y-1">
@@ -85,7 +85,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-[rgba(240,240,240,0.08)]">
-          <p className="font-mono text-[10px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.30)]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.55)]">
             {t('legal')}
           </p>
         </div>

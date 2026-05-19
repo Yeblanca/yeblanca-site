@@ -148,8 +148,17 @@ export function Navbar() {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-[#0a0a0a]/95 backdrop-blur-md"
+          role="button"
+          tabIndex={0}
+          aria-label="Close menu"
+          className="absolute inset-0 bg-[#0a0a0a]/95 backdrop-blur-md cursor-pointer"
           onClick={() => setMobileOpen(false)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              setMobileOpen(false)
+            }
+          }}
         />
 
         {/* Menu Content */}

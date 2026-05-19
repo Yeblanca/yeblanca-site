@@ -24,6 +24,7 @@ export function Hero() {
         muted
         playsInline
         webkit-playsinline="true"
+        aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover opacity-40"
       >
         <source src="/images/3D_letter_Y_UI_202605121532.mp4" type="video/mp4" />

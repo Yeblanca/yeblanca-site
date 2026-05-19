@@ -86,7 +86,7 @@ export default async function CaseStudyPage({ params }: Props) {
       {nextProject && (
         <div className="px-6 py-16 border-t border-[rgba(240,240,240,0.08)]">
           <div className="max-w-5xl mx-auto flex items-center justify-between">
-            <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)]">
+            <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)]">
               {t('next_project')}
             </span>
             <Link

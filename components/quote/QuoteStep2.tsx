@@ -53,7 +53,7 @@ export function QuoteStep2({
           aria-required="true"
           className={`${inputClass} resize-none`}
         />
-        <p className="font-mono text-[10px] text-[rgba(240,240,240,0.25)] text-right">
+        <p className="font-mono text-[10px] text-[rgba(240,240,240,0.45)] text-right">
           {(data.description || '').length}/500
         </p>
       </div>

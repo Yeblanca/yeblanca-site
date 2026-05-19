@@ -7,7 +7,7 @@ const SERVICE_TYPES = ['web', 'ecommerce', 'system', 'consulting'] as const
 const BUDGETS = ['under1k', '1k3k', '3k8k', '8kplus', 'talk'] as const
 const TIMELINES = ['asap', '1to3', '3to6', 'flexible'] as const
 
-function OptionButton({
+function RadioOption({
   active,
   onClick,
   children,
@@ -19,6 +19,8 @@ function OptionButton({
   return (
     <button
       type="button"
+      role="radio"
+      aria-checked={active}
       onClick={onClick}
       className={`h-11 px-5 rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] border-[0.5px] transition-colors text-left ${
         active
@@ -28,6 +30,25 @@ function OptionButton({
     >
       {children}
     </button>
+  )
+}
+
+function OptionGroup({
+  label,
+  children,
+}: {
+  label: string
+  children: React.ReactNode
+}) {
+  return (
+    <fieldset className="space-y-4 border-0 p-0 m-0">
+      <legend className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] mb-4">
+        {label}
+      </legend>
+      <div role="radiogroup" aria-label={label} className="flex flex-wrap gap-3">
+        {children}
+      </div>
+    </fieldset>
   )
 }
 
@@ -46,59 +67,41 @@ export function QuoteStep1({
 
   return (
     <div className="space-y-10">
-      {/* Service type */}
-      <div className="space-y-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
-          {t('type_label')}
-        </p>
-        <div className="flex flex-wrap gap-3">
-          {SERVICE_TYPES.map((type) => (
-            <OptionButton
-              key={type}
-              active={data.serviceType === type}
-              onClick={() => onChange({ serviceType: type })}
-            >
-              {t(`type_${type}`)}
-            </OptionButton>
-          ))}
-        </div>
-      </div>
+      <OptionGroup label={t('type_label')}>
+        {SERVICE_TYPES.map((type) => (
+          <RadioOption
+            key={type}
+            active={data.serviceType === type}
+            onClick={() => onChange({ serviceType: type })}
+          >
+            {t(`type_${type}`)}
+          </RadioOption>
+        ))}
+      </OptionGroup>
 
-      {/* Budget */}
-      <div className="space-y-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
-          {t('budget_label')}
-        </p>
-        <div className="flex flex-wrap gap-3">
-          {BUDGETS.map((b) => (
-            <OptionButton
-              key={b}
-              active={data.budget === b}
-              onClick={() => onChange({ budget: b })}
-            >
-              {t(`budget_${b}`)}
-            </OptionButton>
-          ))}
-        </div>
-      </div>
+      <OptionGroup label={t('budget_label')}>
+        {BUDGETS.map((b) => (
+          <RadioOption
+            key={b}
+            active={data.budget === b}
+            onClick={() => onChange({ budget: b })}
+          >
+            {t(`budget_${b}`)}
+          </RadioOption>
+        ))}
+      </OptionGroup>
 
-      {/* Timeline */}
-      <div className="space-y-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
-          {t('timeline_label')}
-        </p>
-        <div className="flex flex-wrap gap-3">
-          {TIMELINES.map((tl) => (
-            <OptionButton
-              key={tl}
-              active={data.timeline === tl}
-              onClick={() => onChange({ timeline: tl })}
-            >
-              {t(`timeline_${tl}`)}
-            </OptionButton>
-          ))}
-        </div>
-      </div>
+      <OptionGroup label={t('timeline_label')}>
+        {TIMELINES.map((tl) => (
+          <RadioOption
+            key={tl}
+            active={data.timeline === tl}
+            onClick={() => onChange({ timeline: tl })}
+          >
+            {t(`timeline_${tl}`)}
+          </RadioOption>
+        ))}
+      </OptionGroup>
 
       <button
         type="button"

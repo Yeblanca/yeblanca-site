@@ -76,6 +76,14 @@ select:focus {
   box-shadow: none;
 }
 
+/* Visible focus indicator for links and buttons (WCAG 2.4.7) */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #ff3e7f;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* Light mode overrides — activated by removing .dark from <html> */
 html.light {
   --color-bg: #f5f5f5;

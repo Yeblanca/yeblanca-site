@@ -49,7 +49,7 @@ export function CaseStudyHero({
 
         <div className="flex flex-wrap items-center gap-6 mb-8">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)] mb-1">
+            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)] mb-1">
               Client
             </p>
             <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.75)]">
@@ -57,7 +57,7 @@ export function CaseStudyHero({
             </p>
           </div>
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)] mb-1">
+            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)] mb-1">
               Year
             </p>
             <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.75)]">

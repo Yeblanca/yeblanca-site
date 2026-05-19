@@ -46,7 +46,7 @@ export default async function ServicesPage({ params }: Props) {
                   <div className="flex items-center gap-4 shrink-0">
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-px bg-[#FF3E7F]" />
-                      <span className="font-mono text-[11px] text-[rgba(240,240,240,0.30)] tracking-[0.10em]">
+                      <span className="font-mono text-[11px] text-[rgba(240,240,240,0.55)] tracking-[0.10em]">
                         {String(i + 1).padStart(2, '0')}
                       </span>
                     </div>

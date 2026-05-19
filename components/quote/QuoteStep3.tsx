@@ -9,7 +9,7 @@ const inputClass =
 const LANGUAGES = ['en', 'es'] as const
 const SOURCES = ['google', 'referral', 'social', 'other'] as const
 
-function OptionButton({
+function RadioOption({
   active,
   onClick,
   children,
@@ -21,6 +21,8 @@ function OptionButton({
   return (
     <button
       type="button"
+      role="radio"
+      aria-checked={active}
       onClick={onClick}
       className={`h-9 px-4 rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] border-[0.5px] transition-colors ${
         active
@@ -30,6 +32,25 @@ function OptionButton({
     >
       {children}
     </button>
+  )
+}
+
+function OptionGroup({
+  label,
+  children,
+}: {
+  label: string
+  children: React.ReactNode
+}) {
+  return (
+    <fieldset className="space-y-3 border-0 p-0 m-0">
+      <legend className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] mb-3">
+        {label}
+      </legend>
+      <div role="radiogroup" aria-label={label} className="flex flex-wrap gap-3">
+        {children}
+      </div>
+    </fieldset>
   )
 }
 
@@ -96,39 +117,33 @@ export function QuoteStep3({
         />
       </div>
 
-      <div className="space-y-3">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
-          {t('language_label')}
-        </p>
+      <OptionGroup label={t('language_label')}>
         <div className="flex gap-3">
           {LANGUAGES.map((lang) => (
-            <OptionButton
+            <RadioOption
               key={lang}
               active={data.preferredLanguage === lang}
               onClick={() => onChange({ preferredLanguage: lang })}
             >
               {t(`language_${lang}`)}
-            </OptionButton>
+            </RadioOption>
           ))}
         </div>
-      </div>
+      </OptionGroup>
 
-      <div className="space-y-3">
-        <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
-          {t('source_label')}
-        </p>
+      <OptionGroup label={t('source_label')}>
         <div className="flex flex-wrap gap-3">
           {SOURCES.map((src) => (
-            <OptionButton
+            <RadioOption
               key={src}
               active={data.source === src}
               onClick={() => onChange({ source: src })}
             >
               {t(`source_${src}`)}
-            </OptionButton>
+            </RadioOption>
           ))}
         </div>
-      </div>
+      </OptionGroup>
 
       <div className="flex gap-4">
         <button

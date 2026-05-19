@@ -6,6 +6,7 @@ import { FeaturedProjects } from '@/components/sections/FeaturedProjects'
 import { ServicesTeaser } from '@/components/sections/ServicesTeaser'
 import { FinalCTA } from '@/components/sections/FinalCTA'
 import { getPayloadClient } from '@/lib/payload'
+import {TextQuoteIcon} from "lucide-react";
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -138,7 +139,7 @@ export default async function HomePage({ params }: Props) {
       {featuredTestimonial && (
         <section className="py-32 px-6 bg-[#0a0a0a]">
           <div className="max-w-4xl mx-auto">
-            <span className="material-symbols-outlined text-[#ff3e7f] text-6xl mb-8" data-icon="format_quote">format_quote</span>
+            <span className="material-symbols-outlined text-[#ff3e7f] text-6xl mb-8" aria-hidden="true" data-icon="format_quote">  </span>
             <blockquote className="font-display text-[#f0f0f0] italic uppercase leading-tight">
               "{locale === 'es' && featuredTestimonial.textEs ? featuredTestimonial.textEs : featuredTestimonial.textEn}"
             </blockquote>
