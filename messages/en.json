@@ -57,6 +57,29 @@
     "methodology_phase4_title": "Phase 04 — Ship",
     "methodology_phase4_body": "Deployed, documented, and handed off on your terms, at the tier you chose.",
 
+    "methodology_timeline": [
+      {
+        "label": "PHASE_001",
+        "title": "DISCOVERY",
+        "description": "Deep immersion into brand DNA and technical constraints. We define the scope, goals, and parameters of the digital ecosystem before writing a single line of code."
+      },
+      {
+        "label": "PHASE_002",
+        "title": "DESIGN",
+        "description": "Iterative construction of the visual and structural language. Every pixel has weight and purpose. We review each decision with you before moving forward."
+      },
+      {
+        "label": "PHASE_003",
+        "title": "DEVELOPMENT",
+        "description": "Meticulous translation of pixels into performant code. We build the silent engine of the experience: clean, strict, zero shortcuts, designed to last."
+      },
+      {
+        "label": "PHASE_004",
+        "title": "LAUNCH",
+        "description": "Final optimization and deployment to the global stage. The signal is sent. We polish, document, and hand off on your terms, at the tier you chose."
+      }
+    ],
+
     "nfe_headline": "yeblanca is not for everyone.",
     "nfe_body": "If you need a website in 48 hours, we're not it.\n\nIf your budget is $300 and your expectations are enterprise, we're not it.\n\nIf you want a vendor you can ignore and everything still works forever, nobody is that.\n\nBut if you want a system built for your actual workflow, a partner who speaks plainly, and software you won't outgrow in two years, that's exactly what we do.",
 
@@ -120,7 +143,13 @@
       "Performance audits",
       "Team onboarding",
       "Code review & mentoring"
-    ]
+    ],
+
+    "from": "from",
+    "web_starting_price": "$2,000",
+    "ecommerce_starting_price": "$5,000",
+    "system_starting_price": "$8,000",
+    "consulting_starting_price": "$1,500"
   },
   "services_landing": {
     "intro": "Each service has its own page with deeper breakdowns, case studies, tech rationale, and a scoped quote form.",
