@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import type { QuoteFormData } from './QuoteForm'
 
 const inputClass =
-  'w-full bg-transparent border-[0.5px] border-[rgba(240,240,240,0.15)] rounded-[2px] px-4 py-3 font-sans font-light text-[1rem] text-[#f0f0f0] placeholder:text-[rgba(240,240,240,0.25)] focus:outline-none focus:border-[#FF3E7F] transition-colors'
+  'w-full bg-transparent border-[0.5px] border-[rgba(240,240,240,0.15)] rounded-[2px] px-4 py-3 font-sans font-light text-[1rem] text-[#f0f0f0] placeholder:text-[rgba(240,240,240,0.45)] focus:outline-none focus:border-[#FF3E7F] transition-colors'
 
 const LANGUAGES = ['en', 'es'] as const
 const SOURCES = ['google', 'referral', 'social', 'other'] as const
@@ -55,25 +55,29 @@ export function QuoteStep3({
       <div className="grid sm:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label htmlFor="quote-contact-name" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
-            {t('name_label')}
+            {t('name_label')} <span aria-hidden="true">*</span>
           </label>
           <input
             id="quote-contact-name"
             type="text"
             value={data.name || ''}
             onChange={(e) => onChange({ name: e.target.value })}
+            required
+            aria-required="true"
             className={inputClass}
           />
         </div>
         <div className="space-y-2">
           <label htmlFor="quote-contact-email" className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
-            {t('email_label')}
+            {t('email_label')} <span aria-hidden="true">*</span>
           </label>
           <input
             id="quote-contact-email"
             type="email"
             value={data.email || ''}
             onChange={(e) => onChange({ email: e.target.value })}
+            required
+            aria-required="true"
             className={inputClass}
           />
         </div>

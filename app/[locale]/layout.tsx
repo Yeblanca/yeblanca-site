@@ -10,6 +10,7 @@ import '../../globals.css'
 
 import { routing } from '@/i18n/routing'
 import { Providers } from '@/components/Providers'
+import { SkipLink } from '@/components/layout/SkipLink'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 
@@ -79,8 +80,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Providers>
+            <SkipLink />
             <Navbar />
-            <main>{children}</main>
+            <main id="main-content">{children}</main>
             <Footer />
           </Providers>
         </NextIntlClientProvider>

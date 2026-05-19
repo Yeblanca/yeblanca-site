@@ -106,7 +106,14 @@ export function QuoteForm({ preselectedService }: { preselectedService?: string 
       </h1>
 
       {/* Progress bar */}
-      <div className="flex gap-1 mb-12">
+      <div
+        role="progressbar"
+        aria-valuenow={step}
+        aria-valuemin={1}
+        aria-valuemax={3}
+        aria-label={`Step ${step} of 3`}
+        className="flex gap-1 mb-12"
+      >
         {([1, 2, 3] as const).map((s) => (
           <div
             key={s}
@@ -139,7 +146,7 @@ export function QuoteForm({ preselectedService }: { preselectedService?: string 
       )}
 
       {error && (
-        <p className="mt-4 font-mono text-[11px] text-[#FF3E7F]">{error}</p>
+        <p role="alert" className="mt-4 font-mono text-[11px] text-[#FF3E7F]">{error}</p>
       )}
     </div>
   )
