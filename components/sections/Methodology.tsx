@@ -11,9 +11,10 @@ interface MethodologyPhase {
 
 interface MethodologyProps {
   phases: MethodologyPhase[]
+  headline?: string
 }
 
-export function Methodology({ phases }: MethodologyProps) {
+export function Methodology({ phases, headline = 'Methodology' }: MethodologyProps) {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -41,7 +42,7 @@ export function Methodology({ phases }: MethodologyProps) {
     <section
       ref={sectionRef}
       aria-labelledby="methodology-heading"
-      className="py-32 overflow-hidden bg-[#0a0a0a] relative"
+      className="py-16 md:py-32 overflow-hidden bg-[#0a0a0a] relative"
     >
       {/* Diferenciador: Dots pattern - REDUCIDO 50% */}
       <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true">
@@ -78,7 +79,7 @@ export function Methodology({ phases }: MethodologyProps) {
       <div className="px-6 md:px-24 max-w-6xl mx-auto relative z-10">
         {/* Section header */}
         <div
-          className={`flex items-center gap-4 mb-24 transition-all duration-200 ease-out ${
+          className={`flex items-center gap-4 mb-16 md:mb-24 transition-all duration-200 ease-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
@@ -87,7 +88,7 @@ export function Methodology({ phases }: MethodologyProps) {
             id="methodology-heading"
             className="font-mono text-[11px] tracking-[0.2em] uppercase text-[rgba(240,240,240,0.5)]"
           >
-            Methodology
+            {headline}
           </h2>
         </div>
 
@@ -96,7 +97,7 @@ export function Methodology({ phases }: MethodologyProps) {
           {/* Central vertical line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-[rgba(255,62,127,0.15)] -translate-x-1/2 hidden md:block" />
 
-          <div className="space-y-24 md:space-y-32">
+          <div className="space-y-16 md:space-y-32">
             {phases.map((phase, index) => (
               <PhaseCard
                 key={index}

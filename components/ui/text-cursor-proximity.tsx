@@ -1,8 +1,9 @@
 "use client"
 
-import React, { useCallback, useRef, useEffect, useState } from "react"
+import React, { useCallback, useRef } from "react"
 import { useAnimationFrame } from "motion/react"
 import { useMousePositionRef } from "@/hooks/use-mouse-position-ref"
+import { useReducedMotion } from "@/hooks/use-reduced-motion"
 
 interface TextProps extends React.HTMLAttributes<HTMLSpanElement> {
   label: string
@@ -32,14 +33,7 @@ export default function TextCursorProximity({
   const stylesRef = useRef(styles)
 
   // Respect prefers-reduced-motion (WCAG 2.3.3)
-  const [reducedMotion, setReducedMotion] = useState(false)
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setReducedMotion(mq.matches)
-    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches)
-    mq.addEventListener('change', handler)
-    return () => mq.removeEventListener('change', handler)
-  }, [])
+  const reducedMotion = useReducedMotion()
 
   // Keep styles ref updated
   stylesRef.current = styles

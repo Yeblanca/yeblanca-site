@@ -75,7 +75,7 @@ export function WhoIsFor() {
               {translations.body.split('\n\n').map((paragraph, index) => (
                 <p 
                   key={index} 
-                  className="font-sans text-[1rem] md:text-[1.125rem] leading-[1.75] text-[rgba(240,240,240,0.72)]"
+                  className="font-sans text-[1.125rem] md:text-[1.25rem] leading-[1.75] text-[rgba(240,240,240,0.72)]"
                 >
                   {paragraph}
                 </p>

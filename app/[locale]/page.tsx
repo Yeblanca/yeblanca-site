@@ -74,7 +74,7 @@ export default async function HomePage({ params }: Props) {
 
       <ServicesTeaser />
 
-      <Methodology phases={methodologyTimeline} />
+      <Methodology phases={methodologyTimeline} headline={t('methodology_headline')} />
 
       <TestimonialSection testimonial={featuredTestimonial} locale={locale} />
 

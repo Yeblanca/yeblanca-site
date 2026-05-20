@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { Globe, ShoppingBag, Layers, Compass, ArrowUpRight } from 'lucide-react'
@@ -30,15 +32,15 @@ export function ServicesTeaser() {
   const locale = useLocale()
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-[var(--color-bg)]">
+    <section className="py-24 md:py-32 px-6 bg-[#0a0a0a]">
       <div className="max-w-5xl mx-auto">
         <SectionLabel label={t('services_label')} />
 
-        <h2 className="font-sans font-medium text-2xl md:text-[2.5rem] tracking-tight text-[var(--color-fg)] leading-[1.15] mb-12 max-w-2xl">
+        <h2 className="font-sans font-medium text-2xl md:text-[2.5rem] tracking-tight text-[#f0f0f0] leading-[1.15] mb-12 max-w-2xl">
           {t('services_heading')}
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {SERVICES.map(({ key, index }) => {
             const Icon = ICONS[key]
             const title = ts(`${key}_title`)
@@ -49,7 +51,7 @@ export function ServicesTeaser() {
               <Link
                 key={key}
                 href={`/${locale}/services`}
-                className="group relative flex flex-col p-8 lg:p-10 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] hover:border-[#FF3E7F]/40 hover:bg-[var(--color-surface)]/50 transition-all duration-300 ease-out min-h-[340px] lg:min-h-[360px]"
+                className="group relative flex flex-col p-6 md:p-8 lg:p-10 rounded-lg border border-[rgba(240,240,240,0.08)] bg-[#0a0a0a] hover:border-[#FF3E7F]/40 hover:bg-[#111111]/50 transition-all duration-300 ease-out min-h-[280px] md:min-h-[340px] lg:min-h-[360px]"
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 bg-gradient-to-br from-[#FF3E7F]/5 to-transparent" />
@@ -61,31 +63,31 @@ export function ServicesTeaser() {
                   </div>
                   <ArrowUpRight
                     size={16}
-                    className="text-[var(--color-muted)] -translate-x-1 -translate-y-1 opacity-0 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                    className="text-[rgba(240,240,240,0.65)] -translate-x-1 -translate-y-1 opacity-0 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
                   />
                 </div>
 
                 {/* Index */}
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-3 h-px bg-[#FF3E7F]" />
-                  <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-[var(--color-muted)] group-hover:text-[#FF3E7F] transition-colors duration-200">
+                  <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-[rgba(240,240,240,0.65)] group-hover:text-[#FF3E7F] transition-colors duration-200">
                     {index}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-sans font-medium text-[15px] tracking-tight text-[var(--color-fg)] mb-2">
+                <h3 className="font-sans font-medium text-[15px] tracking-tight text-[#f0f0f0] mb-2">
                   {title}
                 </h3>
 
                 {/* Description */}
-                <p className="font-sans text-[13px] leading-relaxed text-[var(--color-muted)] flex-1 group-hover:text-[var(--color-fg)]/80 transition-colors duration-200 whitespace-pre-line">
+                <p className="font-sans text-[14px] leading-relaxed text-[rgba(240,240,240,0.65)] flex-1 group-hover:text-[rgba(240,240,240,0.85)] transition-colors duration-200 whitespace-pre-line">
                   {tagline}
                 </p>
 
                 {/* Price */}
-                <div className="mt-5 pt-4 border-t border-[var(--color-border)]/60">
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[var(--color-muted)]">
+                <div className="mt-5 pt-4 border-t border-[rgba(240,240,240,0.08)]/60">
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[rgba(240,240,240,0.65)]">
                     {ts('from')}{' '}
                     <span className="text-[#FF3E7F] font-medium">{price}</span>
                   </span>

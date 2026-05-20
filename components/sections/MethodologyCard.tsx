@@ -55,7 +55,7 @@ export function PhaseCard({ phase, alignment, isVisible, delay }: PhaseCardProps
             <h4 className="relative font-sans font-medium text-[1.5rem] md:text-[2rem] tracking-tight uppercase text-[#f0f0f0] mb-3 leading-none">
               {phase.title}
             </h4>
-            <p className="relative font-sans text-[13px] leading-[1.6] text-[rgba(240,240,240,0.4)] max-w-sm">
+            <p className="relative font-sans text-[14px] leading-[1.6] text-[rgba(240,240,240,0.4)] max-w-sm">
               {phase.description}
             </p>
 
@@ -107,7 +107,7 @@ export function PhaseCard({ phase, alignment, isVisible, delay }: PhaseCardProps
             <h4 className="relative font-sans font-medium text-[1.5rem] md:text-[2rem] tracking-tight uppercase text-[#f0f0f0] mb-3 leading-none">
               {phase.title}
             </h4>
-            <p className="relative font-sans text-[13px] leading-[1.6] text-[rgba(240,240,240,0.4)] max-w-sm">
+            <p className="relative font-sans text-[14px] leading-[1.6] text-[rgba(240,240,240,0.4)] max-w-sm">
               {phase.description}
             </p>
 
