@@ -702,52 +702,6 @@ const services: ServiceSeed[] = [
   },
 ]
 
-// ─── Methodology ─────────────────────────────────────────────────────────────
-
-interface MethodologySeed {
-  phase: string
-  titleEn: string
-  titleEs: string
-  descriptionEn: string
-  descriptionEs: string
-  order: number
-}
-
-const methodologyPhases: MethodologySeed[] = [
-  {
-    phase: '01',
-    titleEn: 'DISCOVERY',
-    titleEs: 'DESCUBRIMIENTO',
-    descriptionEn: 'Deep immersion into brand DNA and technical constraints.',
-    descriptionEs: 'Inmersión profunda en el ADN de la marca y las restricciones técnicas.',
-    order: 1,
-  },
-  {
-    phase: '02',
-    titleEn: 'DESIGN',
-    titleEs: 'DISEÑO',
-    descriptionEn: 'Iterative construction of the visual and structural language.',
-    descriptionEs: 'Construcción iterativa del lenguaje visual y estructural.',
-    order: 2,
-  },
-  {
-    phase: '03',
-    titleEn: 'DEV',
-    titleEs: 'DESARROLLO',
-    descriptionEn: 'Meticulous translation of pixels into performant code.',
-    descriptionEs: 'Traducción meticulosa de píxeles a código de alto rendimiento.',
-    order: 3,
-  },
-  {
-    phase: '04',
-    titleEn: 'LAUNCH',
-    titleEs: 'LANZAMIENTO',
-    descriptionEn: 'Final optimization and deployment to the global stage.',
-    descriptionEs: 'Optimización final y despliegue al escenario global.',
-    order: 4,
-  },
-]
-
 // ─── Clients ─────────────────────────────────────────────────────────────────
 
 interface ClientSeed {
@@ -851,32 +805,6 @@ async function seed() {
       console.log(`  ✅ Created: ${service.slug}`)
     } catch (err) {
       console.error(`  ❌ Failed: ${service.slug}`, err)
-    }
-  }
-
-  // ── Methodology ────────────────────────────────────────────────────────────
-  console.log('\n📋 Seeding methodology phases…')
-
-  for (const phase of methodologyPhases) {
-    try {
-      const existing = await payloadInstance.find({
-        collection: 'methodology',
-        where: { phase: { equals: phase.phase } },
-        limit: 1,
-      })
-
-      if (existing.docs.length > 0) {
-        console.log(`  ⏭  Skipped (exists): Phase ${phase.phase}`)
-        continue
-      }
-
-      await payloadInstance.create({
-        collection: 'methodology',
-        data: phase as any,
-      })
-      console.log(`  ✅ Created: Phase ${phase.phase} - ${phase.titleEn}`)
-    } catch (err) {
-      console.error(`  ❌ Failed: Phase ${phase.phase}`, err)
     }
   }
 
@@ -1003,7 +931,6 @@ async function seed() {
   console.log('\n✨ Seed complete.\n')
   console.log(`   Projects: ${projects.length} (${projects.filter((p) => p.featured).length} featured)`)
   console.log(`   Services: ${services.length}`)
-  console.log(`   Methodology: ${methodologyPhases.length} phases`)
   console.log(`   Clients: ${clients.length} (${clients.filter((c) => c.featured).length} featured)`)
   console.log(`   Testimonials: ${testimonials.length} (${testimonials.filter((t) => t.featured).length} featured)`)
   console.log('\n')

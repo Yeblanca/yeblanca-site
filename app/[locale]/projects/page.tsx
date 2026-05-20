@@ -1,7 +1,15 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { ProjectFilters } from '@/components/project/ProjectFilters'
 import { getPayloadClient } from '@/lib/payload'
+
+export function generateMetadata(): Metadata {
+  return {
+    title: 'Projects — yeblanca',
+    description: 'Cross-border web development projects. From local business sites to full operations systems.',
+  }
+}
 
 type Props = { params: Promise<{ locale: string }> }
 

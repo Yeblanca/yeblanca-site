@@ -49,15 +49,15 @@ export function ProjectFilters({ projects }: { projects: ProjectCardData[] }) {
   }) {
     return (
       <div className="flex items-center gap-2 flex-wrap">
-        <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)] mr-1">
+        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)] mr-1">
           {label}
         </span>
         <button
           onClick={() => onChange('all')}
-          className={`h-8 px-3 rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
+          className={`h-8 px-3 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
             active === 'all'
               ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
-              : 'border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.40)] hover:border-[rgba(240,240,240,0.25)]'
+              : 'border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.65)] hover:border-[rgba(240,240,240,0.25)]'
           }`}
         >
           {t('filter_all')}
@@ -66,10 +66,10 @@ export function ProjectFilters({ projects }: { projects: ProjectCardData[] }) {
           <button
             key={v}
             onClick={() => onChange(v)}
-            className={`h-8 px-3 rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
+            className={`h-8 px-3 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
               active === v
                 ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
-                : 'border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.40)] hover:border-[rgba(240,240,240,0.25)]'
+                : 'border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.65)] hover:border-[rgba(240,240,240,0.25)]'
             }`}
           >
             {v}
@@ -99,7 +99,7 @@ export function ProjectFilters({ projects }: { projects: ProjectCardData[] }) {
 
       {/* Grid */}
       {filtered.length === 0 ? (
-        <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)] py-16 text-center">
+        <p className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)] py-16 text-center">
           {t('no_results')}
         </p>
       ) : (

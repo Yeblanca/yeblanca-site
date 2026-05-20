@@ -49,7 +49,7 @@ export function CaseStudyHero({
 
         <div className="flex flex-wrap items-center gap-6 mb-8">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)] mb-1">
+            <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)] mb-1">
               Client
             </p>
             <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.75)]">
@@ -57,7 +57,7 @@ export function CaseStudyHero({
             </p>
           </div>
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)] mb-1">
+            <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)] mb-1">
               Year
             </p>
             <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.75)]">
@@ -72,7 +72,7 @@ export function CaseStudyHero({
             {stack.map(({ tech }) => (
               <span
                 key={tech}
-                className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.50)]"
+                className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.50)]"
               >
                 {tech}
               </span>
@@ -85,7 +85,7 @@ export function CaseStudyHero({
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 h-9 px-5 border border-[rgba(240,240,240,0.15)] rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(240,240,240,0.60)] hover:border-[#FF3E7F] hover:text-[#FF3E7F] transition-colors"
+            className="inline-flex items-center gap-2 h-9 px-5 border border-[rgba(240,240,240,0.15)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] text-[rgba(240,240,240,0.60)] hover:border-[#FF3E7F] hover:text-[#FF3E7F] transition-colors"
           >
             <ExternalLink size={12} />
             {t('view_live')}

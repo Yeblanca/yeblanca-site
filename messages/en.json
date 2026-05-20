@@ -1,4 +1,7 @@
 {
+  "common": {
+    "skip_to_main": "Skip to main content"
+  },
   "nav": {
     "projects": "Projects",
     "services": "Services",
@@ -7,21 +10,83 @@
     "quote": "Get a quote"
   },
   "home": {
-    "hero_label": "Cross-border web agency",
-    "hero_headline": "We build systems\nthat go to production.",
-    "hero_sub": "Custom web development from Piedras Negras, México. Bilingual. Built for markets on both sides of the border.",
-    "cta_work": "See our work",
-    "cta_quote": "Get a quote",
+"hero_eyebrow": "Coahuila — Texas — Everywhere",
+    "hero_headline": "Your system.\nYour rules.\nYour pace.",
+    "hero_sub": "Whether you're building your first digital presence or replacing a system that stopped working, we engineer it, we run it, and you control it.\n\nNo agencies. No middlemen. No platform fees eating your margin.",
+    "cta_services": "See how we work →",
+    "cta_projects": "View projects",
+
     "projects_label": "Selected work",
     "projects_heading": "Projects we're proud of",
     "projects_cta": "View all projects",
-    "services_label": "What we do",
-    "services_heading": "Full-stack development, end to end",
-    "proof_label": "Clients",
+
+    "services_label": "What we build",
+    "services_heading": "From your first page on the internet to a full operations system, we scope, build, and ship.",
+
+    "who_headline": "Sound familiar?",
+    "who_body": "Maybe you've never had a website and you're not sure where to start.\n\nMaybe you have one, and it's not doing anything for the business.\n\nMaybe you're running your operation on spreadsheets, WhatsApp, and willpower, and you know there's a better way, but you're not sure what to ask for.\n\nMaybe you've outgrown Shopify, Wix, or whatever someone set up for you three years ago.\n\nAny of those is a good place to start. We've been there with clients at every stage.",
+    "who_cta": "Tell us where you are →",
+
+    "services_label": "What we build",
+    "services_heading": "From your first page on the internet to a full operations system, we scope, build, and ship.",
+
+    "delivery_intro": "Every project is different.\nSo is every delivery.\n\nNot every business needs to own the engine to drive the car.\n\nWe offer three ways to work with us, based on how much control you want over what's under the hood.",
+
+    "delivery_hosted_title": "Hosted",
+    "delivery_hosted_body": "We run it. You use it.\n\nYour system is live, maintained, and fully operational. You get admin access, training, and a dashboard built for your workflow, not for developers. We handle everything below the surface.",
+    "delivery_hosted_best": "Best for: local businesses, first-time digital clients, teams without in-house tech.",
+
+    "delivery_managed_title": "Managed",
+    "delivery_managed_body": "More visibility. Same reliability.\n\nEverything in Hosted, plus expanded access: technical documentation, deeper control panels, and priority support. You see more of what's happening, without needing to manage it yourself.",
+    "delivery_managed_best": "Best for: growing businesses that want transparency without the technical overhead.",
+
+    "delivery_architect_title": "Architect",
+    "delivery_architect_body": "Full release. Total ownership.\n\nComplete source code, repository access, full technical documentation, and a structured handoff. You own every line, deploy it anywhere, with anyone, forever.",
+    "delivery_architect_best": "Best for: companies with in-house dev teams, technical founders, or businesses that want zero dependency on any vendor, including us.",
+
+    "delivery_cta": "Not sure which fits? That's what the first conversation is for.",
+
+    "methodology_headline": "How we work",
+    "methodology_intro": "No status meetings. No agency layers. The engineer who scoped your project is the one building it.",
+    "methodology_phase1_title": "Phase 01 — Discovery",
+    "methodology_phase1_body": "We learn your business before we write a single line of code. What you actually need, not what you asked for on day one.",
+    "methodology_phase2_title": "Phase 02 — Design",
+    "methodology_phase2_body": "Structure first, aesthetics second. Everything is reviewed with you before it moves forward.",
+    "methodology_phase3_title": "Phase 03 — Build",
+    "methodology_phase3_body": "Clean code, strict TypeScript, zero shortcuts. Built to last, not built to be replaced in 18 months.",
+    "methodology_phase4_title": "Phase 04 — Ship",
+    "methodology_phase4_body": "Deployed, documented, and handed off on your terms, at the tier you chose.",
+
+    "methodology_timeline": [
+      {
+        "label": "PHASE_001",
+        "title": "DISCOVERY",
+        "description": "Deep immersion into brand DNA and technical constraints. We define the scope, goals, and parameters of the digital ecosystem before writing a single line of code."
+      },
+      {
+        "label": "PHASE_002",
+        "title": "DESIGN",
+        "description": "Iterative construction of the visual and structural language. Every pixel has weight and purpose. We review each decision with you before moving forward."
+      },
+      {
+        "label": "PHASE_003",
+        "title": "DEVELOPMENT",
+        "description": "Meticulous translation of pixels into performant code. We build the silent engine of the experience: clean, strict, zero shortcuts, designed to last."
+      },
+      {
+        "label": "PHASE_004",
+        "title": "LAUNCH",
+        "description": "Final optimization and deployment to the global stage. The signal is sent. We polish, document, and hand off on your terms, at the tier you chose."
+      }
+    ],
+
+    "nfe_headline": "yeblanca is not for everyone.",
+    "nfe_body": "If you need a website in 48 hours, we're not it.\n\nIf your budget is $300 and your expectations are enterprise, we're not it.\n\nIf you want a vendor you can ignore and everything still works forever, nobody is that.\n\nBut if you want a system built for your actual workflow, a partner who speaks plainly, and software you won't outgrow in two years, that's exactly what we do.",
+
     "final_cta_label": "Ready to build?",
-    "final_cta_heading": "Let's build something.",
-    "final_cta_sub": "From landing pages to full enterprise systems. We scope, build, and ship — no hand-holding required.",
-    "final_cta_button": "Start a project"
+    "final_cta_heading": "You've outgrown\nthe off-the-shelf solution.",
+    "final_cta_sub": "Whether it's a system that doesn't fit your workflow, a platform eating your margins, or a project you need built from scratch, this is where that conversation starts.\n\nNo commitment. No technical background required. Just tell us where you are.",
+    "final_cta_button": "Start a project →"
   },
   "projects": {
     "page_label": "Portfolio",
@@ -37,108 +102,115 @@
   "services": {
     "page_label": "Services",
     "page_heading": "What we build",
-    "page_sub": "From a marketing site to a full ERP — we scope, design, and ship.",
+    "page_sub": "From your first page on the internet to a full operations system, we scope, build, and ship.",
     "cta": "Start a project",
+
     "web_title": "Web Development",
-    "web_tagline": "Corporate sites, landing pages, CMS-driven, bilingual.",
+    "web_tagline": "Bilingual sites.\nFast. Structured.\nBuilt to rank.",
     "web_features": [
       "Next.js + Payload CMS",
-      "Bilingual from day one (EN/ES)",
-      "Mobile-first, performance-optimized",
-      "SEO-ready architecture",
-      "Custom design systems"
+      "EN/ES from day one",
+      "Mobile-first",
+      "SEO architecture",
+      "Custom design system"
     ],
+
     "ecommerce_title": "E-commerce",
-    "ecommerce_tagline": "Custom storefronts built to sell.",
+    "ecommerce_tagline": "0% transaction fees.\nOpen source.\nYours forever.",
     "ecommerce_features": [
       "MedusaJS or Shopify headless",
-      "Stripe & OXXO payment integration",
-      "Inventory & logistics management",
-      "Custom checkout flows",
-      "Product search with Meilisearch"
+      "Stripe & OXXO payments",
+      "Inventory management",
+      "Custom checkout",
+      "Product search"
     ],
+
     "system_title": "Custom Systems",
-    "system_tagline": "CRMs, ERPs, booking platforms, internal tools.",
+    "system_tagline": "What you run in a notebook,\nin a system.\nWithout touching code.",
     "system_features": [
       "Full-stack TypeScript",
-      "Role-based access control",
+      "Role-based access",
       "Third-party API integrations",
       "Real-time dashboards",
-      "Mobile PWA support"
+      "PWA support"
     ],
+
     "consulting_title": "Consulting & Strategy",
-    "consulting_tagline": "Digital strategy, tech audits, team mentoring.",
+    "consulting_tagline": "Architecture that explains itself.\nDocumentation your team actually uses.\nNo agency in the middle.",
     "consulting_features": [
-      "Tech stack selection",
+      "Stack selection",
       "Architecture review",
       "Performance audits",
       "Team onboarding",
       "Code review & mentoring"
-    ]
+    ],
+
+    "from": "from",
+    "web_starting_price": "$2,000",
+    "ecommerce_starting_price": "$5,000",
+    "system_starting_price": "$8,000",
+    "consulting_starting_price": "$1,500"
+  },
+  "services_landing": {
+    "intro": "Each service has its own page with deeper breakdowns, case studies, tech rationale, and a scoped quote form.",
+    "comparison_title": "yeblanca vs. typical agency vs. DIY platforms",
+    "cta": "Start a project →"
+  },
+  "services_detail": {
+    "web": {
+      "description": "Deeper breakdown for web development, case studies, tech rationale, and a scoped quote form.",
+      "cta": "Request a quote for your web project →"
+    },
+    "ecommerce": {
+      "description": "Deeper breakdown for e-commerce, case studies, tech rationale, and a scoped quote form.",
+      "cta": "Request a quote for your e-commerce project →"
+    },
+    "system": {
+      "description": "Deeper breakdown for custom systems, case studies, tech rationale, and a scoped quote form.",
+      "cta": "Request a quote for your custom system →"
+    },
+    "consulting": {
+      "description": "Deeper breakdown for consulting, case studies, tech rationale, and a scoped quote form.",
+      "cta": "Request a quote for consulting →"
+    }
   },
   "quote": {
     "page_label": "Start a project",
-    "page_heading": "Get a quote",
-    "step1_label": "Step 1 of 3",
-    "step1_title": "What are you building?",
-    "step2_label": "Step 2 of 3",
-    "step2_title": "Tell us more",
-    "step3_label": "Step 3 of 3",
-    "step3_title": "How do we reach you?",
-    "type_label": "Service type",
-    "type_web": "Web site",
-    "type_ecommerce": "E-commerce",
-    "type_system": "Custom system",
-    "type_consulting": "Consulting",
-    "budget_label": "Budget range",
-    "budget_under1k": "Under $1,000",
-    "budget_1k3k": "$1,000 – $3,000",
-    "budget_3k8k": "$3,000 – $8,000",
-    "budget_8kplus": "$8,000+",
-    "budget_talk": "Let's talk",
-    "timeline_label": "Timeline",
-    "timeline_asap": "ASAP",
-    "timeline_1to3": "1 – 3 months",
-    "timeline_3to6": "3 – 6 months",
-    "timeline_flexible": "Flexible",
-    "project_name_label": "Project name",
-    "project_name_placeholder": "Working title or description",
-    "description_label": "Brief description",
-    "description_placeholder": "What problem does this project solve? What are the key features? (max 500 chars)",
-    "stack_label": "Current tech stack (optional)",
-    "stack_placeholder": "e.g. WordPress, Shopify, custom...",
-    "refs_label": "Reference URLs (optional)",
-    "refs_placeholder": "https://...",
-    "name_label": "Full name",
-    "email_label": "Email",
-    "company_label": "Company / Organization (optional)",
-    "language_label": "Preferred language",
-    "language_en": "English",
-    "language_es": "Español",
-    "source_label": "How did you find us?",
-    "source_google": "Google",
-    "source_referral": "Referral",
-    "source_social": "Social media",
-    "source_other": "Other",
-    "next": "Continue",
-    "back": "Back",
-    "submit": "Send request",
-    "submitting": "Sending...",
-    "success_heading": "Request received.",
-    "success_body": "We'll review your project and get back to you within 24–48 hours.",
-    "success_cta": "Back to home",
-    "error": "Something went wrong. Please try again."
+    "page_heading": "Start a project",
+
+    "field1_label": "Describe your business in one line.",
+    "field1_placeholder": "We run a trucking company between Piedras Negras and San Antonio.",
+
+    "field2_label": "What's not working right now, or what doesn't exist yet that should?",
+
+    "field3_label": "Do you have a budget range in mind?",
+    "budget_under2k": "Under $2,000",
+    "budget_2k5k": "$2,000–$5,000",
+    "budget_5k15k": "$5,000–$15,000",
+    "budget_15kplus": "$15,000+",
+    "budget_unsure": "Not sure yet",
+
+    "field4_label": "How do you want to stay in touch?",
+    "contact_email": "Email",
+    "contact_whatsapp": "WhatsApp",
+    "contact_either": "Either works",
+
+    "submit": "Send it →",
+    "confirmation": "We'll respond within 48 hours. No pitch deck. No sales call unless you want one. Just a direct reply from the person who'd be building it."
   },
   "about": {
     "page_label": "About",
     "page_heading": "yeblanca",
-    "origin_label": "Origin",
-    "origin_heading": "Built in Piedras Negras",
-    "origin_body": "yeblanca is a micro-consultancy founded in 2024 by Juan Pablo Lozano Escareño. Based in Piedras Negras, Coahuila — right on the US–Mexico border — we build for clients on both sides. Bilingual by default. Production-first always.",
+
+    "origin_headline": "Built at the border.\nFor businesses that live there.",
+    "origin_body": "yeblanca is a micro-consultancy, not an agency.\n\nFounded in 2024 by Juan Pablo Lozano Escareño in Piedras Negras, Coahuila. Right on the US–Mexico border, where bilingual, binational, and production-ready aren't differentiators. They're the minimum.\n\nThe micro matters: when you work with yeblanca, you work directly with the engineer building your system. No account managers. No translation layers. No junior developer inheriting your project on week three.\n\nFive years building production systems across retail, fintech, and cross-border commerce. The Texas– México logistics corridor isn't a niche for us, it's the context we've always worked in.",
+
     "founder_label": "Founder",
     "founder_name": "Juan Pablo Lozano Escareño",
     "founder_title": "Full-Stack Engineer & Founder",
     "founder_bio": "5+ years building production systems across fintech, retail, and civic tech. Specialized in Next.js, TypeScript, and complex data pipelines. Known as Bytewing.",
+    "founder_note": "\"Piedras Negras is a market that's just getting started. We're not here to capture as many clients as possible, we're here to build things that actually work, for businesses ready to grow.\"",
+
     "stack_label": "Stack & Tools",
     "available_badge": "Available for projects",
     "unavailable_badge": "Currently booked"
@@ -151,15 +223,29 @@
     "email_label": "Email",
     "message_label": "Message",
     "language_label": "Preferred language",
+    "language_en": "English",
+    "language_es": "Español",
     "submit": "Send message",
     "submitting": "Sending...",
     "success": "Message sent. We'll be in touch.",
     "error": "Something went wrong. Please try again."
   },
+  "error_404": {
+    "headline": "You found a page that doesn't exist.",
+    "body": "That's on us. Head back to the homepage or start a project, whichever's more useful.",
+    "cta_home": "← Home",
+    "cta_project": "Start a project →"
+  },
   "footer": {
-    "tagline": "Cross-border web development.",
+    "tagline": "Digital Infrastructure for the Texas–México Corridor",
     "links_label": "Navigation",
-    "legal": "© 2025 yeblanca. All rights reserved.",
-    "location": "Piedras Negras, Coahuila, México"
+    "legal": "yeblanca is a micro-consultancy registered in Piedras Negras, Coahuila, México.\n© 2024–present Juan Pablo Lozano Escareño. All rights reserved.",
+    "location": "Piedras Negras, Coahuila, México",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "meta": {
+    "title": "yeblanca — Digital Infrastructure for the Texas–México Corridor",
+    "description": "Cross-border engineering from Piedras Negras, México. We build production systems, CRMs, e-commerce, and custom platforms, for businesses operating between México and the U.S. No vendor lock-in. No platform fees."
   }
 }

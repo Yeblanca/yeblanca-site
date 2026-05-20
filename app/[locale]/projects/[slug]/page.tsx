@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { CaseStudyHero } from '@/components/project/CaseStudyHero'
@@ -6,6 +7,28 @@ import { getPayloadClient } from '@/lib/payload'
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  try {
+    const payload = await getPayloadClient()
+    const result = await payload.find({
+      collection: 'projects',
+      where: { slug: { equals: slug } },
+      limit: 1,
+    })
+    const project = result.docs[0]
+    if (project) {
+      return {
+        title: `${project.titleEn} — yeblanca`,
+        description: project.taglineEn || project.descriptionEn?.substring(0, 160) || '',
+      }
+    }
+  } catch {
+    // Payload not ready
+  }
+  return { title: 'Project — yeblanca' }
 }
 
 export async function generateStaticParams() {
@@ -86,7 +109,7 @@ export default async function CaseStudyPage({ params }: Props) {
       {nextProject && (
         <div className="px-6 py-16 border-t border-[rgba(240,240,240,0.08)]">
           <div className="max-w-5xl mx-auto flex items-center justify-between">
-            <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.30)]">
+            <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)]">
               {t('next_project')}
             </span>
             <Link

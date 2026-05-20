@@ -3,6 +3,7 @@
 import React, { useCallback, useRef } from "react"
 import { useAnimationFrame } from "motion/react"
 import { useMousePositionRef } from "@/hooks/use-mouse-position-ref"
+import { useReducedMotion } from "@/hooks/use-reduced-motion"
 
 interface TextProps extends React.HTMLAttributes<HTMLSpanElement> {
   label: string
@@ -31,27 +32,39 @@ export default function TextCursorProximity({
   const mousePositionRef = useMousePositionRef(containerRef)
   const stylesRef = useRef(styles)
 
+  // Respect prefers-reduced-motion (WCAG 2.3.3)
+  const reducedMotion = useReducedMotion()
+
   // Keep styles ref updated
   stylesRef.current = styles
 
-  // Parse label into words and letters for rendering
+  // Parse label into words and letters for rendering, handling newlines
   const parsedLabel = React.useMemo(() => {
-    const words = label.split(" ")
-    const result: { letter: string; isSpace: boolean }[] = []
+    const lines = label.split("\n")
+    const result: { letter: string; isSpace: boolean; isLineBreak: boolean }[] = []
 
-    words.forEach((word, wordIndex) => {
-      word.split("").forEach((letter) => {
-        result.push({ letter, isSpace: false })
+    lines.forEach((line, lineIndex) => {
+      const words = line.split(" ")
+      
+      words.forEach((word, wordIndex) => {
+        word.split("").forEach((letter) => {
+          result.push({ letter, isSpace: false, isLineBreak: false })
+        })
+        if (wordIndex < words.length - 1) {
+          result.push({ letter: " ", isSpace: true, isLineBreak: false })
+        }
       })
-      if (wordIndex < words.length - 1) {
-        result.push({ letter: " ", isSpace: true })
+
+      // Add line break if not the last line
+      if (lineIndex < lines.length - 1) {
+        result.push({ letter: "", isSpace: false, isLineBreak: true })
       }
     })
 
     return result
   }, [label])
 
-  const letterCount = parsedLabel.filter(l => !l.isSpace).length
+  const letterCount = parsedLabel.filter(l => !l.isSpace && !l.isLineBreak).length
 
   // Calculate distance between two points
   const calculateDistance = useCallback((
@@ -102,6 +115,7 @@ export default function TextCursorProximity({
 
   // Animation frame to update letter styles based on cursor proximity
   useAnimationFrame(() => {
+    if (reducedMotion) return
     if (!containerRef.current) return
 
     const containerRect = containerRef.current.getBoundingClientRect()
@@ -110,9 +124,9 @@ export default function TextCursorProximity({
     letterRefs.current.forEach((letterRef, index) => {
       if (!letterRef) return
 
-      // Skip space characters
+      // Skip space characters and line breaks
       const letterData = parsedLabel[index]
-      if (letterData?.isSpace) return
+      if (letterData?.isSpace || letterData?.isLineBreak) return
 
       const rect = letterRef.getBoundingClientRect()
       const letterCenterX = rect.left + rect.width / 2 - containerRect.left
@@ -161,18 +175,23 @@ export default function TextCursorProximity({
       onClick={onClick}
       {...props}
     >
-      {parsedLabel.map((item, index) => (
-        <span
-          key={index}
-          ref={(el: HTMLSpanElement | null) => {
-            letterRefs.current[index] = el
-          }}
-          className={item.isSpace ? "inline-block w-[0.25em]" : "inline-block"}
-          style={item.isSpace ? {} : { display: "inline-block" }}
-        >
-          {item.letter}
-        </span>
-      ))}
+      {parsedLabel.map((item, index) => {
+        if (item.isLineBreak) {
+          return <br key={index} />
+        }
+        return (
+          <span
+            key={index}
+            ref={(el: HTMLSpanElement | null) => {
+              letterRefs.current[index] = el
+            }}
+            className={item.isSpace ? "inline-block w-[0.25em]" : "inline-block"}
+            style={item.isSpace ? {} : { display: "inline-block" }}
+          >
+            {item.letter}
+          </span>
+        )
+      })}
       <span className="sr-only">{label}</span>
     </span>
   )

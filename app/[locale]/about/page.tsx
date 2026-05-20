@@ -1,7 +1,15 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { getPayloadClient } from '@/lib/payload';
 import { ExternalLink } from 'lucide-react';
+
+export function generateMetadata(): Metadata {
+  return {
+    title: 'About — yeblanca',
+    description: 'Micro-consultancy based in Piedras Negras, México. Built at the border for businesses that live there.',
+  }
+}
 
 function IconGithub({ size = 16 }: { size?: number }) {
   return (
@@ -105,14 +113,14 @@ export default async function AboutPage({ params }: Props) {
                 <h3 className="font-sans font-medium text-[1.125rem] text-[#f0f0f0]">
                   {t('founder_name')}
                 </h3>
-                <p className="font-mono text-[11px] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.45)] mt-1">
+                <p className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] mt-1">
                   {t('founder_title')}
                 </p>
               </div>
 
               {/* Available badge */}
               <span
-                className={`inline-flex items-center h-8 px-3 rounded-[2px] font-mono text-[10px] uppercase tracking-[0.10em] border-[0.5px] shrink-0 ${
+                className={`inline-flex items-center h-8 px-3 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] border-[0.5px] shrink-0 ${
                   available
                     ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
                     : 'bg-[rgba(240,240,240,0.05)] border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.40)]'
@@ -134,7 +142,7 @@ export default async function AboutPage({ params }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.40)] hover:text-[#FF3E7F] transition-colors"
-                aria-label="GitHub"
+                aria-label="GitHub (opens in new tab)"
               >
                 <IconGithub size={16} />
               </a>
@@ -143,7 +151,7 @@ export default async function AboutPage({ params }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.40)] hover:text-[#FF3E7F] transition-colors"
-                aria-label="LinkedIn"
+                aria-label="LinkedIn (opens in new tab)"
               >
                 <IconLinkedin size={16} />
               </a>
@@ -158,7 +166,7 @@ export default async function AboutPage({ params }: Props) {
             {STACK.map((tech) => (
               <span
                 key={tech}
-                className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[11px] uppercase tracking-[0.08em] text-[rgba(240,240,240,0.50)]"
+                className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] text-[rgba(240,240,240,0.50)]"
               >
                 {tech}
               </span>

@@ -10,6 +10,7 @@ import '../../globals.css'
 
 import { routing } from '@/i18n/routing'
 import { Providers } from '@/components/Providers'
+import { SkipLink } from '@/components/layout/SkipLink'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 
@@ -67,20 +68,21 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages()
 
   return (
-    <html lang="en" className={`${grotesk.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang={locale} className={`${grotesk.variable} ${mono.variable}`} suppressHydrationWarning>
       <body>
         {/* FOUC prevention: sets theme class before React hydrates */}
         <Script
           id="theme-init"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `try{let t=localStorage.getItem('theme')||'dark';document.documentElement.classList.add(t)}catch(e){document.documentElement.classList.add('dark')}`,
           }}
         />
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Providers>
+            <SkipLink />
             <Navbar />
-            <main>{children}</main>
+            <main id="main-content">{children}</main>
             <Footer />
           </Providers>
         </NextIntlClientProvider>
