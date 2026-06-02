@@ -7,7 +7,8 @@
     "services": "Servicios",
     "about": "Nosotros",
     "contact": "Contacto",
-    "quote": "Solicitar cotización"
+    "quote": "Solicitar cotización",
+    "os": "OS"
   },
   "home": {
     "hero_eyebrow": "Coahuila — Texas — En todos lados.",
@@ -15,34 +16,25 @@
     "hero_sub": "Ya sea que estés construyendo tu primera presencia digital o reemplazando un sistema que dejó de funcionar, nosotros lo ingeniamos, lo operamos y tú lo controlas.\n\nSin agencias. Sin intermediarios. Sin comisiones de plataforma comiendo tu margen.",
     "cta_services": "Así trabajamos →",
     "cta_projects": "Ver proyectos",
-
     "projects_label": "Trabajo selecto",
     "projects_heading": "Proyectos de los que estamos orgullosos",
     "projects_cta": "Ver todos los proyectos",
-
     "services_label": "Qué construimos",
     "services_heading": "Desde tu primera página en internet hasta un sistema operativo completo, definimos, construimos y entregamos.",
-
     "who_headline": "¿Te suena familiar?",
     "who_body": "Quizás nunca has tenido un sitio web y no sabes por dónde empezar.\n\nQuizás tienes uno, pero no le está generando nada al negocio.\n\nQuizás llevas tu operación en hojas de cálculo, WhatsApp y pura voluntad, y sabes que hay una mejor manera, pero no sabes qué pedirle a alguien de tecnología.\n\nQuizás ya le quedaste chico a Shopify, Wix, o lo que sea que alguien te instaló hace tres años.\n\nCualquiera de esos es un buen punto de partida. Hemos estado ahí con clientes en cada etapa.",
     "who_cta": "Cuéntanos dónde estás →",
-
     "delivery_intro": "Cada proyecto es diferente.\nCada entrega también.\n\nNo todo negocio necesita ser dueño del motor para manejar el carro.\n\nOfrecemos tres formas de trabajar contigo, según cuánto control quieras sobre lo que está debajo del capó.",
-
     "delivery_hosted_title": "Hosted",
     "delivery_hosted_body": "Nosotros lo operamos. Tú lo usas.\n\nTu sistema está activo, mantenido y completamente operativo. Recibes acceso de administrador, capacitación y un panel diseñado para tu flujo de trabajo, no para desarrolladores. Nosotros nos encargamos de todo lo que está debajo de la superficie.",
     "delivery_hosted_best": "Ideal para: negocios locales, clientes con su primer proyecto digital, equipos sin tecnología interna.",
-
     "delivery_managed_title": "Managed",
     "delivery_managed_body": "Más visibilidad. La misma confiabilidad.\n\nTodo lo que incluye Hosted, más acceso ampliado: documentación técnica, paneles de control más profundos y soporte prioritario. Ves más de lo que está pasando, sin necesidad de gestionarlo tú mismo.",
     "delivery_managed_best": "Ideal para: negocios en crecimiento que quieren transparencia sin la carga técnica.",
-
     "delivery_architect_title": "Architect",
     "delivery_architect_body": "Entrega completa. Propiedad total.\n\nCódigo fuente completo, acceso al repositorio, documentación técnica exhaustiva y una transferencia estructurada. Eres dueño de cada línea; despliégalo donde quieras, con quien quieras, para siempre.",
     "delivery_architect_best": "Ideal para: empresas con equipos de desarrollo internos, fundadores técnicos, o negocios que quieren cero dependencia de cualquier proveedor, incluidos nosotros.",
-
     "delivery_cta": "¿No sabes cuál aplica? Para eso es la primera conversación.",
-
     "methodology_headline": "Cómo trabajamos",
     "methodology_intro": "Sin juntas de estatus. Sin capas de agencia. El ingeniero que definió tu proyecto es el mismo que lo construye.",
     "methodology_phase1_title": "Fase 01 — Descubrimiento",
@@ -53,7 +45,6 @@
     "methodology_phase3_body": "Código limpio, TypeScript estricto, cero atajos. Construido para durar, no para reemplazarse en 18 meses.",
     "methodology_phase4_title": "Fase 04 — Lanzamiento",
     "methodology_phase4_body": "Desplegado, documentado y entregado en tus términos, al nivel que elegiste.",
-
     "methodology_timeline": [
       {
         "label": "FASE_001",
@@ -76,10 +67,8 @@
         "description": "Optimización final y despliegue. La señal se envía. Pulimos, documentamos y entregamos en tus términos, al nivel que elegiste."
       }
     ],
-
     "nfe_headline": "yeblanca no es para todos.",
     "nfe_body": "Si necesitas un sitio web en 48 horas, no somos la opción.\n\nSi tu presupuesto es de $300 y tus expectativas son de nivel enterprise, no somos la opción.\n\nSi quieres un proveedor al que puedas ignorar y que todo funcione para siempre, nadie puede prometerte eso.\n\nPero si quieres un sistema construido para tu flujo de trabajo real, un partner que hable directo, y software que no se te quede chico en dos años, eso es exactamente lo que hacemos.",
-
     "final_cta_label": "¿Listo para construir?",
     "final_cta_heading": "Ya le quedaste chico\na la solución genérica.",
     "final_cta_sub": "Ya sea un sistema que no se adapta a tu operación, una plataforma que se come tu margen, o un proyecto que necesitas construir desde cero — aquí empieza esa conversación.\n\nSin compromisos. Sin necesidad de conocimientos técnicos. Solo cuéntanos dónde estás.",
@@ -101,7 +90,6 @@
     "page_heading": "Qué construimos",
     "page_sub": "Desde tu primera página en internet hasta un sistema operativo completo, definimos, construimos y entregamos.",
     "cta": "Iniciar un proyecto",
-
     "web_title": "Desarrollo Web",
     "web_tagline": "Sitios bilingües.\nRápidos. Estructurados.\nListos para posicionar.",
     "web_features": [
@@ -111,7 +99,6 @@
       "Arquitectura SEO",
       "Sistema de diseño a medida"
     ],
-
     "ecommerce_title": "E-commerce",
     "ecommerce_tagline": "0% comisión.\nCódigo abierto.\nTuyo para siempre.",
     "ecommerce_features": [
@@ -121,7 +108,6 @@
       "Checkout personalizado",
       "Búsqueda de productos"
     ],
-
     "system_title": "Sistemas a Medida",
     "system_tagline": "Lo que llevas en libreta,\nen sistema.\nSin que tengas que ver código.",
     "system_features": [
@@ -131,7 +117,6 @@
       "Dashboards en tiempo real",
       "Soporte PWA"
     ],
-
     "consulting_title": "Consultoría y Estrategia",
     "consulting_tagline": "Arquitectura que se explica.\nDocumentación que se usa.\nSin agencia en el medio.",
     "consulting_features": [
@@ -141,7 +126,6 @@
       "Incorporación de equipos",
       "Revisión de código y mentoría"
     ],
-
     "from": "desde",
     "web_starting_price": "$2,000 USD",
     "ecommerce_starting_price": "$5,000 USD",
@@ -174,43 +158,37 @@
   "quote": {
     "page_label": "Iniciar un proyecto",
     "page_heading": "Iniciar un proyecto",
-
     "field1_label": "Describe tu negocio en una línea.",
     "field1_placeholder": "Tenemos una empresa de transporte entre Piedras Negras y San Antonio.",
-
     "field2_label": "¿Qué no está funcionando ahora mismo, o qué no existe todavía pero debería?",
-
     "field3_label": "¿Tienes un presupuesto en mente?",
     "budget_under2k": "Menos de $2,000",
     "budget_2k5k": "$2,000–$5,000",
     "budget_5k15k": "$5,000–$15,000",
     "budget_15kplus": "$15,000+",
     "budget_unsure": "Aún no lo sé",
-
     "field4_label": "¿Cómo prefieres que te contactemos?",
     "contact_email": "Correo electrónico",
     "contact_whatsapp": "WhatsApp",
     "contact_either": "Cualquiera está bien",
-
     "submit": "Enviar →",
     "confirmation": "Respondemos en menos de 48 horas. Sin presentación de ventas. Sin llamada comercial a menos que tú la quieras. Solo una respuesta directa de la persona que estaría construyendo tu proyecto."
   },
   "about": {
     "page_label": "Nosotros",
     "page_heading": "yeblanca",
-
     "origin_headline": "Construido en la frontera.\nPara los negocios que viven en ella.",
     "origin_body": "yeblanca es una micro-consultoría, no una agencia.\n\nFundada en 2024 por Juan Pablo Lozano Escareño en Piedras Negras, Coahuila. En la frontera entre México y Estados Unidos, donde ser bilingüe, binacional y listo para producción no son diferenciadores. Son el mínimo.\n\nEl \"micro\" importa: cuando trabajas con yeblanca, trabajas directamente con el ingeniero que está construyendo tu sistema. Sin gestores de cuenta. Sin capas de traducción. Sin desarrollador junior heredando tu proyecto en la tercera semana.\n\nCinco años construyendo sistemas de producción en retail, fintech y comercio transfronterizo. El corredor logístico Texas–México no es un nicho para nosotros — es el contexto en el que siempre hemos trabajado.",
-
     "founder_label": "Fundador",
     "founder_name": "Juan Pablo Lozano Escareño",
     "founder_title": "Ingeniero Full-Stack y Fundador",
     "founder_bio": "Más de 5 años construyendo sistemas de producción en fintech, retail y tecnología cívica. Especializado en Next.js, TypeScript y pipelines de datos complejos. Conocido como Bytewing.",
     "founder_note": "\"Piedras Negras es un mercado que apenas está comenzando. No estamos aquí para capturar la mayor cantidad de clientes posible — estamos aquí para construir cosas que realmente funcionen, para negocios listos para crecer.\"",
-
     "stack_label": "Stack y herramientas",
     "available_badge": "Disponible para proyectos",
-    "unavailable_badge": "Actualmente ocupado"
+    "unavailable_badge": "Actualmente ocupado",
+    "origin_label": "Origen",
+    "origin_heading": "Construido en la frontera.\nPara los negocios que viven en ella."
   },
   "contact": {
     "page_label": "Contacto",
@@ -244,5 +222,92 @@
   "meta": {
     "title": "yeblanca — Infraestructura Digital para el Corredor Texas–México",
     "description": "Ingeniería transfronteriza desde Piedras Negras, México. Construimos sistemas de producción — CRMs, e-commerce y plataformas a medida — para negocios que operan entre México y Estados Unidos. Sin vendor lock-in. Sin comisiones de plataforma."
+  },
+  "os": {
+    "page_label": "Producto",
+    "page_heading": "Yeblanca OS",
+    "hero_sub": "CRM y agendado para negocios de servicios.\nHecho por ingenieros. Precio para negocios reales.",
+    "problem_label": "El problema",
+    "problem_heading": "Estás perdiendo dinero\nen caos manual.",
+    "problem_items": [
+      "Citas por WhatsApp o libreta",
+      "Clientes que desaparecen porque olvidas dar seguimiento",
+      "Sin idea de quién es tu mejor cliente",
+      "3-5 horas/semana perdidas coordinando"
+    ],
+    "solution_label": "La solución",
+    "solution_heading": "Un solo sistema.\nClientes, calendario, seguimiento.",
+    "solution_sub": "Hecho para negocios de servicios — salones, consultorios, consultores, coaches. No un CRM genérico. No un ERP complicado.",
+    "features_label": "Qué hace",
+    "features": [
+      {
+        "title": "CRM de Clientes",
+        "desc": "Todos tus clientes en un lugar. Historial, notas, contacto. Sin leads perdidos."
+      },
+      {
+        "title": "Agendado Inteligente",
+        "desc": "Citas por profesional, por servicio, por horario. Vista de calendario. Sin conflictos."
+      },
+      {
+        "title": "Motor de Seguimiento",
+        "desc": "Recordatorios automáticos. Rastrea quién no ha vuelto. Nunca pierdas un cliente por silencio."
+      },
+      {
+        "title": "Pipeline Simple",
+        "desc": "Ve cada oportunidad del primer contacto al cierre. Conoce tu pronóstico de ingresos."
+      }
+    ],
+    "pricing_label": "Precios",
+    "pricing_heading": "Simple. Transparente. Sin sorpresas.",
+    "pricing_sub": "Empieza gratis en beta. Paga cuando estés listo.",
+    "plan_starter": "Starter",
+    "plan_starter_price": "$3,500",
+    "plan_starter_period": "/mes",
+    "plan_starter_features": [
+      "3 usuarios",
+      "CRM de clientes",
+      "Agendado básico",
+      "Soporte por email"
+    ],
+    "plan_growth": "Growth",
+    "plan_growth_price": "$7,000",
+    "plan_growth_period": "/mes",
+    "plan_growth_features": [
+      "10 usuarios",
+      "CRM + pipeline completo",
+      "Agendado avanzado",
+      "Soporte prioritario"
+    ],
+    "plan_pro": "Pro",
+    "plan_pro_price": "$14,000",
+    "plan_pro_period": "/mes",
+    "plan_pro_features": [
+      "Usuarios ilimitados",
+      "Acceso API",
+      "Integraciones custom",
+      "Soporte dedicado"
+    ],
+    "waitlist_label": "Acceso anticipado",
+    "waitlist_heading": "Únete a la lista de espera.",
+    "waitlist_sub": "Sé de los primeros en probar Yeblanca OS. Gratis durante beta. Sin tarjeta de crédito.",
+    "waitlist_email_placeholder": "tu@email.com",
+    "waitlist_business_placeholder": "Nombre de tu negocio",
+    "waitlist_type_label": "Tipo de negocio",
+    "waitlist_type_options": [
+      "Salón / Belleza",
+      "Consultorio médico",
+      "Consultor / Coach",
+      "Fitness / Bienestar",
+      "Otro servicio"
+    ],
+    "waitlist_submit": "Unirme a la lista",
+    "waitlist_success": "Estás en la lista. Te contactaremos pronto.",
+    "waitlist_error": "Algo salió mal. Intenta de nuevo.",
+    "case_label": "Construido desde operaciones reales",
+    "case_heading": "Ya corre en producción.",
+    "case_body": "Yeblanca OS nació de un CRM real construido para un fabricante de puertas de acero en EE.UU. — 20+ trabajadores, 5 ciudades, miles de proyectos. Ahora lo abrimos para cada negocio de servicios.",
+    "final_cta_label": "¿Listo?",
+    "final_cta_heading": "Deja de perder clientes\npor caos manual.",
+    "final_cta_button": "Unirme a la lista"
   }
 }

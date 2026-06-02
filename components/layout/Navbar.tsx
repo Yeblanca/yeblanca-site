@@ -41,6 +41,7 @@ export function Navbar() {
   const navLinks = [
     { href: `/${locale}/projects`, label: t('projects') },
     { href: `/${locale}/services`, label: t('services') },
+    { href: `/${locale}/os`, label: t('os') },
     { href: `/${locale}/about`, label: t('about') },
     { href: `/${locale}/contact`, label: t('contact') },
   ]

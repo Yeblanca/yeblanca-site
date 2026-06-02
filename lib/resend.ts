@@ -64,3 +64,24 @@ export async function sendContactEmail(data: ContactFormData) {
 
   return resend.emails.send({ from: FROM, to: TO, subject, html })
 }
+
+export interface WaitlistFormData {
+  email: string
+  businessName?: string
+  businessType: string
+}
+
+export async function sendWaitlistEmail(data: WaitlistFormData) {
+  const subject = `[Waitlist] ${data.businessName || data.email}`
+
+  const html = `
+    <h2>Yeblanca OS Waitlist — yeblanca.com</h2>
+    <table style="font-family:sans-serif;font-size:14px;border-collapse:collapse;width:100%">
+      <tr><td style="padding:8px;font-weight:bold;width:200px">Email</td><td style="padding:8px">${data.email}</td></tr>
+      <tr><td style="padding:8px;font-weight:bold">Business name</td><td style="padding:8px">${data.businessName || 'Not provided'}</td></tr>
+      <tr><td style="padding:8px;font-weight:bold">Business type</td><td style="padding:8px">${data.businessType}</td></tr>
+    </table>
+  `
+
+  return resend.emails.send({ from: FROM, to: TO, subject, html })
+}

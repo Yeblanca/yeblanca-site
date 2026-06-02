@@ -7,45 +7,34 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "quote": "Get a quote"
+    "quote": "Get a quote",
+    "os": "OS"
   },
   "home": {
-"hero_eyebrow": "Coahuila — Texas — Everywhere",
+    "hero_eyebrow": "Coahuila — Texas — Everywhere",
     "hero_headline": "Your system.\nYour rules.\nYour pace.",
     "hero_sub": "Whether you're building your first digital presence or replacing a system that stopped working, we engineer it, we run it, and you control it.\n\nNo agencies. No middlemen. No platform fees eating your margin.",
     "cta_services": "See how we work →",
     "cta_projects": "View projects",
-
     "projects_label": "Selected work",
     "projects_heading": "Projects we're proud of",
     "projects_cta": "View all projects",
-
     "services_label": "What we build",
     "services_heading": "From your first page on the internet to a full operations system, we scope, build, and ship.",
-
     "who_headline": "Sound familiar?",
     "who_body": "Maybe you've never had a website and you're not sure where to start.\n\nMaybe you have one, and it's not doing anything for the business.\n\nMaybe you're running your operation on spreadsheets, WhatsApp, and willpower, and you know there's a better way, but you're not sure what to ask for.\n\nMaybe you've outgrown Shopify, Wix, or whatever someone set up for you three years ago.\n\nAny of those is a good place to start. We've been there with clients at every stage.",
     "who_cta": "Tell us where you are →",
-
-    "services_label": "What we build",
-    "services_heading": "From your first page on the internet to a full operations system, we scope, build, and ship.",
-
     "delivery_intro": "Every project is different.\nSo is every delivery.\n\nNot every business needs to own the engine to drive the car.\n\nWe offer three ways to work with us, based on how much control you want over what's under the hood.",
-
     "delivery_hosted_title": "Hosted",
     "delivery_hosted_body": "We run it. You use it.\n\nYour system is live, maintained, and fully operational. You get admin access, training, and a dashboard built for your workflow, not for developers. We handle everything below the surface.",
     "delivery_hosted_best": "Best for: local businesses, first-time digital clients, teams without in-house tech.",
-
     "delivery_managed_title": "Managed",
     "delivery_managed_body": "More visibility. Same reliability.\n\nEverything in Hosted, plus expanded access: technical documentation, deeper control panels, and priority support. You see more of what's happening, without needing to manage it yourself.",
     "delivery_managed_best": "Best for: growing businesses that want transparency without the technical overhead.",
-
     "delivery_architect_title": "Architect",
     "delivery_architect_body": "Full release. Total ownership.\n\nComplete source code, repository access, full technical documentation, and a structured handoff. You own every line, deploy it anywhere, with anyone, forever.",
     "delivery_architect_best": "Best for: companies with in-house dev teams, technical founders, or businesses that want zero dependency on any vendor, including us.",
-
     "delivery_cta": "Not sure which fits? That's what the first conversation is for.",
-
     "methodology_headline": "How we work",
     "methodology_intro": "No status meetings. No agency layers. The engineer who scoped your project is the one building it.",
     "methodology_phase1_title": "Phase 01 — Discovery",
@@ -56,7 +45,6 @@
     "methodology_phase3_body": "Clean code, strict TypeScript, zero shortcuts. Built to last, not built to be replaced in 18 months.",
     "methodology_phase4_title": "Phase 04 — Ship",
     "methodology_phase4_body": "Deployed, documented, and handed off on your terms, at the tier you chose.",
-
     "methodology_timeline": [
       {
         "label": "PHASE_001",
@@ -79,10 +67,8 @@
         "description": "Final optimization and deployment to the global stage. The signal is sent. We polish, document, and hand off on your terms, at the tier you chose."
       }
     ],
-
     "nfe_headline": "yeblanca is not for everyone.",
     "nfe_body": "If you need a website in 48 hours, we're not it.\n\nIf your budget is $300 and your expectations are enterprise, we're not it.\n\nIf you want a vendor you can ignore and everything still works forever, nobody is that.\n\nBut if you want a system built for your actual workflow, a partner who speaks plainly, and software you won't outgrow in two years, that's exactly what we do.",
-
     "final_cta_label": "Ready to build?",
     "final_cta_heading": "You've outgrown\nthe off-the-shelf solution.",
     "final_cta_sub": "Whether it's a system that doesn't fit your workflow, a platform eating your margins, or a project you need built from scratch, this is where that conversation starts.\n\nNo commitment. No technical background required. Just tell us where you are.",
@@ -104,7 +90,6 @@
     "page_heading": "What we build",
     "page_sub": "From your first page on the internet to a full operations system, we scope, build, and ship.",
     "cta": "Start a project",
-
     "web_title": "Web Development",
     "web_tagline": "Bilingual sites.\nFast. Structured.\nBuilt to rank.",
     "web_features": [
@@ -114,7 +99,6 @@
       "SEO architecture",
       "Custom design system"
     ],
-
     "ecommerce_title": "E-commerce",
     "ecommerce_tagline": "0% transaction fees.\nOpen source.\nYours forever.",
     "ecommerce_features": [
@@ -124,7 +108,6 @@
       "Custom checkout",
       "Product search"
     ],
-
     "system_title": "Custom Systems",
     "system_tagline": "What you run in a notebook,\nin a system.\nWithout touching code.",
     "system_features": [
@@ -134,7 +117,6 @@
       "Real-time dashboards",
       "PWA support"
     ],
-
     "consulting_title": "Consulting & Strategy",
     "consulting_tagline": "Architecture that explains itself.\nDocumentation your team actually uses.\nNo agency in the middle.",
     "consulting_features": [
@@ -144,7 +126,6 @@
       "Team onboarding",
       "Code review & mentoring"
     ],
-
     "from": "from",
     "web_starting_price": "$2,000",
     "ecommerce_starting_price": "$5,000",
@@ -177,43 +158,37 @@
   "quote": {
     "page_label": "Start a project",
     "page_heading": "Start a project",
-
     "field1_label": "Describe your business in one line.",
     "field1_placeholder": "We run a trucking company between Piedras Negras and San Antonio.",
-
     "field2_label": "What's not working right now, or what doesn't exist yet that should?",
-
     "field3_label": "Do you have a budget range in mind?",
     "budget_under2k": "Under $2,000",
     "budget_2k5k": "$2,000–$5,000",
     "budget_5k15k": "$5,000–$15,000",
     "budget_15kplus": "$15,000+",
     "budget_unsure": "Not sure yet",
-
     "field4_label": "How do you want to stay in touch?",
     "contact_email": "Email",
     "contact_whatsapp": "WhatsApp",
     "contact_either": "Either works",
-
     "submit": "Send it →",
     "confirmation": "We'll respond within 48 hours. No pitch deck. No sales call unless you want one. Just a direct reply from the person who'd be building it."
   },
   "about": {
     "page_label": "About",
     "page_heading": "yeblanca",
-
     "origin_headline": "Built at the border.\nFor businesses that live there.",
     "origin_body": "yeblanca is a micro-consultancy, not an agency.\n\nFounded in 2024 by Juan Pablo Lozano Escareño in Piedras Negras, Coahuila. Right on the US–Mexico border, where bilingual, binational, and production-ready aren't differentiators. They're the minimum.\n\nThe micro matters: when you work with yeblanca, you work directly with the engineer building your system. No account managers. No translation layers. No junior developer inheriting your project on week three.\n\nFive years building production systems across retail, fintech, and cross-border commerce. The Texas– México logistics corridor isn't a niche for us, it's the context we've always worked in.",
-
     "founder_label": "Founder",
     "founder_name": "Juan Pablo Lozano Escareño",
     "founder_title": "Full-Stack Engineer & Founder",
     "founder_bio": "5+ years building production systems across fintech, retail, and civic tech. Specialized in Next.js, TypeScript, and complex data pipelines. Known as Bytewing.",
     "founder_note": "\"Piedras Negras is a market that's just getting started. We're not here to capture as many clients as possible, we're here to build things that actually work, for businesses ready to grow.\"",
-
     "stack_label": "Stack & Tools",
     "available_badge": "Available for projects",
-    "unavailable_badge": "Currently booked"
+    "unavailable_badge": "Currently booked",
+    "origin_label": "Origin",
+    "origin_heading": "Built at the border.\nFor businesses that live there."
   },
   "contact": {
     "page_label": "Contact",
@@ -247,5 +222,92 @@
   "meta": {
     "title": "yeblanca — Digital Infrastructure for the Texas–México Corridor",
     "description": "Cross-border engineering from Piedras Negras, México. We build production systems, CRMs, e-commerce, and custom platforms, for businesses operating between México and the U.S. No vendor lock-in. No platform fees."
+  },
+  "os": {
+    "page_label": "Product",
+    "page_heading": "Yeblanca OS",
+    "hero_sub": "CRM and scheduling for service businesses.\nBuilt by engineers. Priced for real businesses.",
+    "problem_label": "The problem",
+    "problem_heading": "You're losing money\non manual chaos.",
+    "problem_items": [
+      "Appointments by WhatsApp or notebook",
+      "Clients that disappear because you forget to follow up",
+      "No idea who your best client is",
+      "3-5 hours/week lost to scheduling"
+    ],
+    "solution_label": "The solution",
+    "solution_heading": "One system.\nClients, calendar, follow-up.",
+    "solution_sub": "Built for service businesses — salons, clinics, consultants, coaches. Not a generic CRM. Not a complicated ERP.",
+    "features_label": "What it does",
+    "features": [
+      {
+        "title": "Client CRM",
+        "desc": "Every client in one place. History, notes, contact info. No more lost leads."
+      },
+      {
+        "title": "Smart Scheduling",
+        "desc": "Appointments by professional, by service, by time slot. Calendar view. No conflicts."
+      },
+      {
+        "title": "Follow-up Engine",
+        "desc": "Automatic reminders. Track who hasn't come back. Never lose a client to silence again."
+      },
+      {
+        "title": "Simple Pipeline",
+        "desc": "See every opportunity from first contact to closing. Know your revenue forecast."
+      }
+    ],
+    "pricing_label": "Pricing",
+    "pricing_heading": "Simple. Transparent. No surprises.",
+    "pricing_sub": "Start free during beta. Pay when you're ready.",
+    "plan_starter": "Starter",
+    "plan_starter_price": "$199",
+    "plan_starter_period": "/month",
+    "plan_starter_features": [
+      "3 users",
+      "Client CRM",
+      "Basic scheduling",
+      "Email support"
+    ],
+    "plan_growth": "Growth",
+    "plan_growth_price": "$399",
+    "plan_growth_period": "/month",
+    "plan_growth_features": [
+      "10 users",
+      "Full CRM + pipeline",
+      "Advanced scheduling",
+      "Priority support"
+    ],
+    "plan_pro": "Pro",
+    "plan_pro_price": "$799",
+    "plan_pro_period": "/month",
+    "plan_pro_features": [
+      "Unlimited users",
+      "API access",
+      "Custom integrations",
+      "Dedicated support"
+    ],
+    "waitlist_label": "Early access",
+    "waitlist_heading": "Join the waitlist.",
+    "waitlist_sub": "Be one of the first to try Yeblanca OS. Free during beta. No credit card required.",
+    "waitlist_email_placeholder": "your@email.com",
+    "waitlist_business_placeholder": "Your business name",
+    "waitlist_type_label": "Business type",
+    "waitlist_type_options": [
+      "Salon / Beauty",
+      "Medical clinic",
+      "Consultant / Coach",
+      "Fitness / Wellness",
+      "Other service"
+    ],
+    "waitlist_submit": "Join waitlist",
+    "waitlist_success": "You're on the list. We'll be in touch soon.",
+    "waitlist_error": "Something went wrong. Please try again.",
+    "case_label": "Built from real operations",
+    "case_heading": "Already running in production.",
+    "case_body": "Yeblanca OS was born from a real CRM built for a U.S. steel door manufacturer — 20+ workers, 5 cities, thousands of projects. Now we're opening it for every service business.",
+    "final_cta_label": "Ready?",
+    "final_cta_heading": "Stop losing clients\nto manual chaos.",
+    "final_cta_button": "Join the waitlist"
   }
 }
