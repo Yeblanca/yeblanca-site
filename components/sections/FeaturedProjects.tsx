@@ -93,7 +93,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
 
                       {/* Tagline */}
                       {tagline && (
-                        <p className="font-sans font-light text-[1rem] leading-[1.7] text-[rgba(240,240,240,0.55)] max-w-lg">
+                        <p className="font-sans font-light text-[1rem] leading-[1.7] text-[rgba(240,240,240,0.65)] max-w-lg">
                           {tagline}
                         </p>
                       )}
@@ -104,7 +104,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
                           {project.stack.slice(0, 4).map(({ tech }) => (
                             <span
                               key={tech}
-                              className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)]"
+                              className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.50)]"
                             >
                               {tech}
                             </span>

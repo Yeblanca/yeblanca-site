@@ -40,7 +40,7 @@ export default function ContactPage() {
         <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-[#f0f0f0] mb-6">
           {t('page_heading')}
         </h1>
-        <p className="font-sans font-light text-[1.125rem] text-[rgba(240,240,240,0.55)] mb-16 max-w-lg">
+        <p className="font-sans font-light text-[1.125rem] text-[rgba(240,240,240,0.65)] mb-16 max-w-lg">
           {t('page_sub')}
         </p>
 

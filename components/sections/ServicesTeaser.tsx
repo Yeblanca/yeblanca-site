@@ -70,24 +70,24 @@ export function ServicesTeaser() {
                 {/* Index */}
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-3 h-px bg-[#FF3E7F]" />
-                  <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-[rgba(240,240,240,0.65)] group-hover:text-[#FF3E7F] transition-colors duration-200">
+                  <span className="font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-[rgba(240,240,240,0.65)] group-hover:text-[#FF3E7F] transition-colors duration-200">
                     {index}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-sans font-medium text-[15px] tracking-tight text-[#f0f0f0] mb-2">
+                <h3 className="font-sans font-medium text-[0.9375rem] tracking-tight text-[#f0f0f0] mb-2">
                   {title}
                 </h3>
 
                 {/* Description */}
-                <p className="font-sans text-[14px] leading-relaxed text-[rgba(240,240,240,0.65)] flex-1 group-hover:text-[rgba(240,240,240,0.85)] transition-colors duration-200 whitespace-pre-line">
+                <p className="font-sans text-[0.875rem] leading-relaxed text-[rgba(240,240,240,0.65)] flex-1 group-hover:text-[rgba(240,240,240,0.85)] transition-colors duration-200 whitespace-pre-line">
                   {tagline}
                 </p>
 
                 {/* Price */}
                 <div className="mt-5 pt-4 border-t border-[rgba(240,240,240,0.08)]/60">
-                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-[rgba(240,240,240,0.65)]">
+                  <span className="font-mono text-[0.6875rem] tracking-[0.1em] uppercase text-[rgba(240,240,240,0.65)]">
                     {ts('from')}{' '}
                     <span className="text-[#FF3E7F] font-medium">{price}</span>
                   </span>

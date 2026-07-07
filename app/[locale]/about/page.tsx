@@ -123,7 +123,7 @@ export default async function AboutPage({ params }: Props) {
                 className={`inline-flex items-center h-8 px-3 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] border-[0.5px] shrink-0 ${
                   available
                     ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
-                    : 'bg-[rgba(240,240,240,0.05)] border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.40)]'
+                    : 'bg-[rgba(240,240,240,0.05)] border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.50)]'
                 }`}
               >
                 {available
@@ -141,7 +141,7 @@ export default async function AboutPage({ params }: Props) {
                 href="https://github.com/bytewing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.40)] hover:text-[#FF3E7F] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.50)] hover:text-[#FF3E7F] transition-colors"
                 aria-label="GitHub (opens in new tab)"
               >
                 <IconGithub size={16} />
@@ -150,7 +150,7 @@ export default async function AboutPage({ params }: Props) {
                 href="https://linkedin.com/in/jplozano"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.40)] hover:text-[#FF3E7F] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.50)] hover:text-[#FF3E7F] transition-colors"
                 aria-label="LinkedIn (opens in new tab)"
               >
                 <IconLinkedin size={16} />

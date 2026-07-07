@@ -32,7 +32,7 @@ export function ProjectCard({ project, index = 0 }: { project: ProjectCardData; 
       {/* Index marker */}
       <div className="flex items-center gap-2 mb-5">
         <div className="w-4 h-px bg-[#FF3E7F] shrink-0" />
-        <span className="font-mono text-[0.75rem] text-[rgba(240,240,240,0.40)] tracking-[0.10em]">
+        <span className="font-mono text-[0.75rem] text-[rgba(240,240,240,0.50)] tracking-[0.10em]">
           {num}
         </span>
       </div>
@@ -44,18 +44,18 @@ export function ProjectCard({ project, index = 0 }: { project: ProjectCardData; 
 
       {/* Tagline */}
       {tagline && (
-        <p className="font-sans font-light text-[0.875rem] text-[rgba(240,240,240,0.55)] mb-5 leading-relaxed">
+        <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.60)] mb-5 leading-relaxed">
           {tagline}
         </p>
       )}
 
       {/* Meta */}
       <div className="flex items-center gap-2 mb-5">
-        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.40)]">
+        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.50)]">
           {project.serviceType}
         </span>
         <span className="text-[rgba(240,240,240,0.20)]">·</span>
-        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.40)]">
+        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.50)]">
           {project.year}
         </span>
       </div>
@@ -66,7 +66,7 @@ export function ProjectCard({ project, index = 0 }: { project: ProjectCardData; 
           {project.stack.slice(0, 4).map(({ tech }) => (
             <span
               key={tech}
-              className="inline-flex items-center h-7 px-2.5 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)]"
+              className="inline-flex items-center h-7 px-2.5 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.50)]"
             >
               {tech}
             </span>

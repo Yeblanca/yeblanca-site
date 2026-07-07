@@ -86,7 +86,7 @@ export function Methodology({ phases, headline = 'Methodology' }: MethodologyPro
           <div className="w-8 h-[1px] bg-[#FF3E7F]" />
           <h2
             id="methodology-heading"
-            className="font-mono text-[11px] tracking-[0.2em] uppercase text-[rgba(240,240,240,0.5)]"
+            className="font-mono text-[0.6875rem] tracking-[0.2em] uppercase text-[rgba(240,240,240,0.5)]"
           >
             {headline}
           </h2>

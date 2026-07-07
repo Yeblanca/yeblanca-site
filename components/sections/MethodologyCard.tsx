@@ -49,13 +49,13 @@ export function PhaseCard({ phase, alignment, isVisible, delay }: PhaseCardProps
               }`}
             />
 
-            <span className="relative font-mono text-[10px] tracking-[0.25em] uppercase text-[rgba(255,62,127,0.6)] block mb-3">
+            <span className="relative font-mono text-[0.6875rem] tracking-[0.25em] uppercase text-[rgba(255,62,127,0.6)] block mb-3">
               {phase.label}
             </span>
             <h4 className="relative font-sans font-medium text-[1.5rem] md:text-[2rem] tracking-tight uppercase text-[#f0f0f0] mb-3 leading-none">
               {phase.title}
             </h4>
-            <p className="relative font-sans text-[14px] leading-[1.6] text-[rgba(240,240,240,0.4)] max-w-sm">
+            <p className="relative font-sans text-[0.9375rem] leading-[1.7] text-[rgba(240,240,240,0.62)] max-w-sm">
               {phase.description}
             </p>
 
@@ -101,13 +101,13 @@ export function PhaseCard({ phase, alignment, isVisible, delay }: PhaseCardProps
               }`}
             />
 
-            <span className="relative font-mono text-[10px] tracking-[0.25em] uppercase text-[rgba(255,62,127,0.6)] block mb-3">
+            <span className="relative font-mono text-[0.6875rem] tracking-[0.25em] uppercase text-[rgba(255,62,127,0.6)] block mb-3">
               {phase.label}
             </span>
             <h4 className="relative font-sans font-medium text-[1.5rem] md:text-[2rem] tracking-tight uppercase text-[#f0f0f0] mb-3 leading-none">
               {phase.title}
             </h4>
-            <p className="relative font-sans text-[14px] leading-[1.6] text-[rgba(240,240,240,0.4)] max-w-sm">
+            <p className="relative font-sans text-[0.9375rem] leading-[1.7] text-[rgba(240,240,240,0.62)] max-w-sm">
               {phase.description}
             </p>
 

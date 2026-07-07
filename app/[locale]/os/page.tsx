@@ -38,7 +38,7 @@ export default async function OSPage({ params }: Props) {
           <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-[#f0f0f0] mb-6">
             {t('page_heading')}
           </h1>
-          <p className="font-sans font-light text-[1.125rem] text-[rgba(240,240,240,0.55)] max-w-xl whitespace-pre-line">
+          <p className="font-sans font-light text-[1.125rem] text-[rgba(240,240,240,0.65)] max-w-xl whitespace-pre-line">
             {t('hero_sub')}
           </p>
         </div>
@@ -72,7 +72,7 @@ export default async function OSPage({ params }: Props) {
           <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-[#f0f0f0] mb-4 whitespace-pre-line">
             {t('solution_heading')}
           </h2>
-          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.55)] max-w-xl">
+          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.65)] max-w-xl">
             {t('solution_sub')}
           </p>
         </div>
@@ -94,7 +94,7 @@ export default async function OSPage({ params }: Props) {
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.55)] leading-[1.7]">
+                  <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.65)] leading-[1.7]">
                     {feature.desc}
                   </p>
                 </div>
@@ -109,7 +109,7 @@ export default async function OSPage({ params }: Props) {
           <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-[#f0f0f0] mb-4 whitespace-pre-line">
             {t('pricing_heading')}
           </h2>
-          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.55)] mb-12 max-w-xl">
+          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.65)] mb-12 max-w-xl">
             {t('pricing_sub')}
           </p>
 
@@ -146,7 +146,7 @@ export default async function OSPage({ params }: Props) {
                 }`}
               >
                 {plan.highlight && (
-                  <span className="inline-flex items-center h-6 px-2 mb-4 bg-[rgba(255,62,127,0.15)] border-[0.5px] border-[rgba(255,62,127,0.30)] font-mono text-[0.625rem] uppercase tracking-[0.10em] text-[#FF3E7F]">
+                  <span className="inline-flex items-center h-6 px-2 mb-4 bg-[rgba(255,62,127,0.15)] border-[0.5px] border-[rgba(255,62,127,0.30)] font-mono text-[0.6875rem] uppercase tracking-[0.10em] text-[#FF3E7F]">
                     Popular
                   </span>
                 )}
@@ -157,7 +157,7 @@ export default async function OSPage({ params }: Props) {
                   <span className="font-sans font-bold text-[2rem] text-[#f0f0f0]">
                     {plan.price}
                   </span>
-                  <span className="font-sans font-light text-[0.875rem] text-[rgba(240,240,240,0.40)]">
+                  <span className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.60)]">
                     {plan.period}
                   </span>
                 </div>
@@ -182,7 +182,7 @@ export default async function OSPage({ params }: Props) {
           <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-[#f0f0f0] mb-4 whitespace-pre-line">
             {t('case_heading')}
           </h2>
-          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.55)] max-w-2xl leading-[1.8]">
+          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.65)] max-w-2xl leading-[1.8]">
             {t('case_body')}
           </p>
         </div>
@@ -193,7 +193,7 @@ export default async function OSPage({ params }: Props) {
           <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-[#f0f0f0] mb-4 whitespace-pre-line">
             {t('waitlist_heading')}
           </h2>
-          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.55)] mb-10 max-w-xl">
+          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.65)] mb-10 max-w-xl">
             {t('waitlist_sub')}
           </p>
 

@@ -99,7 +99,7 @@ export function ProjectFilters({ projects }: { projects: ProjectCardData[] }) {
 
       {/* Grid */}
       {filtered.length === 0 ? (
-        <p className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.40)] py-16 text-center">
+        <p className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.50)] py-16 text-center">
           {t('no_results')}
         </p>
       ) : (
