@@ -8,6 +8,8 @@ import { Clients } from '@/components/sections/Clients'
 import { TestimonialSection } from '@/components/sections/Testimonial'
 import { FinalCTA } from '@/components/sections/FinalCTA'
 import { getPayloadClient } from '@/lib/payload'
+import { getMediaUrl } from '@/lib/payload-media'
+import type { ProjectCardData } from '@/components/project/ProjectCard'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -24,7 +26,7 @@ export default async function HomePage({ params }: Props) {
   }>
 
   // Fetch featured projects from Payload
-  let featuredProjects: any[] = []
+  let featuredProjects: ProjectCardData[] = []
   let clients: any[] = []
   let featuredTestimonial: any = null
 
@@ -37,8 +39,21 @@ export default async function HomePage({ params }: Props) {
       where: { featured: { equals: true } },
       limit: 3,
       sort: '-year',
+      depth: 1,
     })
-    featuredProjects = projectsResult.docs
+    featuredProjects = projectsResult.docs.map((p: any) => ({
+      slug: p.slug,
+      titleEn: p.titleEn,
+      titleEs: p.titleEs,
+      taglineEn: p.taglineEn,
+      taglineEs: p.taglineEs,
+      year: p.year,
+      client: p.client,
+      serviceType: p.serviceType,
+      stack: p.stack || [],
+      featured: p.featured,
+      imageUrl: getMediaUrl(p.coverImage),
+    }))
 
     // Clients
     const clientsResult = await payload.find({

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { CaseStudyHero } from '@/components/project/CaseStudyHero'
 import { getPayloadClient } from '@/lib/payload'
+import { getMediaUrl } from '@/lib/payload-media'
 import { convertLexicalToHTMLAsync } from '@payloadcms/richtext-lexical/html-async'
 import { getPayloadPopulateFn } from '@payloadcms/richtext-lexical'
 import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical'
@@ -82,20 +83,6 @@ export default async function CaseStudyPage({ params }: Props) {
   if (!project) notFound()
 
   const rawDescription = locale === 'es' ? project.descriptionEs : project.descriptionEn
-
-  // Helper: resolve a Media document to a working URL.
-  // Media docs in the DB may have url pointing to /api/media/file/... (local, returns 403/501)
-  // since cloudStoragePlugin has disableLocalStorage: true. Construct Cloudinary URL from filename.
-  const getMediaUrl = (media: any): string | undefined => {
-    if (!media || typeof media !== 'object') return undefined
-    if (media.url && media.url.includes('res.cloudinary.com')) return media.url
-    if (media.filename && process.env.CLOUDINARY_CLOUD_NAME) {
-      const ext = media.filename.match(/\.[^/.]+$/)?.[0] || ''
-      const publicId = `yeblanca/${media.filename.replace(/\.[^/.]+$/, '')}`
-      return `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/${publicId}${ext}`
-    }
-    return undefined
-  }
 
   // Convert Lexical rich text to HTML (with populate so upload nodes resolve to Cloudinary URLs)
   let descriptionHtml = ''
