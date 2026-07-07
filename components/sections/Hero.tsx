@@ -34,6 +34,7 @@ export function Hero() {
   const t = useTranslations("home")
   const locale = useLocale()
   const containerRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const reducedMotion = useReducedMotion()
 
@@ -50,9 +51,32 @@ export function Hero() {
     }
   }, [reducedMotion])
 
+  // Pause video when hero section leaves viewport — frees CPU/GPU resources
+  useEffect(() => {
+    const section = sectionRef.current
+    const video = videoRef.current
+    if (!section || !video || reducedMotion) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {})
+        } else {
+          video.pause()
+        }
+      },
+      { threshold: 0 },
+    )
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [reducedMotion])
+
   return (
-    <section className="relative min-h-[90vh] min-h-[90dvh] flex flex-col justify-center px-6 py-32 overflow-hidden">
-      {/* Video background */}
+    <section
+      ref={sectionRef}
+      className="relative min-h-[90vh] min-h-[90dvh] flex flex-col justify-center px-6 py-32 overflow-hidden"
+    >
+      {/* Video background — responsive sources + poster */}
       <video
         ref={videoRef}
         autoPlay
@@ -60,11 +84,16 @@ export function Hero() {
         muted
         playsInline
         preload="metadata"
+        poster="/images/hero-poster.webp"
         aria-hidden="true"
         role="presentation"
         className="absolute inset-0 w-full h-full object-cover opacity-40"
       >
-        <source src="/images/3D_letter_Y_UI_202605121532.mp4" type="video/mp4" />
+        {/* WebM first (better codec, smaller), then H.264 fallback */}
+        <source src="/images/hero-960.webm" type="video/webm" media="(min-width: 768px)" />
+        <source src="/images/hero-640.webm" type="video/webm" />
+        <source src="/images/hero-960.mp4" type="video/mp4" media="(min-width: 768px)" />
+        <source src="/images/hero-640.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient overlay + subtle backdrop blur for readability */}
