@@ -13,6 +13,7 @@ interface Props {
   serviceType: string
   stack: Array<{ tech: string }>
   liveUrl?: string
+  coverImageUrl?: string
 }
 
 export function CaseStudyHero({
@@ -25,6 +26,7 @@ export function CaseStudyHero({
   serviceType,
   stack,
   liveUrl,
+  coverImageUrl,
 }: Props) {
   const locale = useLocale()
   const t = useTranslations('projects')
@@ -90,6 +92,18 @@ export function CaseStudyHero({
             <ExternalLink size={12} />
             {t('view_live')}
           </a>
+        )}
+
+        {/* Cover image */}
+        {coverImageUrl && (
+          <div className="mt-10 relative aspect-video bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.08)] rounded-[2px] overflow-hidden">
+            <img
+              src={coverImageUrl}
+              alt={title}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
         )}
       </div>
     </div>

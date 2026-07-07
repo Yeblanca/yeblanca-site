@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { CaseStudyHero } from '@/components/project/CaseStudyHero'
 import { getPayloadClient } from '@/lib/payload'
+import { convertLexicalToHTMLAsync } from '@payloadcms/richtext-lexical/html-async'
+import { getPayloadPopulateFn } from '@payloadcms/richtext-lexical'
+import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical'
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>
@@ -58,6 +61,7 @@ export default async function CaseStudyPage({ params }: Props) {
       collection: 'projects',
       where: { slug: { equals: slug } },
       limit: 1,
+      depth: 1,
     })
     project = result.docs[0] || null
 
@@ -77,7 +81,54 @@ export default async function CaseStudyPage({ params }: Props) {
 
   if (!project) notFound()
 
-  const description = locale === 'es' ? project.descriptionEs : project.descriptionEn
+  const rawDescription = locale === 'es' ? project.descriptionEs : project.descriptionEn
+
+  // Helper: resolve a Media document to a working URL.
+  // Media docs in the DB may have url pointing to /api/media/file/... (local, returns 403/501)
+  // since cloudStoragePlugin has disableLocalStorage: true. Construct Cloudinary URL from filename.
+  const getMediaUrl = (media: any): string | undefined => {
+    if (!media || typeof media !== 'object') return undefined
+    if (media.url && media.url.includes('res.cloudinary.com')) return media.url
+    if (media.filename && process.env.CLOUDINARY_CLOUD_NAME) {
+      const ext = media.filename.match(/\.[^/.]+$/)?.[0] || ''
+      const publicId = `yeblanca/${media.filename.replace(/\.[^/.]+$/, '')}`
+      return `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/${publicId}${ext}`
+    }
+    return undefined
+  }
+
+  // Convert Lexical rich text to HTML (with populate so upload nodes resolve to Cloudinary URLs)
+  let descriptionHtml = ''
+  if (rawDescription) {
+    if (typeof rawDescription === 'string') {
+      descriptionHtml = `<p>${rawDescription}</p>`
+    } else {
+      const payload = await getPayloadClient()
+      const basePopulate = await getPayloadPopulateFn({
+        currentDepth: 0,
+        depth: 1,
+        payload,
+      })
+      const populate = async (args: any) => {
+        const doc: any = await basePopulate(args)
+        if (args.collectionSlug === 'media' && doc) {
+          const resolved = getMediaUrl(doc)
+          if (resolved) doc.url = resolved
+        }
+        return doc
+      }
+      descriptionHtml = await convertLexicalToHTMLAsync({
+        data: rawDescription as SerializedEditorState,
+        populate: populate as any,
+      })
+    }
+  }
+
+  const coverImageUrl = getMediaUrl(project.coverImage)
+
+  const galleryImages = (project.gallery || [])
+    .map((item: any) => getMediaUrl(item.image))
+    .filter(Boolean) as string[]
 
   return (
     <div className="bg-[#0a0a0a] min-h-screen">
@@ -91,15 +142,39 @@ export default async function CaseStudyPage({ params }: Props) {
         serviceType={project.serviceType}
         stack={project.stack || []}
         liveUrl={project.liveUrl}
+        coverImageUrl={coverImageUrl}
       />
 
       {/* Description */}
-      {description && (
+      {descriptionHtml && (
         <div className="px-6 py-16">
           <div className="max-w-3xl mx-auto">
-            <div className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.70)] leading-[1.8] prose prose-invert">
-              {/* Rich text content — rendered as plain text for now */}
-              <p>{typeof description === 'string' ? description : JSON.stringify(description)}</p>
+            <div
+              className="font-sans font-light text-[1.0625rem] text-[rgba(240,240,240,0.75)] leading-[1.8] [&_p]:mb-5 [&_p:last-child]:mb-0 [&_ul]:mb-5 [&_ul]:pl-5 [&_li]:mb-2 [&_a]:text-[#FF3E7F] [&_a:hover]:underline [&_strong]:font-medium [&_strong]:text-[#f0f0f0]"
+              dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Gallery */}
+      {galleryImages.length > 0 && (
+        <div className="px-6 pb-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {galleryImages.map((url, idx) => (
+                <div
+                  key={idx}
+                  className="relative aspect-video bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.08)] rounded-[2px] overflow-hidden"
+                >
+                  <img
+                    src={url}
+                    alt={`${project.titleEn} screenshot ${idx + 1}`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
