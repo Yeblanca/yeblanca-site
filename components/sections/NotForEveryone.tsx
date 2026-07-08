@@ -15,9 +15,12 @@ export function NotForEveryone() {
     <section className="py-24 md:py-32 px-6 bg-bg border-t-[0.5px] border-border">
       <div className="max-w-5xl mx-auto">
         <SectionLabel label={t('nfe_eyebrow')} />
-        <h2 className="font-sans font-bold text-[clamp(2rem,5vw,3.5rem)] tracking-[-0.03em] text-fg leading-[1.05] mb-16 max-w-3xl">
+        <h2 className="font-sans font-bold text-[clamp(2rem,5vw,3.5rem)] tracking-[-0.03em] text-fg leading-[1.05] mb-6 max-w-3xl">
           {t('nfe_headline')}
         </h2>
+        <p className="font-sans font-light text-[1.125rem] md:text-[1.25rem] leading-[1.75] text-muted max-w-2xl mb-16">
+          {t('nfe_sub')}
+        </p>
 
         <div className="grid md:grid-cols-2 gap-px border-[0.5px] border-border bg-border">
           {/* NOT FOR */}

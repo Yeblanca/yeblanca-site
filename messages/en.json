@@ -68,21 +68,22 @@
         "description": "Final optimization and deployment to the global stage. The signal is sent. We polish, document, and hand off on your terms, at the tier you chose."
       }
     ],
-    "nfe_eyebrow": "Filter",
-    "nfe_headline": "yeblanca is not for everyone.",
-    "nfe_no_title": "We're not it if you need",
+    "nfe_eyebrow": "Scope",
+    "nfe_headline": "What we build. What we don't.",
+    "nfe_sub": "Not because we can't. Because it's not our thing.",
+    "nfe_no_title": "What we don't do.",
     "nfe_no_items": [
       "A website delivered in 48 hours.",
       "A $300 budget with enterprise expectations.",
       "A vendor you can ignore and still expect everything to work forever."
     ],
-    "nfe_yes_title": "But if you want",
+    "nfe_yes_title": "What we do.",
     "nfe_yes_items": [
       "A system built for your actual workflow.",
       "A partner who speaks plainly and shows their work.",
       "Software you won't outgrow in two years."
     ],
-    "nfe_cta": "If that sounds like you, let's talk →",
+    "nfe_cta": "If it fits, start a project →",
     "final_cta_label": "Ready to build?",
     "final_cta_heading": "You've outgrown\nthe off-the-shelf solution.",
     "final_cta_sub": "Whether it's a system that doesn't fit your workflow, a platform eating your margins, or a project you need built from scratch, this is where that conversation starts.\n\nNo commitment. No technical background required. Just tell us where you are.",

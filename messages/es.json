@@ -68,21 +68,22 @@
         "description": "Optimización final y despliegue. La señal se envía. Pulimos, documentamos y entregamos en tus términos, al nivel que elegiste."
       }
     ],
-    "nfe_eyebrow": "Filtro",
-    "nfe_headline": "yeblanca no es para todos.",
-    "nfe_no_title": "No somos opción si necesitas",
+    "nfe_eyebrow": "Alcance",
+    "nfe_headline": "Lo que construimos. Lo que no.",
+    "nfe_sub": "No es por capacidad. Es por enfoque.",
+    "nfe_no_title": "Lo que no hacemos.",
     "nfe_no_items": [
       "Un sitio web entregado en 48 horas.",
       "Un presupuesto de $300 con expectativas de nivel enterprise.",
       "Un proveedor al que puedas ignorar y esperar que todo funcione para siempre."
     ],
-    "nfe_yes_title": "Pero si quieres",
+    "nfe_yes_title": "Lo que hacemos.",
     "nfe_yes_items": [
       "Un sistema construido para tu flujo de trabajo real.",
       "Un partner que hable directo y muestre su trabajo.",
       "Software que no se te quede chico en dos años."
     ],
-    "nfe_cta": "Si eso suena como tú, hablemos →",
+    "nfe_cta": "Si te encaja, inicia un proyecto →",
     "final_cta_label": "¿Listo para construir?",
     "final_cta_heading": "Ya le quedaste chico\na la solución genérica.",
     "final_cta_sub": "Ya sea un sistema que no se adapta a tu operación, una plataforma que se come tu margen, o un proyecto que necesitas construir desde cero — aquí empieza esa conversación.\n\nSin compromisos. Sin necesidad de conocimientos técnicos. Solo cuéntanos dónde estás.",
