@@ -10,29 +10,29 @@ export function FinalCTA() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section className="relative bg-[#050505] overflow-hidden">
+    <section className="relative bg-bg-deeper overflow-hidden">
       {/* Top hairline */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-[rgba(232,232,232,0.06)]" aria-hidden="true" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-fg/5" aria-hidden="true" />
 
       {/* Pink signal - one blade, not a frame */}
-      <div className="absolute top-0 left-0 w-1/3 h-px bg-[#FF3E7F]" aria-hidden="true" />
+      <div className="absolute top-0 left-0 w-1/3 h-px bg-accent" aria-hidden="true" />
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 py-20 md:py-40 relative z-10">
         {/* Label */}
         <div className="flex items-center gap-3 mb-8 md:mb-10">
-          <div className="w-5 h-px bg-[#FF3E7F]" />
-          <span className="font-mono text-[0.6875rem] uppercase tracking-[0.15em] text-[rgba(232,232,232,0.5)]">
+          <div className="w-5 h-px bg-accent" />
+          <span className="font-mono text-[0.6875rem] uppercase tracking-[0.15em] text-muted-50">
             {t('final_cta_label')}
           </span>
         </div>
 
         {/* Massive heading */}
-        <h2 className="font-sans font-bold text-[clamp(2rem,7vw,6.5rem)] tracking-[-0.03em] text-[#E6E6E6] leading-[1.05] md:leading-[0.95] mb-8 max-w-4xl whitespace-pre-line">
+        <h2 className="font-sans font-bold text-[clamp(2rem,7vw,6.5rem)] tracking-[-0.03em] text-fg leading-[1.05] md:leading-[0.95] mb-8 max-w-4xl whitespace-pre-line">
           {t('final_cta_heading')}
         </h2>
 
         {/* Subtext */}
-        <p className="text-[0.9375rem] md:text-[1rem] text-[rgba(232,232,232,0.65)] max-w-md mb-10 md:mb-14 leading-relaxed whitespace-pre-line">
+        <p className="text-[1.0625rem] md:text-[1.125rem] text-muted max-w-lg mb-10 md:mb-14 leading-relaxed whitespace-pre-line">
           {t('final_cta_sub')}
         </p>
 
@@ -46,8 +46,8 @@ export function FinalCTA() {
             font-mono text-[0.75rem] uppercase tracking-[0.15em]
             border transition-all duration-200
             ${isHovered 
-              ? 'border-[#FF3E7F] text-[#FF3E7F]' 
-              : 'border-[rgba(232,232,232,0.15)] text-[rgba(232,232,232,0.7)]'
+              ? 'border-accent text-accent' 
+              : 'border-subtle text-muted-75'
             }
           `}
         >
@@ -61,7 +61,7 @@ export function FinalCTA() {
         </Link>
 
         {/* Bottom hairline - just a whisper */}
-        <div className="mt-16 md:mt-24 w-full h-px bg-[rgba(232,232,232,0.06)]" aria-hidden="true" />
+        <div className="mt-16 md:mt-24 w-full h-px bg-fg/5" aria-hidden="true" />
       </div>
     </section>
   )

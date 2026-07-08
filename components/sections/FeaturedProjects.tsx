@@ -38,19 +38,19 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
   if (!projects || projects.length === 0) return null
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-[#0a0a0a]">
+    <section className="py-24 md:py-32 px-6 bg-bg">
       <div className="max-w-5xl mx-auto">
         {/* Section header */}
         <div className="flex items-end justify-between mb-16">
           <div>
             <SectionLabel label={t('projects_label')} />
-            <h2 className="font-sans font-medium text-[2rem] tracking-[-0.02em] text-[#f0f0f0]">
+            <h2 className="font-sans font-medium text-[2rem] tracking-[-0.02em] text-fg">
               {t('projects_heading')}
             </h2>
           </div>
           <Link
             href={`/${locale}/projects`}
-            className="hidden md:inline-flex font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+            className="hidden md:inline-flex font-mono text-[0.75rem] uppercase tracking-[0.10em] text-muted hover:text-muted-75 transition-colors"
           >
             {t('projects_cta')} →
           </Link>
@@ -80,20 +80,20 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
                     <div className="flex-1 space-y-6 w-full">
                       {/* Number row */}
                       <div className="flex items-center gap-3">
-                        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[#FF3E7F]">
+                        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-accent">
                           {num}
                         </span>
-                        <div className="flex-1 h-px bg-[#FF3E7F]" />
+                        <div className="flex-1 h-px bg-accent" />
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-sans font-medium text-[1.625rem] md:text-[2.25rem] leading-[1.1] tracking-[-0.02em] text-[#f0f0f0] uppercase">
+                      <h3 className="font-sans font-medium text-[1.625rem] md:text-[2.25rem] leading-[1.1] tracking-[-0.02em] text-fg uppercase">
                         {title}
                       </h3>
 
                       {/* Tagline */}
                       {tagline && (
-                        <p className="font-sans font-light text-[1rem] leading-[1.7] text-[rgba(240,240,240,0.65)] max-w-lg">
+                        <p className="font-sans font-light text-[1rem] leading-[1.7] text-muted max-w-lg">
                           {tagline}
                         </p>
                       )}
@@ -104,7 +104,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
                           {project.stack.slice(0, 4).map(({ tech }) => (
                             <span
                               key={tech}
-                              className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.50)]"
+                              className="inline-flex items-center h-8 px-3 border-[0.5px] border-border-strong rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-muted-50"
                             >
                               {tech}
                             </span>
@@ -114,7 +114,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
                     </div>
 
                     {/* Image / Placeholder */}
-                    <div className="w-full md:w-[55%] aspect-video bg-[#111111] overflow-hidden border-[0.5px] border-[rgba(240,240,240,0.08)] rounded-[2px] group-hover:border-[#FF3E7F] transition-colors duration-500">
+                    <div className="w-full md:w-[55%] aspect-video bg-surface overflow-hidden border-[0.5px] border-border rounded-[2px] group-hover:border-[#FF3E7F] transition-colors duration-500">
                       {project.imageUrl ? (
                         <img
                           src={project.imageUrl}
@@ -137,7 +137,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
         <div className="mt-12 md:hidden">
           <Link
             href={`/${locale}/projects`}
-            className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+            className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-muted hover:text-muted-75 transition-colors"
           >
             {t('projects_cta')} →
           </Link>

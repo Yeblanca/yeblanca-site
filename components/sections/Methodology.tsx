@@ -42,7 +42,7 @@ export function Methodology({ phases, headline = 'Methodology' }: MethodologyPro
     <section
       ref={sectionRef}
       aria-labelledby="methodology-heading"
-      className="py-16 md:py-32 overflow-hidden bg-[#0a0a0a] relative"
+      className="py-16 md:py-32 overflow-hidden bg-bg relative"
     >
       {/* Diferenciador: Dots pattern - REDUCIDO 50% */}
       <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true">
@@ -72,7 +72,7 @@ export function Methodology({ phases, headline = 'Methodology' }: MethodologyPro
 
       {/* Nueva línea vertical a la izquierda - divisor de sección - REDUCIDA */}
       <div 
-        className="absolute left-8 top-0 bottom-0 w-[1px] bg-[rgba(255,62,127,0.15)] pointer-events-none hidden md:block"
+        className="absolute left-8 top-0 bottom-0 w-[1px] bg-accent-muted pointer-events-none hidden md:block"
         aria-hidden="true"
       />
 
@@ -83,10 +83,10 @@ export function Methodology({ phases, headline = 'Methodology' }: MethodologyPro
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          <div className="w-8 h-[1px] bg-[#FF3E7F]" />
+          <div className="w-8 h-[1px] bg-accent" />
           <h2
             id="methodology-heading"
-            className="font-mono text-[0.6875rem] tracking-[0.2em] uppercase text-[rgba(240,240,240,0.5)]"
+            className="font-mono text-[0.6875rem] tracking-[0.2em] uppercase text-muted-50"
           >
             {headline}
           </h2>
@@ -95,7 +95,7 @@ export function Methodology({ phases, headline = 'Methodology' }: MethodologyPro
         {/* Timeline */}
         <div className="relative">
           {/* Central vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-[rgba(255,62,127,0.15)] -translate-x-1/2 hidden md:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-accent-muted -translate-x-1/2 hidden md:block" />
 
           <div className="space-y-16 md:space-y-32">
             {phases.map((phase, index) => (

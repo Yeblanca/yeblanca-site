@@ -74,12 +74,12 @@ export default async function AboutPage({ params }: Props) {
   }
 
   return (
-    <div className="pt-32 pb-24 px-6 bg-[#0a0a0a] min-h-screen">
+    <div className="pt-32 pb-24 px-6 bg-bg min-h-screen">
       <div className="max-w-5xl mx-auto space-y-24">
         {/* Header */}
         <div>
           <SectionLabel label={t('page_label')} />
-          <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-[#f0f0f0]">
+          <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-fg">
             {t('page_heading')}
           </h1>
         </div>
@@ -88,10 +88,10 @@ export default async function AboutPage({ params }: Props) {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <SectionLabel label={t('origin_label')} />
-            <h2 className="font-sans font-medium text-[1.75rem] tracking-[-0.02em] text-[#f0f0f0] mb-6">
+            <h2 className="font-sans font-medium text-[1.75rem] tracking-[-0.02em] text-fg mb-6">
               {t('origin_heading')}
             </h2>
-            <p className="font-sans text-[1.0625rem] text-[rgba(240,240,240,0.65)] leading-[1.8]">
+            <p className="font-sans text-[1.0625rem] text-muted leading-[1.8]">
               {t('origin_body')}
             </p>
           </div>
@@ -100,20 +100,20 @@ export default async function AboutPage({ params }: Props) {
         {/* Founder */}
         <div>
           <SectionLabel label={t('founder_label')} />
-          <div className="p-8 bg-[#111111] border-l-2 border-l-[#FF3E7F] border-[0.5px] border-[rgba(240,240,240,0.08)] rounded-[2px] max-w-xl">
+          <div className="p-8 bg-surface border-l-2 border-l-[#FF3E7F] border-[0.5px] border-border rounded-[2px] max-w-xl">
             {/* Avatar placeholder */}
-            <div className="w-16 h-16 rounded-full bg-[rgba(255,62,127,0.15)] border border-[rgba(255,62,127,0.30)] mb-6 flex items-center justify-center">
-              <span className="font-sans font-bold text-[1.25rem] text-[#FF3E7F]">
+            <div className="w-16 h-16 rounded-full bg-accent-muted border border-accent-border mb-6 flex items-center justify-center">
+              <span className="font-sans font-bold text-[1.25rem] text-accent">
                 JP
               </span>
             </div>
 
             <div className="flex items-start justify-between gap-4 mb-4">
               <div>
-                <h3 className="font-sans font-medium text-[1.125rem] text-[#f0f0f0]">
+                <h3 className="font-sans font-medium text-[1.125rem] text-fg">
                   {t('founder_name')}
                 </h3>
-                <p className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.65)] mt-1">
+                <p className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-muted mt-1">
                   {t('founder_title')}
                 </p>
               </div>
@@ -122,8 +122,8 @@ export default async function AboutPage({ params }: Props) {
               <span
                 className={`inline-flex items-center h-8 px-3 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] border-[0.5px] shrink-0 ${
                   available
-                    ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
-                    : 'bg-[rgba(240,240,240,0.05)] border-[rgba(240,240,240,0.10)] text-[rgba(240,240,240,0.50)]'
+                    ? 'bg-accent-muted border-accent-border text-accent'
+                    : 'bg-subtle/5 border-border text-muted-50'
                 }`}
               >
                 {available
@@ -132,7 +132,7 @@ export default async function AboutPage({ params }: Props) {
               </span>
             </div>
 
-            <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.60)] leading-[1.7] mb-6">
+            <p className="font-sans font-light text-[0.9375rem] text-muted-60 leading-[1.7] mb-6">
               {t('founder_bio')}
             </p>
 
@@ -141,7 +141,7 @@ export default async function AboutPage({ params }: Props) {
                 href="https://github.com/bytewing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.50)] hover:text-[#FF3E7F] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-muted-50 hover:text-accent transition-colors"
                 aria-label="GitHub (opens in new tab)"
               >
                 <IconGithub size={16} />
@@ -150,7 +150,7 @@ export default async function AboutPage({ params }: Props) {
                 href="https://linkedin.com/in/jplozano"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-[rgba(240,240,240,0.50)] hover:text-[#FF3E7F] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-muted-50 hover:text-accent transition-colors"
                 aria-label="LinkedIn (opens in new tab)"
               >
                 <IconLinkedin size={16} />
@@ -166,7 +166,7 @@ export default async function AboutPage({ params }: Props) {
             {STACK.map((tech) => (
               <span
                 key={tech}
-                className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] text-[rgba(240,240,240,0.50)]"
+                className="inline-flex items-center h-8 px-3 border-[0.5px] border-border-strong rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] text-muted-50"
               >
                 {tech}
               </span>

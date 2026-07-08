@@ -32,11 +32,11 @@ export function ServicesTeaser() {
   const locale = useLocale()
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-[#0a0a0a]">
+    <section className="py-24 md:py-32 px-6 bg-bg">
       <div className="max-w-5xl mx-auto">
         <SectionLabel label={t('services_label')} />
 
-        <h2 className="font-sans font-medium text-2xl md:text-[2.5rem] tracking-tight text-[#f0f0f0] leading-[1.15] mb-12 max-w-2xl">
+        <h2 className="font-sans font-medium text-2xl md:text-[2.5rem] tracking-tight text-fg leading-[1.15] mb-12 max-w-2xl">
           {t('services_heading')}
         </h2>
 
@@ -50,37 +50,37 @@ export function ServicesTeaser() {
               <Link
                 key={key}
                 href={`/${locale}/services`}
-                className="group relative flex flex-col p-6 md:p-8 lg:p-10 rounded-lg border border-[rgba(240,240,240,0.08)] bg-[#0a0a0a] hover:border-[#FF3E7F]/40 hover:bg-[#111111]/50 transition-all duration-300 ease-out"
+                className="group relative flex flex-col p-6 md:p-8 lg:p-10 rounded-lg border border-border bg-bg hover:border-[#FF3E7F]/40 hover:bg-surface/50 transition-all duration-300 ease-out"
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 bg-gradient-to-br from-[#FF3E7F]/5 to-transparent" />
 
                 {/* Icon + arrow */}
                 <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#FF3E7F]/10 group-hover:bg-[#FF3E7F]/20 transition-colors duration-300">
-                    <Icon size={20} strokeWidth={1.5} className="text-[#FF3E7F]" />
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 group-hover:bg-accent/20 transition-colors duration-300">
+                    <Icon size={20} strokeWidth={1.5} className="text-accent" />
                   </div>
                   <ArrowUpRight
                     size={16}
-                    className="text-[rgba(240,240,240,0.65)] -translate-x-1 -translate-y-1 opacity-0 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                    className="text-muted -translate-x-1 -translate-y-1 opacity-0 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
                   />
                 </div>
 
                 {/* Index */}
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-3 h-px bg-[#FF3E7F]" />
-                  <span className="font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-[rgba(240,240,240,0.65)] group-hover:text-[#FF3E7F] transition-colors duration-200">
+                  <div className="w-3 h-px bg-accent" />
+                  <span className="font-mono text-[0.6875rem] tracking-[0.15em] uppercase text-muted group-hover:text-accent transition-colors duration-200">
                     {index}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-sans font-medium text-[1.0625rem] tracking-tight text-[#f0f0f0] mb-2">
+                <h3 className="font-sans font-medium text-[1.0625rem] tracking-tight text-fg mb-2">
                   {title}
                 </h3>
 
                 {/* Description */}
-                <p className="font-sans text-[1.0625rem] leading-relaxed text-[rgba(240,240,240,0.65)] flex-1 group-hover:text-[rgba(240,240,240,0.85)] transition-colors duration-200 whitespace-pre-line">
+                <p className="font-sans text-[1.0625rem] leading-relaxed text-muted flex-1 group-hover:text-muted-80 transition-colors duration-200 whitespace-pre-line">
                   {tagline}
                 </p>
               </Link>

@@ -39,12 +39,12 @@ export function PhaseCard({ phase, alignment, isVisible, delay }: PhaseCardProps
             {/* Bloom effect */}
             <div
               className={`absolute -inset-4 transition-all duration-200 ease-out ${
-                isHovered ? 'bg-[#FF3E7F]/5' : 'bg-transparent'
+                isHovered ? 'bg-accent/5' : 'bg-transparent'
               }`}
             />
             {/* Signal line */}
             <div
-              className={`absolute top-1/2 left-0 w-[1px] bg-[#FF3E7F] transition-all duration-200 ${
+              className={`absolute top-1/2 left-0 w-[1px] bg-accent transition-all duration-200 ${
                 isHovered ? 'h-[60%] opacity-100' : 'h-0 opacity-0'
               }`}
             />
@@ -52,16 +52,16 @@ export function PhaseCard({ phase, alignment, isVisible, delay }: PhaseCardProps
             <span className="relative font-mono text-[0.6875rem] tracking-[0.25em] uppercase text-[rgba(255,62,127,0.6)] block mb-3">
               {phase.label}
             </span>
-            <h4 className="relative font-sans font-medium text-[1.5rem] md:text-[2rem] tracking-tight uppercase text-[#f0f0f0] mb-3 leading-none">
+            <h4 className="relative font-sans font-medium text-[1.5rem] md:text-[2rem] tracking-tight uppercase text-fg mb-3 leading-none">
               {phase.title}
             </h4>
-            <p className="relative font-sans text-[0.9375rem] leading-[1.7] text-[rgba(240,240,240,0.62)] max-w-sm">
+            <p className="relative font-sans text-[1.125rem] leading-[1.75] text-muted max-w-md">
               {phase.description}
             </p>
 
             {/* Glitch line */}
             <div
-              className={`absolute top-0 right-0 w-4 h-[1px] bg-[#FF3E7F] transition-all duration-200 ${
+              className={`absolute top-0 right-0 w-4 h-[1px] bg-accent transition-all duration-200 ${
                 isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'
               }`}
             />
@@ -73,11 +73,11 @@ export function PhaseCard({ phase, alignment, isVisible, delay }: PhaseCardProps
       <div className="absolute left-1/2 -translate-x-1/2 hidden md:block z-10">
         <div
           className={`absolute inset-0 rounded-full transition-all duration-200 ${
-            isHovered ? 'bg-[#FF3E7F]/20 scale-[3]' : 'bg-transparent scale-100'
+            isHovered ? 'bg-accent/20 scale-[3]' : 'bg-transparent scale-100'
           }`}
           style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
         />
-        <div className={`w-2 h-2 bg-[#FF3E7F] transition-transform duration-200 ${isHovered ? 'scale-150' : 'scale-100'}`} />
+        <div className={`w-2 h-2 bg-accent transition-transform duration-200 ${isHovered ? 'scale-150' : 'scale-100'}`} />
       </div>
 
       {/* Right content */}
@@ -91,12 +91,12 @@ export function PhaseCard({ phase, alignment, isVisible, delay }: PhaseCardProps
             {/* Bloom effect */}
             <div
               className={`absolute -inset-4 transition-all duration-200 ease-out ${
-                isHovered ? 'bg-[#FF3E7F]/5' : 'bg-transparent'
+                isHovered ? 'bg-accent/5' : 'bg-transparent'
               }`}
             />
             {/* Signal line */}
             <div
-              className={`absolute top-1/2 right-0 w-[1px] bg-[#FF3E7F] transition-all duration-200 ${
+              className={`absolute top-1/2 right-0 w-[1px] bg-accent transition-all duration-200 ${
                 isHovered ? 'h-[60%] opacity-100' : 'h-0 opacity-0'
               }`}
             />
@@ -104,16 +104,16 @@ export function PhaseCard({ phase, alignment, isVisible, delay }: PhaseCardProps
             <span className="relative font-mono text-[0.6875rem] tracking-[0.25em] uppercase text-[rgba(255,62,127,0.6)] block mb-3">
               {phase.label}
             </span>
-            <h4 className="relative font-sans font-medium text-[1.5rem] md:text-[2rem] tracking-tight uppercase text-[#f0f0f0] mb-3 leading-none">
+            <h4 className="relative font-sans font-medium text-[1.5rem] md:text-[2rem] tracking-tight uppercase text-fg mb-3 leading-none">
               {phase.title}
             </h4>
-            <p className="relative font-sans text-[0.9375rem] leading-[1.7] text-[rgba(240,240,240,0.62)] max-w-sm">
+            <p className="relative font-sans text-[1.125rem] leading-[1.75] text-muted max-w-md">
               {phase.description}
             </p>
 
             {/* Glitch line */}
             <div
-              className={`absolute top-0 left-0 w-4 h-[1px] bg-[#FF3E7F] transition-all duration-200 ${
+              className={`absolute top-0 left-0 w-4 h-[1px] bg-accent transition-all duration-200 ${
                 isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-2'
               }`}
             />

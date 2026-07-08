@@ -44,8 +44,8 @@ export function WaitlistForm({ businessTypes, labels }: WaitlistFormProps) {
 
   if (status === 'success') {
     return (
-      <div className="p-8 bg-[#111111] border-[0.5px] border-[rgba(255,62,127,0.30)] max-w-lg">
-        <p className="font-sans font-light text-[1rem] text-[#FF3E7F]">
+      <div className="p-8 bg-surface border-[0.5px] border-accent-border max-w-lg">
+        <p className="font-sans font-light text-[1rem] text-accent">
           {labels.success}
         </p>
       </div>
@@ -61,7 +61,7 @@ export function WaitlistForm({ businessTypes, labels }: WaitlistFormProps) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={labels.email}
-          className="w-full h-12 px-4 bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-sans font-light text-[0.9375rem] text-[#f0f0f0] placeholder:text-[rgba(240,240,240,0.30)] focus:outline-none focus:border-[#FF3E7F] transition-colors"
+          className="w-full h-12 px-4 bg-surface border-[0.5px] border-border-strong rounded-[2px] font-sans font-light text-[0.9375rem] text-fg placeholder:text-muted-30 focus:outline-none focus:border-[#FF3E7F] transition-colors"
         />
       </div>
 
@@ -71,25 +71,25 @@ export function WaitlistForm({ businessTypes, labels }: WaitlistFormProps) {
           value={businessName}
           onChange={(e) => setBusinessName(e.target.value)}
           placeholder={labels.business}
-          className="w-full h-12 px-4 bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-sans font-light text-[0.9375rem] text-[#f0f0f0] placeholder:text-[rgba(240,240,240,0.30)] focus:outline-none focus:border-[#FF3E7F] transition-colors"
+          className="w-full h-12 px-4 bg-surface border-[0.5px] border-border-strong rounded-[2px] font-sans font-light text-[0.9375rem] text-fg placeholder:text-muted-30 focus:outline-none focus:border-[#FF3E7F] transition-colors"
         />
       </div>
 
       <div>
-        <label className="block font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.55)] mb-2">
+        <label className="block font-mono text-[0.75rem] uppercase tracking-[0.10em] text-muted-55 mb-2">
           {labels.type}
         </label>
         <select
           required
           value={businessType}
           onChange={(e) => setBusinessType(e.target.value)}
-          className="w-full h-12 px-4 bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-sans font-light text-[0.9375rem] text-[#f0f0f0] focus:outline-none focus:border-[#FF3E7F] transition-colors appearance-none cursor-pointer"
+          className="w-full h-12 px-4 bg-surface border-[0.5px] border-border-strong rounded-[2px] font-sans font-light text-[0.9375rem] text-fg focus:outline-none focus:border-[#FF3E7F] transition-colors appearance-none cursor-pointer"
         >
-          <option value="" disabled className="text-[rgba(240,240,240,0.30)]">
+          <option value="" disabled className="text-muted-30">
             {labels.type}
           </option>
           {businessTypes.map((type) => (
-            <option key={type} value={type} className="bg-[#111111] text-[#f0f0f0]">
+            <option key={type} value={type} className="bg-surface text-fg">
               {type}
             </option>
           ))}
@@ -99,7 +99,7 @@ export function WaitlistForm({ businessTypes, labels }: WaitlistFormProps) {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="inline-flex items-center h-12 px-8 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="inline-flex items-center h-12 px-8 bg-accent text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === 'loading' ? '...' : labels.submit}
       </button>

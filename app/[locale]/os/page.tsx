@@ -30,15 +30,15 @@ export default async function OSPage({ params }: Props) {
   const businessTypes = t.raw('waitlist_type_options') as string[]
 
   return (
-    <div className="pt-32 pb-24 px-6 bg-[#0a0a0a] min-h-screen">
+    <div className="pt-32 pb-24 px-6 bg-bg min-h-screen">
       <div className="max-w-5xl mx-auto space-y-32">
         {/* Hero */}
         <div>
           <SectionLabel label={t('page_label')} />
-          <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-[#f0f0f0] mb-6">
+          <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-fg mb-6">
             {t('page_heading')}
           </h1>
-          <p className="font-sans font-light text-[1.125rem] text-[rgba(240,240,240,0.65)] max-w-xl whitespace-pre-line">
+          <p className="font-sans font-light text-[1.125rem] text-muted max-w-xl whitespace-pre-line">
             {t('hero_sub')}
           </p>
         </div>
@@ -46,19 +46,19 @@ export default async function OSPage({ params }: Props) {
         {/* Problem */}
         <div>
           <SectionLabel label={t('problem_label')} />
-          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-[#f0f0f0] mb-10 whitespace-pre-line">
+          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-fg mb-10 whitespace-pre-line">
             {t('problem_heading')}
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {problemItems.map((item, i) => (
               <div
                 key={i}
-                className="p-5 bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.08)] flex items-start gap-3"
+                className="p-5 bg-surface border-[0.5px] border-border flex items-start gap-3"
               >
-                <span className="text-[#FF3E7F] text-[0.75rem] mt-1 shrink-0">
+                <span className="text-accent text-[0.75rem] mt-1 shrink-0">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <span className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.65)]">
+                <span className="font-sans font-light text-[0.9375rem] text-muted">
                   {item}
                 </span>
               </div>
@@ -69,10 +69,10 @@ export default async function OSPage({ params }: Props) {
         {/* Solution */}
         <div>
           <SectionLabel label={t('solution_label')} />
-          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-[#f0f0f0] mb-4 whitespace-pre-line">
+          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-fg mb-4 whitespace-pre-line">
             {t('solution_heading')}
           </h2>
-          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.65)] max-w-xl">
+          <p className="font-sans font-light text-[1rem] text-muted max-w-xl">
             {t('solution_sub')}
           </p>
         </div>
@@ -86,15 +86,15 @@ export default async function OSPage({ params }: Props) {
               return (
                 <div
                   key={i}
-                  className="p-8 bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.08)] hover:border-[rgba(240,240,240,0.15)] transition-colors"
+                  className="p-8 bg-surface border-[0.5px] border-border hover:border-subtle transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Icon size={20} className="text-[#FF3E7F]" strokeWidth={1.5} />
-                    <h3 className="font-sans font-medium text-[1.125rem] text-[#f0f0f0]">
+                    <Icon size={20} className="text-accent" strokeWidth={1.5} />
+                    <h3 className="font-sans font-medium text-[1.125rem] text-fg">
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.65)] leading-[1.7]">
+                  <p className="font-sans font-light text-[0.9375rem] text-muted leading-[1.7]">
                     {feature.desc}
                   </p>
                 </div>
@@ -106,10 +106,10 @@ export default async function OSPage({ params }: Props) {
         {/* Pricing */}
         <div>
           <SectionLabel label={t('pricing_label')} />
-          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-[#f0f0f0] mb-4 whitespace-pre-line">
+          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-fg mb-4 whitespace-pre-line">
             {t('pricing_heading')}
           </h2>
-          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.65)] mb-12 max-w-xl">
+          <p className="font-sans font-light text-[1rem] text-muted mb-12 max-w-xl">
             {t('pricing_sub')}
           </p>
 
@@ -141,31 +141,31 @@ export default async function OSPage({ params }: Props) {
                 key={i}
                 className={`p-8 ${
                   plan.highlight
-                    ? 'bg-[#111111] border-[0.5px] border-[#FF3E7F]'
-                    : 'bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.08)]'
+                    ? 'bg-surface border-[0.5px] border-[#FF3E7F]'
+                    : 'bg-surface border-[0.5px] border-border'
                 }`}
               >
                 {plan.highlight && (
-                  <span className="inline-flex items-center h-6 px-2 mb-4 bg-[rgba(255,62,127,0.15)] border-[0.5px] border-[rgba(255,62,127,0.30)] font-mono text-[0.6875rem] uppercase tracking-[0.10em] text-[#FF3E7F]">
+                  <span className="inline-flex items-center h-6 px-2 mb-4 bg-accent-muted border-[0.5px] border-accent-border font-mono text-[0.6875rem] uppercase tracking-[0.10em] text-accent">
                     Popular
                   </span>
                 )}
-                <h3 className="font-sans font-medium text-[1.125rem] text-[#f0f0f0] mb-2">
+                <h3 className="font-sans font-medium text-[1.125rem] text-fg mb-2">
                   {plan.name}
                 </h3>
                 <div className="flex items-baseline gap-1 mb-6">
-                  <span className="font-sans font-bold text-[2rem] text-[#f0f0f0]">
+                  <span className="font-sans font-bold text-[2rem] text-fg">
                     {plan.price}
                   </span>
-                  <span className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.60)]">
+                  <span className="font-sans font-light text-[0.9375rem] text-muted-60">
                     {plan.period}
                   </span>
                 </div>
                 <ul className="space-y-3">
                   {plan.features.map((f, j) => (
                     <li key={j} className="flex items-center gap-3">
-                      <span className="text-[#FF3E7F] text-[0.75rem]">—</span>
-                      <span className="font-sans font-light text-[0.875rem] text-[rgba(240,240,240,0.60)]">
+                      <span className="text-accent text-[0.75rem]">—</span>
+                      <span className="font-sans font-light text-[0.875rem] text-muted-60">
                         {f}
                       </span>
                     </li>
@@ -179,10 +179,10 @@ export default async function OSPage({ params }: Props) {
         {/* Case Study */}
         <div>
           <SectionLabel label={t('case_label')} />
-          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-[#f0f0f0] mb-4 whitespace-pre-line">
+          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-fg mb-4 whitespace-pre-line">
             {t('case_heading')}
           </h2>
-          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.65)] max-w-2xl leading-[1.8]">
+          <p className="font-sans font-light text-[1rem] text-muted max-w-2xl leading-[1.8]">
             {t('case_body')}
           </p>
         </div>
@@ -190,10 +190,10 @@ export default async function OSPage({ params }: Props) {
         {/* Waitlist */}
         <div>
           <SectionLabel label={t('waitlist_label')} />
-          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-[#f0f0f0] mb-4 whitespace-pre-line">
+          <h2 className="font-sans font-medium text-[clamp(1.75rem,4vw,2.5rem)] tracking-[-0.02em] text-fg mb-4 whitespace-pre-line">
             {t('waitlist_heading')}
           </h2>
-          <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.65)] mb-10 max-w-xl">
+          <p className="font-sans font-light text-[1rem] text-muted mb-10 max-w-xl">
             {t('waitlist_sub')}
           </p>
 
@@ -213,12 +213,12 @@ export default async function OSPage({ params }: Props) {
         {/* Final CTA */}
         <div className="text-center pt-8">
           <SectionLabel label={t('final_cta_label')} />
-          <h2 className="font-sans font-bold text-[clamp(2rem,5vw,3rem)] tracking-[-0.03em] text-[#f0f0f0] mb-8 whitespace-pre-line">
+          <h2 className="font-sans font-bold text-[clamp(2rem,5vw,3rem)] tracking-[-0.03em] text-fg mb-8 whitespace-pre-line">
             {t('final_cta_heading')}
           </h2>
           <a
             href="#waitlist"
-            className="inline-flex items-center h-12 px-8 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
+            className="inline-flex items-center h-12 px-8 bg-accent text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors"
           >
             {t('final_cta_button')}
           </a>

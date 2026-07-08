@@ -119,7 +119,7 @@ export default async function CaseStudyPage({ params }: Props) {
     .filter(Boolean) as string[]
 
   return (
-    <div className="bg-[#0a0a0a] min-h-screen">
+    <div className="bg-bg min-h-screen">
       <CaseStudyHero
         titleEn={project.titleEn}
         titleEs={project.titleEs}
@@ -138,7 +138,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <div className="px-6 py-16">
           <div className="max-w-3xl mx-auto">
             <div
-              className="font-sans text-[1.125rem] text-[rgba(240,240,240,0.80)] leading-[1.8] [&_p]:mb-5 [&_p:last-child]:mb-0 [&_ul]:mb-5 [&_ul]:pl-5 [&_li]:mb-2 [&_a]:text-[#FF3E7F] [&_a:hover]:underline [&_strong]:font-medium [&_strong]:text-[#f0f0f0]"
+              className="font-sans text-[1.125rem] text-muted-80 leading-[1.8] [&_p]:mb-5 [&_p:last-child]:mb-0 [&_ul]:mb-5 [&_ul]:pl-5 [&_li]:mb-2 [&_a]:text-accent [&_a:hover]:underline [&_strong]:font-medium [&_strong]:text-fg"
               dangerouslySetInnerHTML={{ __html: descriptionHtml }}
             />
           </div>
@@ -153,7 +153,7 @@ export default async function CaseStudyPage({ params }: Props) {
               {galleryImages.map((url, idx) => (
                 <div
                   key={idx}
-                  className="relative aspect-video bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.08)] rounded-[2px] overflow-hidden"
+                  className="relative aspect-video bg-surface border-[0.5px] border-border rounded-[2px] overflow-hidden"
                 >
                   <LightboxImage
                     src={url}
@@ -169,14 +169,14 @@ export default async function CaseStudyPage({ params }: Props) {
 
       {/* Next project */}
       {nextProject && (
-        <div className="px-6 py-16 border-t border-[rgba(240,240,240,0.08)]">
+        <div className="px-6 py-16 border-t border-border">
           <div className="max-w-5xl mx-auto flex items-center justify-between">
-            <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)]">
+            <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted-55">
               {t('next_project')}
             </span>
             <Link
               href={`/${locale}/projects/${nextProject.slug}`}
-              className="font-sans font-medium text-[1.125rem] text-[#f0f0f0] hover:text-[#FF3E7F] transition-colors"
+              className="font-sans font-medium text-[1.125rem] text-fg hover:text-accent transition-colors"
             >
               {locale === 'es' ? nextProject.titleEs : nextProject.titleEn} →
             </Link>

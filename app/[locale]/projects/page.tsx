@@ -33,10 +33,10 @@ export default async function ProjectsPage({ params }: Props) {
   }
 
   return (
-    <div className="pt-32 pb-24 px-6 bg-[#0a0a0a] min-h-screen">
+    <div className="pt-32 pb-24 px-6 bg-bg min-h-screen">
       <div className="max-w-5xl mx-auto">
         <SectionLabel label={t('page_label')} />
-        <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-[#f0f0f0] mb-16">
+        <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-fg mb-16">
           {t('page_heading')}
         </h1>
 
