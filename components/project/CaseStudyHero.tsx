@@ -44,7 +44,7 @@ export function CaseStudyHero({
         </h1>
 
         {tagline && (
-          <p className="font-sans font-light text-[1.125rem] text-[rgba(240,240,240,0.60)] mb-8 max-w-xl">
+          <p className="font-sans text-[1.125rem] text-[rgba(240,240,240,0.60)] mb-8 max-w-xl">
             {tagline}
           </p>
         )}

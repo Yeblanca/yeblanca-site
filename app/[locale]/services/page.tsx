@@ -66,7 +66,7 @@ export default async function ServicesPage({ params }: Props) {
                     <h2 className="font-sans font-medium text-[1.25rem] text-[#f0f0f0] mb-2">
                       {t(`${key}_title`)}
                     </h2>
-                    <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.65)] mb-6">
+                    <p className="font-sans text-[0.9375rem] text-[rgba(240,240,240,0.65)] mb-6">
                       {t(`${key}_tagline`)}
                     </p>
 
@@ -74,7 +74,7 @@ export default async function ServicesPage({ params }: Props) {
                       {(Array.isArray(features) ? features : []).map((f: string, j: number) => (
                         <li key={j} className="flex items-center gap-3">
                           <span className="text-[#FF3E7F] text-[0.75rem]">—</span>
-                          <span className="font-sans font-light text-[0.875rem] text-[rgba(240,240,240,0.65)]">
+                          <span className="font-sans text-[1rem] text-[rgba(240,240,240,0.65)]">
                             {f}
                           </span>
                         </li>

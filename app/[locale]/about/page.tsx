@@ -91,7 +91,7 @@ export default async function AboutPage({ params }: Props) {
             <h2 className="font-sans font-medium text-[1.75rem] tracking-[-0.02em] text-[#f0f0f0] mb-6">
               {t('origin_heading')}
             </h2>
-            <p className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.65)] leading-[1.8]">
+            <p className="font-sans text-[1.0625rem] text-[rgba(240,240,240,0.65)] leading-[1.8]">
               {t('origin_body')}
             </p>
           </div>

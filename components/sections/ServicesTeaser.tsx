@@ -80,7 +80,7 @@ export function ServicesTeaser() {
                 </h3>
 
                 {/* Description */}
-                <p className="font-sans text-[0.9375rem] leading-relaxed text-[rgba(240,240,240,0.65)] flex-1 group-hover:text-[rgba(240,240,240,0.85)] transition-colors duration-200 whitespace-pre-line">
+                <p className="font-sans text-[1.0625rem] leading-relaxed text-[rgba(240,240,240,0.65)] flex-1 group-hover:text-[rgba(240,240,240,0.85)] transition-colors duration-200 whitespace-pre-line">
                   {tagline}
                 </p>
               </Link>
