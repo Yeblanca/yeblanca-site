@@ -118,6 +118,7 @@ export default async function OSPage({ params }: Props) {
               {
                 name: t('plan_starter'),
                 price: t('plan_starter_price'),
+                currency: t('plan_starter_currency'),
                 period: t('plan_starter_period'),
                 features: starterFeatures,
                 highlight: false,
@@ -125,6 +126,7 @@ export default async function OSPage({ params }: Props) {
               {
                 name: t('plan_growth'),
                 price: t('plan_growth_price'),
+                currency: t('plan_growth_currency'),
                 period: t('plan_growth_period'),
                 features: growthFeatures,
                 highlight: true,
@@ -132,6 +134,7 @@ export default async function OSPage({ params }: Props) {
               {
                 name: t('plan_pro'),
                 price: t('plan_pro_price'),
+                currency: t('plan_pro_currency'),
                 period: t('plan_pro_period'),
                 features: proFeatures,
                 highlight: false,
@@ -153,9 +156,12 @@ export default async function OSPage({ params }: Props) {
                 <h3 className="font-sans font-medium text-[1.125rem] text-fg mb-2">
                   {plan.name}
                 </h3>
-                <div className="flex items-baseline gap-1 mb-6">
+                <div className="flex items-baseline gap-2 mb-6">
                   <span className="font-sans font-bold text-[2rem] text-fg">
                     {plan.price}
+                  </span>
+                  <span className="font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-muted-55">
+                    {plan.currency}
                   </span>
                   <span className="font-sans font-light text-[0.9375rem] text-muted-60">
                     {plan.period}

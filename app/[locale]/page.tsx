@@ -3,9 +3,11 @@ import { Hero } from '@/components/sections/Hero'
 import { WhoIsFor } from '@/components/sections/WhoIsFor'
 import { FeaturedProjects } from '@/components/sections/FeaturedProjects'
 import { ServicesTeaser } from '@/components/sections/ServicesTeaser'
+import { DeliveryTiers } from '@/components/sections/DeliveryTiers'
 import { Methodology } from '@/components/sections/Methodology'
 import { Clients } from '@/components/sections/Clients'
 import { TestimonialSection } from '@/components/sections/Testimonial'
+import { NotForEveryone } from '@/components/sections/NotForEveryone'
 import { FinalCTA } from '@/components/sections/FinalCTA'
 import { getPayloadClient } from '@/lib/payload'
 import { getMediaUrl } from '@/lib/payload-media'
@@ -89,9 +91,13 @@ export default async function HomePage({ params }: Props) {
 
       <ServicesTeaser />
 
+      <DeliveryTiers />
+
       <Methodology phases={methodologyTimeline} headline={t('methodology_headline')} />
 
       <TestimonialSection testimonial={featuredTestimonial} locale={locale} />
+
+      <NotForEveryone />
 
       {/* Final CTA */}
       <FinalCTA />

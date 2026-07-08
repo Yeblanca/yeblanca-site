@@ -26,35 +26,6 @@ export function WhoIsFor() {
 
   return (
     <section className="relative py-24 md:py-32 px-6 bg-bg border-t-[0.5px] border-border overflow-hidden">
-      {/* Diferenciador visual: Grid pattern animado - MUY SUTIL */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" aria-hidden="true">
-        <div 
-          className="absolute inset-0 animate-subtle-drift"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px',
-          }}
-        />
-      </div>
-
-      {/* Línea vertical divisor decorativa - MUY SUTIL */}
-      <div 
-        className="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-b from-[rgba(255,62,127,0.2)] via-[rgba(255,62,127,0.08)] to-transparent pointer-events-none"
-        aria-hidden="true"
-      />
-
-      {/* Gradiente radial como divisor visual - MUY SUTIL */}
-      <div 
-        className="absolute top-0 right-0 w-[500px] h-[500px] opacity-[0.05] pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, rgba(255,62,127,0.3) 0%, transparent 70%)',
-        }}
-        aria-hidden="true"
-      />
-
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Two column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">

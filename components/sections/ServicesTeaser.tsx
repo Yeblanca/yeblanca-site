@@ -50,11 +50,8 @@ export function ServicesTeaser() {
               <Link
                 key={key}
                 href={`/${locale}/services`}
-                className="group relative flex flex-col p-6 md:p-8 lg:p-10 rounded-lg border border-border bg-bg hover:border-[#FF3E7F]/40 hover:bg-surface/50 transition-all duration-300 ease-out"
+                className="group relative flex flex-col p-6 md:p-8 lg:p-10 rounded-[2px] border border-border bg-bg hover:border-accent transition-colors duration-300"
               >
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 bg-gradient-to-br from-[#FF3E7F]/5 to-transparent" />
-
                 {/* Icon + arrow */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 group-hover:bg-accent/20 transition-colors duration-300">
