@@ -6,26 +6,19 @@ import { SectionLabel } from '@/components/ui/SectionLabel'
 import { type ProjectCardData } from '@/components/project/ProjectCard'
 
 /**
- * Generates a deterministic gradient + initial placeholder based on the project slug.
- * Falls back to a geometric pattern when no real image is available.
+ * Placeholder shown when a project has no cover image.
+ * Flat surface with the project index — no gradients, no decorative noise.
  */
 function projectPlaceholder(project: ProjectCardData, index: number) {
-  const gradients = [
-    'from-[#1a0a14] via-[#2d1b28] to-[#1a0a14]',
-    'from-[#0a141a] via-[#1b2d28] to-[#0a141a]',
-    'from-[#140a1a] via-[#281b2d] to-[#140a1a]',
-    'from-[#0a1a14] via-[#1b282d] to-[#0a1a14]',
-  ]
-  const g = gradients[index % gradients.length]
-  const letter = (project.titleEn ?? 'P').charAt(0).toUpperCase()
+  const num = String(index + 1).padStart(3, '0')
 
   return (
     <div
-      className={`w-full h-full bg-gradient-to-br ${g} flex items-center justify-center`}
+      className="w-full h-full bg-surface flex items-center justify-center"
       aria-hidden="true"
     >
-      <span className="font-sans font-bold text-[6rem] md:text-[8rem] text-[rgba(255,62,127,0.12)] select-none">
-        {letter}
+      <span className="font-mono text-[0.75rem] uppercase tracking-[0.20em] text-muted-30 select-none">
+        {num}
       </span>
     </div>
   )
