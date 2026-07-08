@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { CaseStudyHero } from '@/components/project/CaseStudyHero'
+import { LightboxImage } from '@/components/ui/LightboxImage'
 import { getPayloadClient } from '@/lib/payload'
 import { getMediaUrl } from '@/lib/payload-media'
 import { convertLexicalToHTMLAsync } from '@payloadcms/richtext-lexical/html-async'
@@ -137,7 +138,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <div className="px-6 py-16">
           <div className="max-w-3xl mx-auto">
             <div
-              className="font-sans font-light text-[1.0625rem] text-[rgba(240,240,240,0.75)] leading-[1.8] [&_p]:mb-5 [&_p:last-child]:mb-0 [&_ul]:mb-5 [&_ul]:pl-5 [&_li]:mb-2 [&_a]:text-[#FF3E7F] [&_a:hover]:underline [&_strong]:font-medium [&_strong]:text-[#f0f0f0]"
+              className="font-sans text-[1.125rem] text-[rgba(240,240,240,0.80)] leading-[1.8] [&_p]:mb-5 [&_p:last-child]:mb-0 [&_ul]:mb-5 [&_ul]:pl-5 [&_li]:mb-2 [&_a]:text-[#FF3E7F] [&_a:hover]:underline [&_strong]:font-medium [&_strong]:text-[#f0f0f0]"
               dangerouslySetInnerHTML={{ __html: descriptionHtml }}
             />
           </div>
@@ -154,11 +155,10 @@ export default async function CaseStudyPage({ params }: Props) {
                   key={idx}
                   className="relative aspect-video bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.08)] rounded-[2px] overflow-hidden"
                 >
-                  <img
+                  <LightboxImage
                     src={url}
                     alt={`${project.titleEn} screenshot ${idx + 1}`}
                     className="w-full h-full object-cover"
-                    loading="lazy"
                   />
                 </div>
               ))}

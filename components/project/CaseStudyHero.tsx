@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { ExternalLink } from 'lucide-react'
 import { SectionLabel } from '@/components/ui/SectionLabel'
+import { LightboxImage } from '@/components/ui/LightboxImage'
 
 interface Props {
   titleEn: string
@@ -94,14 +95,13 @@ export function CaseStudyHero({
           </a>
         )}
 
-        {/* Cover image */}
+        {/* Cover image — click to expand */}
         {coverImageUrl && (
           <div className="mt-10 relative aspect-video bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.08)] rounded-[2px] overflow-hidden">
-            <img
+            <LightboxImage
               src={coverImageUrl}
               alt={title}
               className="w-full h-full object-cover"
-              loading="lazy"
             />
           </div>
         )}
