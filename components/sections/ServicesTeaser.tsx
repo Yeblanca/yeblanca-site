@@ -45,13 +45,12 @@ export function ServicesTeaser() {
             const Icon = ICONS[key]
             const title = ts(`${key}_title`)
             const tagline = ts(`${key}_tagline`)
-            const price = ts(`${key}_starting_price`)
 
             return (
               <Link
                 key={key}
                 href={`/${locale}/services`}
-                className="group relative flex flex-col p-6 md:p-8 lg:p-10 rounded-lg border border-[rgba(240,240,240,0.08)] bg-[#0a0a0a] hover:border-[#FF3E7F]/40 hover:bg-[#111111]/50 transition-all duration-300 ease-out min-h-[280px] md:min-h-[340px] lg:min-h-[360px]"
+                className="group relative flex flex-col p-6 md:p-8 lg:p-10 rounded-lg border border-[rgba(240,240,240,0.08)] bg-[#0a0a0a] hover:border-[#FF3E7F]/40 hover:bg-[#111111]/50 transition-all duration-300 ease-out"
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 bg-gradient-to-br from-[#FF3E7F]/5 to-transparent" />
@@ -84,14 +83,6 @@ export function ServicesTeaser() {
                 <p className="font-sans text-[0.875rem] leading-relaxed text-[rgba(240,240,240,0.65)] flex-1 group-hover:text-[rgba(240,240,240,0.85)] transition-colors duration-200 whitespace-pre-line">
                   {tagline}
                 </p>
-
-                {/* Price */}
-                <div className="mt-5 pt-4 border-t border-[rgba(240,240,240,0.08)]/60">
-                  <span className="font-mono text-[0.6875rem] tracking-[0.1em] uppercase text-[rgba(240,240,240,0.65)]">
-                    {ts('from')}{' '}
-                    <span className="text-[#FF3E7F] font-medium">{price}</span>
-                  </span>
-                </div>
               </Link>
             )
           })}
