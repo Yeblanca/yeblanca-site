@@ -75,12 +75,12 @@ export function ServicesTeaser() {
                 </div>
 
                 {/* Title */}
-                <h3 className="font-sans font-medium text-[0.9375rem] tracking-tight text-[#f0f0f0] mb-2">
+                <h3 className="font-sans font-medium text-[1.0625rem] tracking-tight text-[#f0f0f0] mb-2">
                   {title}
                 </h3>
 
                 {/* Description */}
-                <p className="font-sans text-[0.875rem] leading-relaxed text-[rgba(240,240,240,0.65)] flex-1 group-hover:text-[rgba(240,240,240,0.85)] transition-colors duration-200 whitespace-pre-line">
+                <p className="font-sans text-[0.9375rem] leading-relaxed text-[rgba(240,240,240,0.65)] flex-1 group-hover:text-[rgba(240,240,240,0.85)] transition-colors duration-200 whitespace-pre-line">
                   {tagline}
                 </p>
               </Link>
