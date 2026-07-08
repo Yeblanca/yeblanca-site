@@ -24,6 +24,7 @@
     "who_headline": "Sound familiar?",
     "who_body": "Maybe you've never had a website and you're not sure where to start.\n\nMaybe you have one, and it's not doing anything for the business.\n\nMaybe you're running your operation on spreadsheets, WhatsApp, and willpower, and you know there's a better way, but you're not sure what to ask for.\n\nMaybe you've outgrown Shopify, Wix, or whatever someone set up for you three years ago.\n\nAny of those is a good place to start. We've been there with clients at every stage.",
     "who_cta": "Tell us where you are →",
+    "delivery_eyebrow": "Delivery",
     "delivery_intro": "Every project is different.\nSo is every delivery.\n\nNot every business needs to own the engine to drive the car.\n\nWe offer three ways to work with us, based on how much control you want over what's under the hood.",
     "delivery_hosted_title": "Hosted",
     "delivery_hosted_body": "We run it. You use it.\n\nYour system is live, maintained, and fully operational. You get admin access, training, and a dashboard built for your workflow, not for developers. We handle everything below the surface.",
@@ -67,8 +68,21 @@
         "description": "Final optimization and deployment to the global stage. The signal is sent. We polish, document, and hand off on your terms, at the tier you chose."
       }
     ],
+    "nfe_eyebrow": "Filter",
     "nfe_headline": "yeblanca is not for everyone.",
-    "nfe_body": "If you need a website in 48 hours, we're not it.\n\nIf your budget is $300 and your expectations are enterprise, we're not it.\n\nIf you want a vendor you can ignore and everything still works forever, nobody is that.\n\nBut if you want a system built for your actual workflow, a partner who speaks plainly, and software you won't outgrow in two years, that's exactly what we do.",
+    "nfe_no_title": "We're not it if you need",
+    "nfe_no_items": [
+      "A website delivered in 48 hours.",
+      "A $300 budget with enterprise expectations.",
+      "A vendor you can ignore and still expect everything to work forever."
+    ],
+    "nfe_yes_title": "But if you want",
+    "nfe_yes_items": [
+      "A system built for your actual workflow.",
+      "A partner who speaks plainly and shows their work.",
+      "Software you won't outgrow in two years."
+    ],
+    "nfe_cta": "If that sounds like you, let's talk →",
     "final_cta_label": "Ready to build?",
     "final_cta_heading": "You've outgrown\nthe off-the-shelf solution.",
     "final_cta_sub": "Whether it's a system that doesn't fit your workflow, a platform eating your margins, or a project you need built from scratch, this is where that conversation starts.\n\nNo commitment. No technical background required. Just tell us where you are.",
@@ -262,6 +276,7 @@
     "pricing_sub": "Start free during beta. Pay when you're ready.",
     "plan_starter": "Starter",
     "plan_starter_price": "$199",
+    "plan_starter_currency": "USD",
     "plan_starter_period": "/month",
     "plan_starter_features": [
       "3 users",
@@ -271,6 +286,7 @@
     ],
     "plan_growth": "Growth",
     "plan_growth_price": "$399",
+    "plan_growth_currency": "USD",
     "plan_growth_period": "/month",
     "plan_growth_features": [
       "10 users",
@@ -280,6 +296,7 @@
     ],
     "plan_pro": "Pro",
     "plan_pro_price": "$799",
+    "plan_pro_currency": "USD",
     "plan_pro_period": "/month",
     "plan_pro_features": [
       "Unlimited users",
