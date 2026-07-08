@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { ExternalLink } from 'lucide-react'
 import { SectionLabel } from '@/components/ui/SectionLabel'
+import { LightboxImage } from '@/components/ui/LightboxImage'
 
 interface Props {
   titleEn: string
@@ -13,6 +14,7 @@ interface Props {
   serviceType: string
   stack: Array<{ tech: string }>
   liveUrl?: string
+  coverImageUrl?: string
 }
 
 export function CaseStudyHero({
@@ -25,6 +27,7 @@ export function CaseStudyHero({
   serviceType,
   stack,
   liveUrl,
+  coverImageUrl,
 }: Props) {
   const locale = useLocale()
   const t = useTranslations('projects')
@@ -33,34 +36,34 @@ export function CaseStudyHero({
   const tagline = locale === 'es' ? taglineEs : taglineEn
 
   return (
-    <div className="pt-32 pb-16 px-6 bg-[#0a0a0a]">
+    <div className="pt-32 pb-16 px-6 bg-bg">
       <div className="max-w-5xl mx-auto">
         <SectionLabel label={`${serviceType} · ${year}`} />
 
-        <h1 className="font-sans font-bold text-[clamp(2rem,6vw,3.5rem)] leading-[1.05] tracking-[-0.03em] text-[#f0f0f0] mb-4">
+        <h1 className="font-sans font-bold text-[clamp(2rem,6vw,3.5rem)] leading-[1.05] tracking-[-0.03em] text-fg mb-4">
           {title}
         </h1>
 
         {tagline && (
-          <p className="font-sans font-light text-[1.125rem] text-[rgba(240,240,240,0.60)] mb-8 max-w-xl">
+          <p className="font-sans text-[1.125rem] text-muted-60 mb-8 max-w-xl">
             {tagline}
           </p>
         )}
 
         <div className="flex flex-wrap items-center gap-6 mb-8">
           <div>
-            <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)] mb-1">
+            <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted-55 mb-1">
               Client
             </p>
-            <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.75)]">
+            <p className="font-sans font-light text-[0.9375rem] text-muted-75">
               {client}
             </p>
           </div>
           <div>
-            <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)] mb-1">
+            <p className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted-55 mb-1">
               Year
             </p>
-            <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.75)]">
+            <p className="font-sans font-light text-[0.9375rem] text-muted-75">
               {year}
             </p>
           </div>
@@ -72,7 +75,7 @@ export function CaseStudyHero({
             {stack.map(({ tech }) => (
               <span
                 key={tech}
-                className="inline-flex items-center h-8 px-3 border-[0.5px] border-[rgba(240,240,240,0.12)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[rgba(240,240,240,0.50)]"
+                className="inline-flex items-center h-8 px-3 border-[0.5px] border-border-strong rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] text-muted-50"
               >
                 {tech}
               </span>
@@ -85,11 +88,22 @@ export function CaseStudyHero({
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 h-9 px-5 border border-[rgba(240,240,240,0.15)] rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] text-[rgba(240,240,240,0.60)] hover:border-[#FF3E7F] hover:text-[#FF3E7F] transition-colors"
+            className="inline-flex items-center gap-2 h-9 px-5 border border-subtle rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] text-muted-60 hover:border-[#FF3E7F] hover:text-accent transition-colors"
           >
             <ExternalLink size={12} />
             {t('view_live')}
           </a>
+        )}
+
+        {/* Cover image — click to expand */}
+        {coverImageUrl && (
+          <div className="mt-10 relative aspect-video bg-surface border-[0.5px] border-border rounded-[2px] overflow-hidden">
+            <LightboxImage
+              src={coverImageUrl}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+          </div>
         )}
       </div>
     </div>

@@ -3,7 +3,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { CaseStudyHero } from '@/components/project/CaseStudyHero'
+import { LightboxImage } from '@/components/ui/LightboxImage'
 import { getPayloadClient } from '@/lib/payload'
+import { getMediaUrl } from '@/lib/payload-media'
+import { convertLexicalToHTMLAsync } from '@payloadcms/richtext-lexical/html-async'
+import { getPayloadPopulateFn } from '@payloadcms/richtext-lexical'
+import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical'
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>
@@ -58,6 +63,7 @@ export default async function CaseStudyPage({ params }: Props) {
       collection: 'projects',
       where: { slug: { equals: slug } },
       limit: 1,
+      depth: 1,
     })
     project = result.docs[0] || null
 
@@ -77,10 +83,43 @@ export default async function CaseStudyPage({ params }: Props) {
 
   if (!project) notFound()
 
-  const description = locale === 'es' ? project.descriptionEs : project.descriptionEn
+  const rawDescription = locale === 'es' ? project.descriptionEs : project.descriptionEn
+
+  // Convert Lexical rich text to HTML (with populate so upload nodes resolve to Cloudinary URLs)
+  let descriptionHtml = ''
+  if (rawDescription) {
+    if (typeof rawDescription === 'string') {
+      descriptionHtml = `<p>${rawDescription}</p>`
+    } else {
+      const payload = await getPayloadClient()
+      const basePopulate = await getPayloadPopulateFn({
+        currentDepth: 0,
+        depth: 1,
+        payload,
+      })
+      const populate = async (args: any) => {
+        const doc: any = await basePopulate(args)
+        if (args.collectionSlug === 'media' && doc) {
+          const resolved = getMediaUrl(doc)
+          if (resolved) doc.url = resolved
+        }
+        return doc
+      }
+      descriptionHtml = await convertLexicalToHTMLAsync({
+        data: rawDescription as SerializedEditorState,
+        populate: populate as any,
+      })
+    }
+  }
+
+  const coverImageUrl = getMediaUrl(project.coverImage)
+
+  const galleryImages = (project.gallery || [])
+    .map((item: any) => getMediaUrl(item.image))
+    .filter(Boolean) as string[]
 
   return (
-    <div className="bg-[#0a0a0a] min-h-screen">
+    <div className="bg-bg min-h-screen">
       <CaseStudyHero
         titleEn={project.titleEn}
         titleEs={project.titleEs}
@@ -91,15 +130,38 @@ export default async function CaseStudyPage({ params }: Props) {
         serviceType={project.serviceType}
         stack={project.stack || []}
         liveUrl={project.liveUrl}
+        coverImageUrl={coverImageUrl}
       />
 
       {/* Description */}
-      {description && (
+      {descriptionHtml && (
         <div className="px-6 py-16">
           <div className="max-w-3xl mx-auto">
-            <div className="font-sans font-light text-[1rem] text-[rgba(240,240,240,0.70)] leading-[1.8] prose prose-invert">
-              {/* Rich text content — rendered as plain text for now */}
-              <p>{typeof description === 'string' ? description : JSON.stringify(description)}</p>
+            <div
+              className="font-sans text-[1.125rem] text-muted-80 leading-[1.8] [&_p]:mb-5 [&_p:last-child]:mb-0 [&_ul]:mb-5 [&_ul]:pl-5 [&_li]:mb-2 [&_a]:text-accent [&_a:hover]:underline [&_strong]:font-medium [&_strong]:text-fg"
+              dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Gallery */}
+      {galleryImages.length > 0 && (
+        <div className="px-6 pb-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {galleryImages.map((url, idx) => (
+                <div
+                  key={idx}
+                  className="relative aspect-video bg-surface border-[0.5px] border-border rounded-[2px] overflow-hidden"
+                >
+                  <LightboxImage
+                    src={url}
+                    alt={`${project.titleEn} screenshot ${idx + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -107,14 +169,14 @@ export default async function CaseStudyPage({ params }: Props) {
 
       {/* Next project */}
       {nextProject && (
-        <div className="px-6 py-16 border-t border-[rgba(240,240,240,0.08)]">
+        <div className="px-6 py-16 border-t border-border">
           <div className="max-w-5xl mx-auto flex items-center justify-between">
-            <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.55)]">
+            <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted-55">
               {t('next_project')}
             </span>
             <Link
               href={`/${locale}/projects/${nextProject.slug}`}
-              className="font-sans font-medium text-[1.125rem] text-[#f0f0f0] hover:text-[#FF3E7F] transition-colors"
+              className="font-sans font-medium text-[1.125rem] text-fg hover:text-accent transition-colors"
             >
               {locale === 'es' ? nextProject.titleEs : nextProject.titleEn} →
             </Link>

@@ -25,7 +25,7 @@ export function WhoIsFor() {
       }
 
   return (
-    <section className="relative py-24 md:py-32 px-6 bg-[#0a0a0a] border-t-[0.5px] border-[rgba(240,240,240,0.08)] overflow-hidden">
+    <section className="relative py-24 md:py-32 px-6 bg-bg border-t-[0.5px] border-border overflow-hidden">
       {/* Diferenciador visual: Grid pattern animado - MUY SUTIL */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" aria-hidden="true">
         <div 
@@ -60,12 +60,12 @@ export function WhoIsFor() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Left column - eyebrow + title */}
           <div className="lg:col-span-5">
-            <span className="font-mono text-[0.75rem] uppercase tracking-[0.20em] text-[rgba(240,240,240,0.45)] block mb-6">
+            <span className="font-mono text-[0.75rem] uppercase tracking-[0.20em] text-muted-45 block mb-6">
               {translations.eyebrow}
             </span>
             <h2 className="font-sans font-medium text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] tracking-[-0.02em]">
-              <span className="text-[#f0f0f0]">{translations.titleWhite}</span>
-              <span className="text-[#FF3E7F]">{translations.titlePink}</span>
+              <span className="text-fg">{translations.titleWhite}</span>
+              <span className="text-accent">{translations.titlePink}</span>
             </h2>
           </div>
 
@@ -75,7 +75,7 @@ export function WhoIsFor() {
               {translations.body.split('\n\n').map((paragraph, index) => (
                 <p 
                   key={index} 
-                  className="font-sans text-[1.125rem] md:text-[1.25rem] leading-[1.75] text-[rgba(240,240,240,0.72)]"
+                  className="font-sans text-[1.125rem] md:text-[1.25rem] leading-[1.75] text-muted-72"
                 >
                   {paragraph}
                 </p>
@@ -86,7 +86,7 @@ export function WhoIsFor() {
             <div className="mt-12">
               <Link
                 href={`/${locale}/quote`}
-                className="inline-flex items-center font-mono text-[0.75rem] uppercase tracking-[0.10em] text-[#FF3E7F] hover:text-[#ff5c8d] transition-colors group"
+                className="inline-flex items-center font-mono text-[0.75rem] uppercase tracking-[0.10em] text-accent hover:text-[#ff5c8d] transition-colors group"
               >
                 {translations.cta}
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>

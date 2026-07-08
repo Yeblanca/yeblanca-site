@@ -29,13 +29,13 @@ export default async function ServicesPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'services' })
 
   return (
-    <div className="pt-32 pb-24 px-6 bg-[#0a0a0a] min-h-screen">
+    <div className="pt-32 pb-24 px-6 bg-bg min-h-screen">
       <div className="max-w-5xl mx-auto">
         <SectionLabel label={t('page_label')} />
-        <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-[#f0f0f0] mb-6">
+        <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,4rem)] tracking-[-0.03em] text-fg mb-6">
           {t('page_heading')}
         </h1>
-        <p className="font-sans font-light text-[1.125rem] text-[rgba(240,240,240,0.55)] mb-20 max-w-xl">
+        <p className="font-sans font-light text-[1.125rem] text-muted mb-20 max-w-xl">
           {t('page_sub')}
         </p>
 
@@ -47,34 +47,34 @@ export default async function ServicesPage({ params }: Props) {
             return (
               <div
                 key={key}
-                className="group p-8 bg-[#111111] border-[0.5px] border-[rgba(240,240,240,0.08)] hover:border-[rgba(240,240,240,0.15)] transition-colors"
+                className="group p-8 bg-surface border-[0.5px] border-border hover:border-subtle transition-colors"
               >
                 <div className="flex flex-col md:flex-row md:items-start gap-8">
                   {/* Index + Icon */}
                   <div className="flex items-center gap-4 shrink-0">
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-px bg-[#FF3E7F]" />
-                      <span className="font-mono text-[0.75rem] text-[rgba(240,240,240,0.55)] tracking-[0.10em]">
+                      <div className="w-4 h-px bg-accent" />
+                      <span className="font-mono text-[0.75rem] text-muted-55 tracking-[0.10em]">
                         {String(i + 1).padStart(2, '0')}
                       </span>
                     </div>
-                    <Icon size={20} className="text-[#FF3E7F]" strokeWidth={1.5} />
+                    <Icon size={20} className="text-accent" strokeWidth={1.5} />
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h2 className="font-sans font-medium text-[1.25rem] text-[#f0f0f0] mb-2">
+                    <h2 className="font-sans font-medium text-[1.25rem] text-fg mb-2">
                       {t(`${key}_title`)}
                     </h2>
-                    <p className="font-sans font-light text-[0.9375rem] text-[rgba(240,240,240,0.55)] mb-6">
+                    <p className="font-sans text-[0.9375rem] text-muted mb-6">
                       {t(`${key}_tagline`)}
                     </p>
 
                     <ul className="space-y-2 mb-8">
                       {(Array.isArray(features) ? features : []).map((f: string, j: number) => (
                         <li key={j} className="flex items-center gap-3">
-                          <span className="text-[#FF3E7F] text-[0.75rem]">—</span>
-                          <span className="font-sans font-light text-[0.875rem] text-[rgba(240,240,240,0.60)]">
+                          <span className="text-accent text-[0.75rem]">—</span>
+                          <span className="font-sans text-[1rem] text-muted">
                             {f}
                           </span>
                         </li>
@@ -83,7 +83,7 @@ export default async function ServicesPage({ params }: Props) {
 
                     <Link
                       href={`/${locale}/quote?service=${SLUGS[key]}`}
-                      className="inline-flex items-center h-9 px-5 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
+                      className="inline-flex items-center h-9 px-5 bg-accent text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors"
                     >
                       {t('cta')}
                     </Link>

@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import type { QuoteFormData } from './QuoteForm'
 
 const inputClass =
-  'w-full bg-transparent border-[0.5px] border-[rgba(240,240,240,0.15)] rounded-[2px] px-4 py-3 font-sans font-light text-[1rem] text-[#f0f0f0] placeholder:text-[rgba(240,240,240,0.45)] focus:outline-none focus:border-[#FF3E7F] transition-colors'
+  'w-full bg-transparent border-[0.5px] border-subtle rounded-[2px] px-4 py-3 font-sans font-light text-[1rem] text-fg placeholder:text-muted-45 focus:outline-none focus:border-[#FF3E7F] transition-colors'
 
 const LANGUAGES = ['en', 'es'] as const
 const SOURCES = ['google', 'referral', 'social', 'other'] as const
@@ -26,8 +26,8 @@ function RadioOption({
       onClick={onClick}
       className={`h-9 px-4 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] border-[0.5px] transition-colors ${
         active
-          ? 'bg-[rgba(255,62,127,0.15)] border-[rgba(255,62,127,0.30)] text-[#FF3E7F]'
-          : 'border-[rgba(240,240,240,0.12)] text-[rgba(240,240,240,0.55)] hover:border-[rgba(240,240,240,0.30)]'
+          ? 'bg-accent-muted border-accent-border text-accent'
+          : 'border-border-strong text-muted-55 hover:border-border-hover'
       }`}
     >
       {children}
@@ -44,7 +44,7 @@ function OptionGroup({
 }) {
   return (
     <fieldset className="space-y-3 border-0 p-0 m-0">
-      <legend className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] mb-3">
+      <legend className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted mb-3">
         {label}
       </legend>
       <div role="radiogroup" aria-label={label} className="flex flex-wrap gap-3">
@@ -75,7 +75,7 @@ export function QuoteStep3({
     <div className="space-y-8">
       <div className="grid sm:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label htmlFor="quote-contact-name" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+          <label htmlFor="quote-contact-name" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted">
             {t('name_label')} <span aria-hidden="true">*</span>
           </label>
           <input
@@ -89,7 +89,7 @@ export function QuoteStep3({
           />
         </div>
         <div className="space-y-2">
-          <label htmlFor="quote-contact-email" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+          <label htmlFor="quote-contact-email" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted">
             {t('email_label')} <span aria-hidden="true">*</span>
           </label>
           <input
@@ -105,7 +105,7 @@ export function QuoteStep3({
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="quote-company" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)]">
+        <label htmlFor="quote-company" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted">
           {t('company_label')}
         </label>
         <input
@@ -150,7 +150,7 @@ export function QuoteStep3({
           type="button"
           onClick={onBack}
           disabled={isSubmitting}
-          className="h-11 px-6 border-[0.5px] border-[rgba(240,240,240,0.15)] text-[rgba(240,240,240,0.55)] font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:border-[rgba(240,240,240,0.30)] transition-colors disabled:opacity-30"
+          className="h-11 px-6 border-[0.5px] border-subtle text-muted-55 font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:border-border-hover transition-colors disabled:opacity-30"
         >
           {t('back')}
         </button>
@@ -158,7 +158,7 @@ export function QuoteStep3({
           type="button"
           disabled={!canSubmit || isSubmitting}
           onClick={onSubmit}
-          className="h-11 px-6 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          className="h-11 px-6 bg-accent text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
         >
           {isSubmitting ? t('submitting') : t('submit')}
         </button>

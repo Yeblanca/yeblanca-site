@@ -41,6 +41,7 @@ export function Navbar() {
   const navLinks = [
     { href: `/${locale}/projects`, label: t('projects') },
     { href: `/${locale}/services`, label: t('services') },
+    { href: `/${locale}/os`, label: t('os') },
     { href: `/${locale}/about`, label: t('about') },
     { href: `/${locale}/contact`, label: t('contact') },
   ]
@@ -49,7 +50,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-[rgba(240,240,240,0.08)] bg-[#0a0a0a]/90 backdrop-blur-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-bg/90 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-2 h-8 relative z-50">
@@ -61,7 +62,7 @@ export function Navbar() {
               className="h-full w-auto object-contain"
               priority
             />
-            <span className="font-sans text-sm font-bold tracking-[0.08em] text-[#f0f0f0]">YEBLANCA</span>
+            <span className="font-sans text-sm font-bold tracking-[0.08em] text-fg">YEBLANCA</span>
           </Link>
 
           {/* Desktop Nav links */}
@@ -72,8 +73,8 @@ export function Navbar() {
                 href={href}
                 className={`font-mono text-[0.75rem] uppercase tracking-[0.12em] transition-colors ${
                   isActive(href)
-                    ? 'text-[#FF3E7F] opacity-100'
-                    : 'text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)]'
+                    ? 'text-accent opacity-100'
+                    : 'text-muted hover:text-muted-75'
                 }`}
               >
                 {label}
@@ -86,7 +87,7 @@ export function Navbar() {
             {/* Locale toggle — expanded tap target */}
             <button
               onClick={() => switchLocale(locale === 'en' ? 'es' : 'en')}
-              className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted hover:text-muted-75 transition-colors"
               aria-label={locale === 'en' ? 'Switch to Spanish' : 'Switch to English'}
             >
               {locale === 'en' ? 'ES' : 'EN'}
@@ -96,7 +97,7 @@ export function Navbar() {
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               aria-label="Toggle theme"
-              className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.75rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted hover:text-muted-75 transition-colors"
             >
               {(theme ?? 'dark') === 'dark' ? '○' : '●'}
             </button>
@@ -104,7 +105,7 @@ export function Navbar() {
             {/* Desktop Quote CTA */}
             <Link
               href={`/${locale}/quote`}
-              className="hidden md:inline-flex items-center h-8 px-4 bg-[#FF3E7F] text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-colors"
+              className="hidden md:inline-flex items-center h-8 px-4 bg-accent text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors"
             >
               {t('quote')}
             </Link>
@@ -119,17 +120,17 @@ export function Navbar() {
               <div className="w-5 h-3.5 relative flex flex-col justify-between">
                 <span
                   className={`block h-[1.5px] bg-current transition-all duration-300 origin-center ${
-                    mobileOpen ? 'rotate-45 translate-y-[5px] bg-[#f0f0f0]' : 'bg-[rgba(240,240,240,0.75)]'
+                    mobileOpen ? 'rotate-45 translate-y-[5px] bg-fg' : 'bg-muted-75'
                   }`}
                 />
                 <span
                   className={`block h-[1.5px] bg-current transition-all duration-300 ${
-                    mobileOpen ? 'opacity-0' : 'bg-[rgba(240,240,240,0.75)]'
+                    mobileOpen ? 'opacity-0' : 'bg-muted-75'
                   }`}
                 />
                 <span
                   className={`block h-[1.5px] bg-current transition-all duration-300 origin-center ${
-                    mobileOpen ? '-rotate-45 -translate-y-[5px] bg-[#f0f0f0]' : 'bg-[rgba(240,240,240,0.75)]'
+                    mobileOpen ? '-rotate-45 -translate-y-[5px] bg-fg' : 'bg-muted-75'
                   }`}
                 />
               </div>
@@ -151,7 +152,7 @@ export function Navbar() {
           role="button"
           tabIndex={0}
           aria-label="Close menu"
-          className="absolute inset-0 bg-[#0a0a0a]/95 backdrop-blur-md cursor-pointer"
+          className="absolute inset-0 bg-bg/95 backdrop-blur-md cursor-pointer"
           onClick={() => setMobileOpen(false)}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -175,8 +176,8 @@ export function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className={`font-sans text-[clamp(1.75rem,6vw,2.5rem)] font-bold tracking-[-0.02em] transition-all duration-300 ${
                   isActive(href)
-                    ? 'text-[#FF3E7F]'
-                    : 'text-[#f0f0f0] hover:text-[rgba(240,240,240,0.75)]'
+                    ? 'text-accent'
+                    : 'text-fg hover:text-muted-75'
                 }`}
                 style={{
                   transitionDelay: mobileOpen ? `${index * 50 + 100}ms` : '0ms',
@@ -192,7 +193,7 @@ export function Navbar() {
             <Link
               href={`/${locale}/quote`}
               onClick={() => setMobileOpen(false)}
-              className="mt-4 inline-flex items-center h-12 px-8 bg-[#FF3E7F] text-white font-mono text-[0.8125rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-[#e6356e] transition-all duration-300"
+              className="mt-4 inline-flex items-center h-12 px-8 bg-accent text-white font-mono text-[0.8125rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-all duration-300"
               style={{
                 transitionDelay: mobileOpen ? `${navLinks.length * 50 + 100}ms` : '0ms',
                 opacity: mobileOpen ? 1 : 0,
@@ -213,15 +214,15 @@ export function Navbar() {
             >
               <button
                 onClick={() => switchLocale(locale === 'en' ? 'es' : 'en')}
-                className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.8125rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.8125rem] uppercase tracking-[0.12em] text-muted hover:text-muted-75 transition-colors"
               >
                 {locale === 'en' ? 'ES' : 'EN'}
               </button>
-              <span className="w-px h-4 bg-[rgba(240,240,240,0.15)]" />
+              <span className="w-px h-4 bg-subtle" />
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 aria-label="Toggle theme"
-                className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.8125rem] uppercase tracking-[0.12em] text-[rgba(240,240,240,0.65)] hover:text-[rgba(240,240,240,0.75)] transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center font-mono text-[0.8125rem] uppercase tracking-[0.12em] text-muted hover:text-muted-75 transition-colors"
               >
                 {(theme ?? 'dark') === 'dark' ? '○' : '●'}
               </button>

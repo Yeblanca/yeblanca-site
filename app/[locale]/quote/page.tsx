@@ -23,7 +23,7 @@ export default async function QuotePage({ params, searchParams }: Props) {
   const t = await getTranslations({ locale, namespace: 'quote' })
 
   return (
-    <div className="pt-32 pb-24 px-6 bg-[#0a0a0a] min-h-screen">
+    <div className="pt-32 pb-24 px-6 bg-bg min-h-screen">
       <div className="max-w-5xl mx-auto">
         <QuoteForm preselectedService={service} />
       </div>
