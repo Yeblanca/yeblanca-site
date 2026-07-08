@@ -37,10 +37,13 @@ export function DeliveryTiers() {
                 highlight ? 'border-l-2 border-l-accent md:border-l-[0.5px]' : ''
               }`}
             >
-              {badge && (
+              {badge ? (
                 <span className="inline-flex items-center h-6 px-2 mb-6 self-start bg-accent-muted border-[0.5px] border-accent-border font-mono text-[0.6875rem] uppercase tracking-[0.10em] text-accent">
                   {badge}
                 </span>
+              ) : (
+                /* Reserve badge space so titles align across all three cards */
+                <div className="h-6 mb-6" aria-hidden="true" />
               )}
 
               {/* Index */}
