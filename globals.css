@@ -1,56 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 @import "tailwindcss";
 
-@theme inline {
-  /* Brand color tokens — var() references so utility classes use var() and respond to theme changes */
-  --color-bg: var(--color-bg-root);
-  --color-surface: var(--color-surface-root);
-  --color-elevated: var(--color-elevated-root);
-  --color-fg: var(--color-fg-root);
-  --color-muted: var(--color-muted-root);
-  --color-muted-75: var(--color-muted-75-root);
-  --color-muted-60: var(--color-muted-60-root);
-  --color-muted-55: var(--color-muted-55-root);
-  --color-muted-50: var(--color-muted-50-root);
-  --color-muted-80: var(--color-muted-80-root);
-  --color-muted-72: var(--color-muted-72-root);
-  --color-muted-62: var(--color-muted-62-root);
-  --color-muted-40: var(--color-muted-40-root);
-  --color-muted-30: var(--color-muted-30-root);
-  --color-muted-20: var(--color-muted-20-root);
-  --color-muted-10: var(--color-muted-10-root);
-  --color-subtle: var(--color-subtle-root);
-  --color-border: var(--color-border-root);
-  --color-border-strong: var(--color-border-strong-root);
-  --color-border-hover: var(--color-border-hover-root);
+@theme {
+  /* Brand color tokens — dark mode defaults; html.light overrides below.
+     Values are hardcoded here (not var() references) so Tailwind emits
+     `var(--color-bg)` in utility classes and the theme switch works at runtime. */
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-elevated: #1a1a1a;
+  --color-fg: #f0f0f0;
+  --color-muted: rgba(240, 240, 240, 0.65);
+  --color-muted-75: rgba(240, 240, 240, 0.75);
+  --color-muted-60: rgba(240, 240, 240, 0.60);
+  --color-muted-55: rgba(240, 240, 240, 0.55);
+  --color-muted-50: rgba(240, 240, 240, 0.50);
+  --color-muted-80: rgba(240, 240, 240, 0.80);
+  --color-muted-72: rgba(240, 240, 240, 0.72);
+  --color-muted-62: rgba(240, 240, 240, 0.62);
+  --color-muted-40: rgba(240, 240, 240, 0.40);
+  --color-muted-30: rgba(240, 240, 240, 0.30);
+  --color-muted-20: rgba(240, 240, 240, 0.20);
+  --color-muted-10: rgba(240, 240, 240, 0.10);
+  --color-subtle: rgba(240, 240, 240, 0.15);
+  --color-border: rgba(240, 240, 240, 0.08);
+  --color-border-strong: rgba(240, 240, 240, 0.12);
+  --color-border-hover: rgba(240, 240, 240, 0.25);
   --color-accent: #ff3e7f;
   --color-accent-muted: rgba(255, 62, 127, 0.15);
   --color-accent-border: rgba(255, 62, 127, 0.3);
   --color-accent-dark: #e6356e;
-  --color-bg-deeper: var(--color-bg-deeper-root);
+  --color-bg-deeper: #050505;
 
   /* Typography */
   --font-sans: var(--font-grotesk), "Arial Black", sans-serif;
   --font-mono: var(--font-mono-var), "Courier New", monospace;
 
   /* shadcn/ui CSS variable mapping */
-  --color-background: var(--color-bg-root);
-  --color-foreground: var(--color-fg-root);
-  --color-card: var(--color-surface-root);
-  --color-card-foreground: var(--color-fg-root);
-  --color-popover: var(--color-surface-root);
-  --color-popover-foreground: var(--color-fg-root);
+  --color-background: #0a0a0a;
+  --color-foreground: #f0f0f0;
+  --color-card: #111111;
+  --color-card-foreground: #f0f0f0;
+  --color-popover: #111111;
+  --color-popover-foreground: #f0f0f0;
   --color-primary: #ff3e7f;
   --color-primary-foreground: #ffffff;
-  --color-secondary: var(--color-elevated-root);
-  --color-secondary-foreground: var(--color-fg-root);
-  --color-muted-bg: var(--color-surface-root);
-  --color-muted-fg: var(--color-muted-root);
+  --color-secondary: #1a1a1a;
+  --color-secondary-foreground: #f0f0f0;
+  --color-muted-bg: #111111;
+  --color-muted-fg: rgba(240, 240, 240, 0.65);
   --color-accent-bg: rgba(255, 62, 127, 0.15);
   --color-accent-fg: #ff3e7f;
   --color-destructive: #ff3e7f;
-  --color-border-ui: var(--color-border-root);
-  --color-input: var(--color-border-root);
+  --color-border-ui: rgba(240, 240, 240, 0.08);
+  --color-input: rgba(240, 240, 240, 0.08);
   --color-ring: #ff3e7f;
   --radius: 2px;
 }
@@ -124,8 +126,12 @@ button:focus-visible {
   border-radius: 2px;
 }
 
-/* Light mode overrides — override the -root variables so all utility classes update */
+/* Light mode overrides — override both the -root and the non-root tokens
+   so utility classes (which use --color-bg, --color-fg, etc.) and direct
+   var() references (which use --color-bg-root, --color-fg-root) both
+   respond to the theme switch. */
 html.light {
+  /* -root variables: consumed by html/body and inline JS reads */
   --color-bg-root: #f5f5f5;
   --color-surface-root: #ffffff;
   --color-elevated-root: #ebebeb;
@@ -147,6 +153,44 @@ html.light {
   --color-border-strong-root: rgba(10, 10, 10, 0.12);
   --color-border-hover-root: rgba(10, 10, 10, 0.25);
   --color-bg-deeper-root: #e5e5e5;
+
+  /* non-root variables: consumed by Tailwind utility classes (bg-bg, text-fg, etc.) */
+  --color-bg: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-elevated: #ebebeb;
+  --color-fg: #0a0a0a;
+  --color-muted: rgba(10, 10, 10, 0.65);
+  --color-muted-75: rgba(10, 10, 10, 0.75);
+  --color-muted-60: rgba(10, 10, 10, 0.60);
+  --color-muted-55: rgba(10, 10, 10, 0.55);
+  --color-muted-50: rgba(10, 10, 10, 0.50);
+  --color-muted-80: rgba(10, 10, 10, 0.80);
+  --color-muted-72: rgba(10, 10, 10, 0.72);
+  --color-muted-62: rgba(10, 10, 10, 0.62);
+  --color-muted-40: rgba(10, 10, 10, 0.40);
+  --color-muted-30: rgba(10, 10, 10, 0.30);
+  --color-muted-20: rgba(10, 10, 10, 0.20);
+  --color-muted-10: rgba(10, 10, 10, 0.10);
+  --color-subtle: rgba(10, 10, 10, 0.08);
+  --color-border: rgba(10, 10, 10, 0.08);
+  --color-border-strong: rgba(10, 10, 10, 0.12);
+  --color-border-hover: rgba(10, 10, 10, 0.25);
+  --color-bg-deeper: #e5e5e5;
+
+  /* shadcn/ui mappings */
+  --color-background: #f5f5f5;
+  --color-foreground: #0a0a0a;
+  --color-card: #ffffff;
+  --color-card-foreground: #0a0a0a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0a0a0a;
+  --color-secondary: #ebebeb;
+  --color-secondary-foreground: #0a0a0a;
+  --color-muted-bg: #ffffff;
+  --color-muted-fg: rgba(10, 10, 10, 0.65);
+  --color-border-ui: rgba(10, 10, 10, 0.08);
+  --color-input: rgba(10, 10, 10, 0.08);
+
   background-color: #f5f5f5;
   color: #0a0a0a;
 }
