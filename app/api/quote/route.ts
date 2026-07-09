@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { sendQuoteEmail } from '@/lib/resend'
 
 const schema = z.object({
+  engagement: z.string().min(1),
   serviceType: z.string().min(1),
   budget: z.string().min(1),
   timeline: z.string().min(1),

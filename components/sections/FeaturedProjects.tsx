@@ -43,7 +43,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
           </div>
           <Link
             href={`/${locale}/projects`}
-            className="hidden md:inline-flex font-mono text-[0.75rem] uppercase tracking-[0.10em] text-muted hover:text-muted-75 transition-colors"
+            className="hidden md:inline-flex font-mono text-[0.875rem] uppercase tracking-[0.10em] text-muted hover:text-muted-75 transition-colors"
           >
             {t('projects_cta')} →
           </Link>
@@ -130,7 +130,7 @@ export function FeaturedProjects({ projects }: { projects: ProjectCardData[] }) 
         <div className="mt-12 md:hidden">
           <Link
             href={`/${locale}/projects`}
-            className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-muted hover:text-muted-75 transition-colors"
+            className="font-mono text-[0.875rem] uppercase tracking-[0.10em] text-muted hover:text-muted-75 transition-colors"
           >
             {t('projects_cta')} →
           </Link>

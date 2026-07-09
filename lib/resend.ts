@@ -5,6 +5,7 @@ const TO = 'yp@yeblanca.com'
 const FROM = 'yeblanca <noreply@yeblanca.com>'
 
 export interface QuoteFormData {
+  engagement: string
   serviceType: string
   budget: string
   timeline: string
@@ -32,6 +33,7 @@ export async function sendQuoteEmail(data: QuoteFormData) {
   const html = `
     <h2>New Quote Request — yeblanca.com</h2>
     <table style="font-family:sans-serif;font-size:14px;border-collapse:collapse;width:100%">
+      <tr><td style="padding:8px;font-weight:bold;width:200px">Engagement</td><td style="padding:8px">${data.engagement}</td></tr>
       <tr><td style="padding:8px;font-weight:bold;width:200px">Service type</td><td style="padding:8px">${data.serviceType}</td></tr>
       <tr><td style="padding:8px;font-weight:bold">Budget</td><td style="padding:8px">${data.budget}</td></tr>
       <tr><td style="padding:8px;font-weight:bold">Timeline</td><td style="padding:8px">${data.timeline}</td></tr>

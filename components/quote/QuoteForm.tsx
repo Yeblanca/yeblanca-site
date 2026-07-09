@@ -9,6 +9,7 @@ import { QuoteStep2 } from './QuoteStep2'
 import { QuoteStep3 } from './QuoteStep3'
 
 export interface QuoteFormData {
+  engagement: string
   serviceType: string
   budget: string
   timeline: string

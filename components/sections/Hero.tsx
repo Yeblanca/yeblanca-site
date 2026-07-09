@@ -144,13 +144,13 @@ export function Hero() {
         <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
           <Link
             href={`/${locale}/services`}
-            className="inline-flex items-center h-11 px-6 border border-subtle text-fg font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:border-border-hover transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            className="inline-flex items-center h-12 px-6 border border-subtle text-fg font-mono text-[1rem] uppercase tracking-[0.08em] rounded-[2px] hover:border-border-hover transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
           >
             {t("cta_services")}
           </Link>
           <Link
             href={`/${locale}/projects`}
-            className="inline-flex items-center h-11 px-6 bg-accent text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+            className="inline-flex items-center h-12 px-6 bg-accent text-white font-mono text-[1rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
           >
             {t("cta_projects")}
           </Link>

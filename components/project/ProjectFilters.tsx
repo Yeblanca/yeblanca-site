@@ -49,12 +49,12 @@ export function ProjectFilters({ projects }: { projects: ProjectCardData[] }) {
   }) {
     return (
       <div className="flex items-center gap-2 flex-wrap">
-        <span className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted-55 mr-1">
+        <span className="font-mono text-[1rem] uppercase tracking-[0.12em] text-muted-55 mr-1">
           {label}
         </span>
         <button
           onClick={() => onChange('all')}
-          className={`h-8 px-3 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
+          className={`h-8 px-3 rounded-[2px] font-mono text-[1rem] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
             active === 'all'
               ? 'bg-accent-muted border-accent-border text-accent'
               : 'border-border text-muted hover:border-border-hover'
@@ -66,7 +66,7 @@ export function ProjectFilters({ projects }: { projects: ProjectCardData[] }) {
           <button
             key={v}
             onClick={() => onChange(v)}
-            className={`h-8 px-3 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
+            className={`h-8 px-3 rounded-[2px] font-mono text-[1rem] uppercase tracking-[0.10em] border-[0.5px] transition-colors ${
               active === v
                 ? 'bg-accent-muted border-accent-border text-accent'
                 : 'border-border text-muted hover:border-border-hover'
@@ -99,7 +99,7 @@ export function ProjectFilters({ projects }: { projects: ProjectCardData[] }) {
 
       {/* Grid */}
       {filtered.length === 0 ? (
-        <p className="font-mono text-[0.75rem] uppercase tracking-[0.10em] text-muted-50 py-16 text-center">
+        <p className="font-mono text-[1rem] uppercase tracking-[0.10em] text-muted-50 py-16 text-center">
           {t('no_results')}
         </p>
       ) : (

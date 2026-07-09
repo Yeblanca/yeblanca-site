@@ -24,7 +24,7 @@ function RadioOption({
       role="radio"
       aria-checked={active}
       onClick={onClick}
-      className={`h-9 px-4 rounded-[2px] font-mono text-[0.75rem] uppercase tracking-[0.08em] border-[0.5px] transition-colors ${
+      className={`h-9 px-4 rounded-[2px] font-mono text-[1rem] uppercase tracking-[0.08em] border-[0.5px] transition-colors ${
         active
           ? 'bg-accent-muted border-accent-border text-accent'
           : 'border-border-strong text-muted-55 hover:border-border-hover'
@@ -44,7 +44,7 @@ function OptionGroup({
 }) {
   return (
     <fieldset className="space-y-3 border-0 p-0 m-0">
-      <legend className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted mb-3">
+      <legend className="font-mono text-[1rem] uppercase tracking-[0.12em] text-muted mb-3">
         {label}
       </legend>
       <div role="radiogroup" aria-label={label} className="flex flex-wrap gap-3">
@@ -73,9 +73,74 @@ export function QuoteStep3({
 
   return (
     <div className="space-y-8">
+      {/* Project details */}
+      <div className="space-y-2">
+          <label htmlFor="quote-project-name" className="font-mono text-[1rem] uppercase tracking-[0.12em] text-muted">
+          {t('project_name_label')} <span aria-hidden="true">*</span>
+        </label>
+        <input
+          id="quote-project-name"
+          type="text"
+          value={data.projectName || ''}
+          onChange={(e) => onChange({ projectName: e.target.value })}
+          placeholder={t('project_name_placeholder')}
+          required
+          aria-required="true"
+          className={inputClass}
+        />
+      </div>
+
+      <div className="space-y-2">
+          <label htmlFor="quote-description" className="font-mono text-[1rem] uppercase tracking-[0.12em] text-muted">
+          {t('description_label')} <span aria-hidden="true">*</span>
+        </label>
+        <textarea
+          id="quote-description"
+          value={data.description || ''}
+          onChange={(e) => onChange({ description: e.target.value.slice(0, 500) })}
+          placeholder={t('description_placeholder')}
+          rows={5}
+          required
+          aria-required="true"
+          className={`${inputClass} resize-none`}
+        />
+        <p className="font-mono text-[1rem] text-muted-45 text-right">
+          {(data.description || '').length}/500
+        </p>
+      </div>
+
+      <div className="space-y-2">
+          <label htmlFor="quote-stack" className="font-mono text-[1rem] uppercase tracking-[0.12em] text-muted">
+          {t('stack_label')}
+        </label>
+        <input
+          id="quote-stack"
+          type="text"
+          value={data.currentStack || ''}
+          onChange={(e) => onChange({ currentStack: e.target.value })}
+          placeholder={t('stack_placeholder')}
+          className={inputClass}
+        />
+      </div>
+
+      <div className="space-y-2">
+          <label htmlFor="quote-refs" className="font-mono text-[1rem] uppercase tracking-[0.12em] text-muted">
+          {t('refs_label')}
+        </label>
+        <input
+          id="quote-refs"
+          type="text"
+          value={data.referenceUrls || ''}
+          onChange={(e) => onChange({ referenceUrls: e.target.value })}
+          placeholder={t('refs_placeholder')}
+          className={inputClass}
+        />
+      </div>
+
+      {/* Contact info */}
       <div className="grid sm:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label htmlFor="quote-contact-name" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted">
+            <label htmlFor="quote-contact-name" className="font-mono text-[1rem] uppercase tracking-[0.12em] text-muted">
             {t('name_label')} <span aria-hidden="true">*</span>
           </label>
           <input
@@ -89,7 +154,7 @@ export function QuoteStep3({
           />
         </div>
         <div className="space-y-2">
-          <label htmlFor="quote-contact-email" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted">
+            <label htmlFor="quote-contact-email" className="font-mono text-[1rem] uppercase tracking-[0.12em] text-muted">
             {t('email_label')} <span aria-hidden="true">*</span>
           </label>
           <input
@@ -105,7 +170,7 @@ export function QuoteStep3({
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="quote-company" className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-muted">
+        <label htmlFor="quote-company" className="font-mono text-[1rem] uppercase tracking-[0.12em] text-muted">
           {t('company_label')}
         </label>
         <input
@@ -150,7 +215,7 @@ export function QuoteStep3({
           type="button"
           onClick={onBack}
           disabled={isSubmitting}
-          className="h-11 px-6 border-[0.5px] border-subtle text-muted-55 font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:border-border-hover transition-colors disabled:opacity-30"
+          className="h-11 px-6 border-[0.5px] border-subtle text-muted-55 font-mono text-[1rem] uppercase tracking-[0.08em] rounded-[2px] hover:border-border-hover transition-colors disabled:opacity-30"
         >
           {t('back')}
         </button>
@@ -158,7 +223,7 @@ export function QuoteStep3({
           type="button"
           disabled={!canSubmit || isSubmitting}
           onClick={onSubmit}
-          className="h-11 px-6 bg-accent text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          className="h-11 px-6 bg-accent text-white font-mono text-[1rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
         >
           {isSubmitting ? t('submitting') : t('submit')}
         </button>
