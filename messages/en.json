@@ -17,7 +17,7 @@
     "cta_services": "See how we work →",
     "cta_projects": "View projects",
     "projects_label": "Selected work",
-    "projects_heading": "Projects we're proud of",
+    "projects_heading": "Client work",
     "projects_cta": "View all projects",
     "services_label": "What we build",
     "services_heading": "From your first page on the internet to a full operations system, we scope, build, and ship.",
@@ -50,22 +50,22 @@
       {
         "label": "PHASE_001",
         "title": "DISCOVERY",
-        "description": "Deep immersion into brand DNA and technical constraints. We define the scope, goals, and parameters of the digital ecosystem before writing a single line of code."
+        "description": "We start with how your business runs today: who buys, who approves, what lives in spreadsheets. Then we define scope, goals, and parameters before building anything."
       },
       {
         "label": "PHASE_002",
         "title": "DESIGN",
-        "description": "Iterative construction of the visual and structural language. Every pixel has weight and purpose. We review each decision with you before moving forward."
+        "description": "You see every screen before we build it. We review each decision with you before moving forward. Changing a screen in design costs less than changing it in production."
       },
       {
         "label": "PHASE_003",
         "title": "DEVELOPMENT",
-        "description": "Meticulous translation of pixels into performant code. We build the silent engine of the experience: clean, strict, zero shortcuts, designed to last."
+        "description": "We build exactly what you approved in Design, in a stack we name before we start. Changes are short and reviewable, so you see what moved and why. The stack is named, the dependencies are listed, and nothing runs in production that we can't explain to you."
       },
       {
         "label": "PHASE_004",
         "title": "LAUNCH",
-        "description": "Final optimization and deployment to the global stage. The signal is sent. We polish, document, and hand off on your terms, at the tier you chose."
+        "description": "Launch is a deploy, not an event. We document what runs where and hand off on your terms, at the tier you chose."
       }
     ],
     "nfe_eyebrow": "Scope",
