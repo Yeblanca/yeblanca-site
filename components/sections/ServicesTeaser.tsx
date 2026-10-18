@@ -59,7 +59,7 @@ export function ServicesTeaser() {
                   </div>
                   <ArrowUpRight
                     size={16}
-                    className="text-muted -translate-x-1 -translate-y-1 opacity-0 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                    className="text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
 

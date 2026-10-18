@@ -96,8 +96,8 @@ export function Hero() {
         <source src="/images/hero-640.mp4" type="video/mp4" />
       </video>
 
-      {/* Gradient overlay + subtle backdrop blur for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/70 to-bg backdrop-blur-[2px]" />
+      {/* Flat scrim + subtle backdrop blur for readability */}
+      <div className="absolute inset-0 bg-bg/70 backdrop-blur-[2px]" />
 
       <motion.div
         ref={containerRef}
@@ -150,7 +150,7 @@ export function Hero() {
           </Link>
           <Link
             href={`/${locale}/projects`}
-            className="inline-flex items-center h-12 px-6 bg-accent text-white font-mono text-[1rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+            className="inline-flex items-center h-12 px-6 bg-accent text-white font-mono text-[1rem] uppercase tracking-[0.08em] rounded-[2px] hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
           >
             {t("cta_projects")}
           </Link>

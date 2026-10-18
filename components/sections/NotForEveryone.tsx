@@ -65,10 +65,10 @@ export function NotForEveryone() {
         <div className="mt-12">
           <Link
             href={`/${locale}/quote`}
-            className="inline-flex items-center font-mono text-[0.875rem] uppercase tracking-[0.10em] text-accent hover:text-[#ff5c8d] transition-colors group"
+            className="inline-flex items-center font-mono text-[0.875rem] uppercase tracking-[0.10em] text-accent hover:opacity-80 transition-opacity group"
           >
             {t('nfe_cta')}
-            <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            <span className="ml-2">→</span>
           </Link>
         </div>
       </div>

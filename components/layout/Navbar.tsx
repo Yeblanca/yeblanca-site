@@ -105,7 +105,7 @@ export function Navbar() {
             {/* Desktop Quote CTA */}
             <Link
               href={`/${locale}/quote`}
-              className="hidden md:inline-flex items-center h-8 px-4 bg-accent text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-colors"
+              className="hidden md:inline-flex items-center h-8 px-4 bg-accent text-white font-mono text-[0.75rem] uppercase tracking-[0.08em] rounded-[2px] hover:opacity-90 transition-opacity"
             >
               {t('quote')}
             </Link>
@@ -193,7 +193,7 @@ export function Navbar() {
             <Link
               href={`/${locale}/quote`}
               onClick={() => setMobileOpen(false)}
-              className="mt-4 inline-flex items-center h-12 px-8 bg-accent text-white font-mono text-[0.8125rem] uppercase tracking-[0.08em] rounded-[2px] hover:bg-accent-dark transition-all duration-300"
+              className="mt-4 inline-flex items-center h-12 px-8 bg-accent text-white font-mono text-[0.8125rem] uppercase tracking-[0.08em] rounded-[2px] hover:opacity-90 transition-all duration-300"
               style={{
                 transitionDelay: mobileOpen ? `${navLinks.length * 50 + 100}ms` : '0ms',
                 opacity: mobileOpen ? 1 : 0,
