@@ -733,7 +733,6 @@ interface TestimonialSeed {
 }
 
 const testimonials: TestimonialSeed[] = [
-  { projectSlug: 'colonial-crm',              author: 'DIRECTOR', company: 'MONOLITH INC.', textEn: "YEBLANCA DOESN'T JUST BUILD WEBSITES; THEY CONSTRUCT DIGITAL ARCHITECTURE THAT COMMANDS ATTENTION THROUGH SILENCE.", textEs: "YEBLANCA NO SOLO CONSTRUYE SITIOS WEB; CONSTRUYEN ARQUITECTURA DIGITAL QUE COMANDA ATENCIÓN A TRAVÉS DEL SILENCIO.", featured: true },
   { projectSlug: 'talent-insight-wizeline',    author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximamente.', featured: false },
   { projectSlug: 'vlood-plus',                 author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
   { projectSlug: 'covid-management-bxp',       author: 'Juan N.', company: '', textEn: 'Testimonial coming soon.', textEs: 'Testimonio próximas.', featured: false },
