@@ -17,7 +17,7 @@
     "cta_services": "Así trabajamos →",
     "cta_projects": "Ver proyectos",
     "projects_label": "Trabajo selecto",
-    "projects_heading": "Proyectos de los que estamos orgullosos",
+    "projects_heading": "Trabajo para clientes",
     "projects_cta": "Ver todos los proyectos",
     "services_label": "Qué construimos",
     "services_heading": "Desde tu primera página en internet hasta un sistema operativo completo, definimos, construimos y entregamos.",
@@ -50,22 +50,22 @@
       {
         "label": "FASE_001",
         "title": "DESCUBRIMIENTO",
-        "description": "Inmersión profunda en el ADN de la marca y las restricciones técnicas. Definimos el alcance, los objetivos y los parámetros del ecosistema digital antes de escribir una sola línea de código."
+        "description": "Empezamos por cómo opera tu negocio hoy: quién compra, quién aprueba, qué vive en hojas de cálculo. Después definimos alcance, metas y parámetros antes de construir nada."
       },
       {
         "label": "FASE_002",
         "title": "DISEÑO",
-        "description": "Construcción iterativa del lenguaje visual y estructural. Cada píxel tiene peso y propósito. Revisamos cada decisión contigo antes de avanzar."
+        "description": "Ves cada pantalla antes de que la construyamos. Revisamos cada decisión contigo antes de avanzar. Cambiar una pantalla en diseño cuesta menos que cambiarla en producción."
       },
       {
         "label": "FASE_003",
         "title": "DESARROLLO",
-        "description": "Traducción meticulosa de píxeles en código de alto rendimiento. Construimos el motor silencioso de la experiencia: limpio, estricto, sin atajos, diseñado para durar."
+        "description": "Construimos exactamente lo que aprobaste en Diseño, en un stack que nombramos antes de empezar. Los cambios son cortos y revisables, para que veas qué se movió y por qué. El stack está nombrado, las dependencias están listadas, y nada corre en producción que no podamos explicarte."
       },
       {
         "label": "FASE_004",
         "title": "LANZAMIENTO",
-        "description": "Optimización final y despliegue. La señal se envía. Pulimos, documentamos y entregamos en tus términos, al nivel que elegiste."
+        "description": "Lanzar es un deploy, no un evento. Documentamos qué corre dónde y entregamos en tus términos, en el tier que elegiste."
       }
     ],
     "nfe_eyebrow": "Alcance",
